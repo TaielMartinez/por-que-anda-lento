@@ -6,12 +6,12 @@
 
 **Status:** ready-for-agent
 
-- [ ] Skill de proyecto invocable como `/diagnosticar`.
-- [ ] Checklist de Síntomas: ¿lenta ahora?, desde cuándo, frecuencia, tras horas encendida o tras suspender, qué hacía, qué se traba, si se arregla solo o reiniciando.
-- [ ] Cada Consulta tiene su carpeta, separada de las Capturas, con `symptoms.md`, `captures.json` (Captura analizada y Referencia usada) y `diagnosis.md`.
-- [ ] El Colector acepta marcar la Captura como Referencia; la marca queda en el manifest y el agente puede encontrar la Referencia vigente.
-- [ ] El agente elige la duración de la Ventana de muestreo según el Síntoma (cuando exista el ticket 05).
-- [ ] Si faltan herramientas (según el manifest), el agente ofrece correr la Preparación.
-- [ ] `diagnosis.md`: hipótesis ordenadas con evidencia (archivo + valor), descartes, recomendaciones que aplica el usuario y próxima Captura sugerida si los datos no alcanzan.
-- [ ] El agente no aplica cambios al sistema.
+- [x] Skill de proyecto invocable como `/diagnosticar`.
+- [x] Checklist de Síntomas: ¿lenta ahora?, desde cuándo, frecuencia, tras horas encendida o tras suspender, qué hacía, qué se traba, si se arregla solo o reiniciando.
+- [x] Cada Consulta tiene su carpeta, separada de las Capturas, con `symptoms.md`, `captures.json` (Captura analizada y Referencia usada) y `diagnosis.md`.
+- [x] El Colector acepta marcar la Captura como Referencia; la marca queda en el manifest y el agente puede encontrar la Referencia vigente.
+- [x] El agente elige la duración de la Ventana de muestreo según el Síntoma (cuando exista el ticket 05).
+- [x] Si faltan herramientas (según el manifest), el agente ofrece correr la Preparación.
+- [x] `diagnosis.md`: hipótesis ordenadas con evidencia (archivo + valor), descartes, recomendaciones que aplica el usuario y próxima Captura sugerida si los datos no alcanzan.
+- [x] El agente no aplica cambios al sistema.
 - [ ] Verificación manual: una Consulta real en esta PC.
