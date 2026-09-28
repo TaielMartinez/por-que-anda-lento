@@ -36,6 +36,13 @@ COUNTERS = [
 ]
 
 TOP_TAGS_IN_SUMMARY = 5
+OWNER_TAGS_PER_POOL = 15  # tags a identificar: los primeros por pool no paginado y por paginado
+DRIVERS_GLOB = r"C:\Windows\System32\drivers\*.sys"
+
+
+def driver_search_command(tag: str) -> list[str]:
+    """Busca el tag como texto literal dentro de los binarios de los drivers."""
+    return ["findstr", "/m", "/l", "/s", f"/c:{tag}", DRIVERS_GLOB]
 
 
 def collect(ports: Ports, out: DomainWriter) -> None:
@@ -97,6 +104,14 @@ def collect(ports: Ports, out: DomainWriter) -> None:
         tags, pool_reason = [], str(e)
     out.json("pool_tags", tags, "¿Qué tags del pool del kernel ocupan más memoria?", pool_reason)
 
+    owners, owners_reason = _owners(ports, tags)
+    out.json(
+        "pool_tag_owners",
+        owners,
+        "¿Qué driver es dueño de cada tag del pool que más memoria ocupa?",
+        owners_reason,
+    )
+
     attribution = _attribution(used, c)
     out.json(
         "attribution",
@@ -119,6 +134,8 @@ def collect(ports: Ports, out: DomainWriter) -> None:
             {"tag": t["tag"], "nonpaged_bytes": t["nonpaged_bytes"]}
             for t in tags[:TOP_TAGS_IN_SUMMARY]
         ],
+        top_drivers_by_nonpaged_pool=_by_driver(owners, "nonpaged_bytes"),
+        top_drivers_by_paged_pool=_by_driver(owners, "paged_bytes"),
     )
 
 
@@ -146,6 +163,79 @@ def _attribution(used: int, c: dict[str, int | None]) -> dict[str, Any]:
         "unattributed_to_processes_bytes": unattributed,
         "breakdown": breakdown,
     }
+
+
+def _owners(ports: Ports, tags: list[dict[str, Any]]) -> tuple[list[dict[str, Any]], str | None]:
+    by_paged = sorted(tags, key=lambda t: t["paged_bytes"], reverse=True)
+    selected = {t["tag"]: t for t in [*tags[:OWNER_TAGS_PER_POOL], *by_paged[:OWNER_TAGS_PER_POOL]]}
+
+    reason = None
+    known: dict[str, tuple[list[str], str | None]] = {}
+    try:
+        path = ports.tool_path("pooltag")
+    except PortError:
+        path = None
+    if path:
+        try:
+            known = parse_pooltag(ports.file_text(path))
+        except PortError as e:
+            reason = f"no se pudo leer pooltag.txt: {e}"
+    else:
+        reason = "pooltag.txt no instalado (correr la Preparación): solo búsqueda en binarios de drivers"
+
+    owners = []
+    for name, t in selected.items():
+        drivers, description, source = [], None, "unknown"
+        if name.rstrip() in known:
+            drivers, description = known[name.rstrip()]
+            source = "pooltag.txt"
+        elif " " not in name:  # tags con espacios son demasiado genéricos para buscar en binarios
+            found = _search_drivers(ports, name)
+            if found:
+                drivers, source = found, "driver_search"
+        owners.append({
+            "tag": name,
+            "nonpaged_bytes": t["nonpaged_bytes"],
+            "paged_bytes": t["paged_bytes"],
+            "drivers": drivers,
+            "description": description,
+            "source": source,
+        })
+    owners.sort(key=lambda o: (o["nonpaged_bytes"], o["paged_bytes"]), reverse=True)
+    return owners, reason
+
+
+def parse_pooltag(text: str) -> dict[str, tuple[list[str], str | None]]:
+    """Líneas `Tag - driver.sys - descripción`; `rem` y `//` son comentarios."""
+    known: dict[str, tuple[list[str], str | None]] = {}
+    for line in text.splitlines():
+        stripped = line.strip()
+        if not stripped or stripped.lower().startswith(("rem", "//")):
+            continue
+        parts = [p.strip() for p in stripped.split(" - ", 2)]
+        if len(parts) < 2 or not parts[0] or len(parts[0]) > 4:
+            continue
+        drivers = [d.strip() for d in parts[1].split(",") if d.strip()]
+        known.setdefault(parts[0], (drivers, parts[2] if len(parts) > 2 and parts[2] else None))
+    return known
+
+
+def _search_drivers(ports: Ports, tag: str) -> list[str]:
+    try:
+        result = ports.run(driver_search_command(tag), 120)
+    except PortError:
+        return []
+    return sorted({line.strip().rsplit("\\", 1)[-1] for line in result["stdout"].splitlines() if line.strip()})
+
+
+def _by_driver(owners: list[dict[str, Any]], field: str, n: int = 5) -> list[dict[str, Any]]:
+    totals: dict[str, int] = {}
+    for o in owners:
+        if o["drivers"] and o[field]:
+            key = ", ".join(o["drivers"])
+            totals[key] = totals.get(key, 0) + o[field]
+    ranked = sorted(totals.items(), key=lambda kv: kv[1], reverse=True)[:n]
+    return [{"driver": driver, field: value} for driver, value in ranked]
 
 
 def _pool_tags(raw: list[dict[str, Any]]) -> list[dict[str, Any]]:

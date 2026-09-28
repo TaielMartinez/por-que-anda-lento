@@ -6,9 +6,9 @@
 
 **Status:** ready-for-agent
 
-- [ ] Archivo con tag → driver(s) candidato(s) y origen del mapeo (pooltag.txt o búsqueda en binarios).
-- [ ] Los tags sin mapeo se reportan como desconocidos, no se omiten.
-- [ ] Sin pooltag.txt, el dominio queda `partial` con motivo.
-- [ ] Resumen: top de drivers por pool no paginado y paginado.
-- [ ] Tests con fixtures de pool y un pooltag.txt reducido.
-- [ ] Documento del dominio `memory` actualizado.
+- [x] Archivo con tag → driver(s) candidato(s) y origen del mapeo (pooltag.txt o búsqueda en binarios).
+- [x] Los tags sin mapeo se reportan como desconocidos, no se omiten.
+- [x] Sin pooltag.txt, el dominio queda `partial` con motivo.
+- [x] Resumen: top de drivers por pool no paginado y paginado.
+- [x] Tests con fixtures de pool y un pooltag.txt reducido.
+- [x] Documento del dominio `memory` actualizado.

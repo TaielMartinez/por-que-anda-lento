@@ -95,7 +95,8 @@ def test_real_capture_is_consistent(capture):
     assert totals["physical_used_bytes"] == totals["physical_total_bytes"] - totals["physical_available_bytes"]
     assert 0 < cap.summary["memory"]["used_percent"] < 100
     assert cap.json(f"{BASE}/pool_tags.json"), "debe haber tags de pool"
-    assert cap.domain("memory")["status"] == "complete"
+    for name in ("totals", "page_lists", "compression", "pool_tags", "attribution"):
+        assert cap.entry(f"{BASE}/{name}.json")["status"] == "complete", name
 
 
 def test_pool_tags_unavailable_leaves_the_file_partial(capture):

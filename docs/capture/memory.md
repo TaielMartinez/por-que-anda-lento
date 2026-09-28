@@ -37,7 +37,20 @@ Parte de la **Foto**. Carpeta: `snapshot/memory/`. Responde la pregunta "el Admi
 
 Cada asignación del pool lleva un tag de 4 letras que identifica al driver o componente que la hizo. Ordenado por `nonpaged_bytes`. Campos: `tag`, `nonpaged_bytes`, `paged_bytes`, `nonpaged_outstanding_allocs`, `paged_outstanding_allocs` (asignaciones sin liberar). Si hay cientos de miles de asignaciones pendientes y creciendo, es señal de fuga.
 
-Tags frecuentes: `NVRM` (driver NVIDIA), `EtwB` (buffers de ETW), `smNp` y `smCB` (gestor de memoria y compresión), `File` (objetos de archivo), `Ntfx`/`NtFs` (NTFS). La traducción de cada tag a su driver está en el ticket de mapeo (pooltag).
+Tags frecuentes: `NVRM` (driver NVIDIA), `EtwB` (buffers de ETW), `smNp` y `smCB` (gestor de memoria y compresión), `File` (objetos de archivo), `Ntfx`/`NtFs` (NTFS). El driver dueño de cada tag está en `pool_tag_owners`.
+
+### `pool_tag_owners`: ¿Qué driver es dueño de cada tag del pool que más memoria ocupa?
+
+Para los 15 tags con más pool no paginado y los 15 con más paginado:
+
+| Campo | Qué es |
+|---|---|
+| `tag`, `nonpaged_bytes`, `paged_bytes` | El tag y cuánto ocupa. |
+| `drivers` | Driver(s) dueño(s). `nt!mm` significa un componente del kernel (`nt`), no un driver aparte. |
+| `description` | Descripción de `pooltag.txt`, si la hay. |
+| `source` | `pooltag.txt` (lista de Microsoft), `driver_search` (el tag aparece como texto dentro de ese `.sys`) o `unknown`. |
+
+Una coincidencia de `driver_search` es un indicio fuerte pero no una prueba: otro driver podría usar el mismo tag. Los tags que tienen espacios (`Mm  `) no se buscan en binarios porque son demasiado genéricos. Sin `pooltag.txt` (se instala con la Preparación), el archivo queda `partial` y solo se usa la búsqueda en binarios.
 
 ### `attribution`: ¿Cuánta RAM usada no se atribuye a ningún proceso y en qué se descompone?
 
@@ -71,3 +84,4 @@ Componentes de `breakdown`:
 | `processes_private_working_set_bytes` | Lo atribuido a procesos. |
 | `unattributed_to_processes_bytes`, `unattributed_breakdown` | La RAM que no aparece y su descomposición (igual que `attribution`). |
 | `top_nonpaged_pool_tags` | Los 5 tags con más pool no paginado. |
+| `top_drivers_by_nonpaged_pool`, `top_drivers_by_paged_pool` | Los 5 drivers que más pool retienen, sumando sus tags identificados. |
