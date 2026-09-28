@@ -35,8 +35,9 @@ class DomainResult:
 class CaptureWriter:
     """Acumula archivos, estados por dominio y el Resumen de una Captura."""
 
-    def __init__(self, root: Path):
+    def __init__(self, root: Path, options: Any = None):
         self.root = root
+        self.options = options
         self.files: list[FileEntry] = []
         self.domains: dict[str, DomainResult] = {}
         self.summary: dict[str, Any] = {}

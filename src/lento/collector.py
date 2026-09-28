@@ -8,11 +8,13 @@ from pathlib import Path
 from types import ModuleType
 
 from lento.capture import CaptureWriter
-from lento.domains import memory, processes, system
+from lento.domains import memory, processes, sampling, system
 from lento.ports import Ports
 
 # Cada dominio es un módulo con NAME, BASE (carpeta dentro de la Captura) y collect(ports, out).
 DOMAINS: list[ModuleType] = [system, processes, memory]
+# Todo lo que puede aparecer en una Captura: los dominios de la Foto y la Ventana de muestreo.
+ALL_MODULES: list[ModuleType] = [*DOMAINS, sampling]
 
 
 @dataclass
@@ -27,7 +29,7 @@ class CollectOptions:
 def collect(ports: Ports, captures_dir: Path, options: CollectOptions) -> Path:
     started_at = ports.now()
     root = _new_capture_dir(Path(captures_dir), started_at)
-    writer = CaptureWriter(root)
+    writer = CaptureWriter(root, options)
     writer.metadata.update(
         capture_id=root.name,
         started_at=started_at,
@@ -36,7 +38,8 @@ def collect(ports: Ports, captures_dir: Path, options: CollectOptions) -> Path:
         sampling={"duration_s": options.duration_s, "interval_s": options.interval_s},
     )
 
-    for module in DOMAINS:
+    modules = [*DOMAINS, *([sampling] if options.duration_s > 0 else [])]
+    for module in modules:
         if options.only is not None and module.NAME not in options.only:
             continue
         out = writer.domain(module.NAME, module.BASE)

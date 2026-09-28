@@ -6,9 +6,9 @@
 
 **Status:** ready-for-agent
 
-- [ ] Duración e intervalo configurables por argumento; valores por defecto 60 s / 1 s.
-- [ ] Un CSV por métrica de sistema, con timestamp.
-- [ ] `processes_all` + tops de CPU, RAM (con `private_bytes_delta`) y disco en archivos separados; el manifest explica el criterio de cada top.
-- [ ] Resumen: picos, promedios y percentiles de cada métrica.
-- [ ] Tests con secuencias de muestras grabadas (puertos de contadores y procesos falsos, reloj controlado).
-- [ ] Documento de la Ventana de muestreo.
+- [x] Duración e intervalo configurables por argumento; valores por defecto 60 s / 1 s.
+- [x] Un CSV por métrica de sistema, con timestamp.
+- [x] `processes_all` + tops de CPU, RAM (con `private_bytes_delta`) y disco en archivos separados; el manifest explica el criterio de cada top.
+- [x] Resumen: picos, promedios y percentiles de cada métrica.
+- [x] Tests con secuencias de muestras grabadas (puertos de contadores y procesos falsos, reloj controlado).
+- [x] Documento de la Ventana de muestreo.

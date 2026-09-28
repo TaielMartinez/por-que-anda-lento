@@ -90,15 +90,17 @@ class Ports:
     def monotonic(self) -> float:
         return self._call("monotonic")
 
-    def sleep(self, seconds: float) -> None:
-        return self._call("sleep", seconds)
+    def wait_until(self, deadline: float) -> float:
+        """Espera hasta el instante `deadline` de `monotonic` y devuelve el instante real."""
+        return self._call("wait_until", deadline)
 
 
 def call_key(method: str, args: tuple[Any, ...]) -> str:
     return f"{method}{json.dumps(list(args), ensure_ascii=False)}"
 
 
-_NOT_RECORDED = {"sleep"}
+# El reloj de espera no se graba: en los fixtures el tiempo salta exacto al deadline.
+_NOT_RECORDED = {"wait_until"}
 
 
 class FixturePorts(Ports):
@@ -120,14 +122,19 @@ class FixturePorts(Ports):
 
     def set(self, method: str, *args: Any, response: Any) -> None:
         """Reemplaza la respuesta de una llamada (para variar un escenario en un test)."""
-        self.calls[call_key(method, args)] = [response]
+        self.set_sequence(method, *args, responses=[response])
+
+    def set_sequence(self, method: str, *args: Any, responses: list[Any]) -> None:
+        """Reemplaza una llamada por una secuencia de respuestas (una por invocación)."""
+        self.calls[call_key(method, args)] = list(responses)
+        self._cursor.pop(call_key(method, args), None)
 
     def fail(self, method: str, *args: Any, reason: str = "no disponible") -> None:
-        self.calls[call_key(method, args)] = [{"__error__": reason}]
+        self.set_sequence(method, *args, responses=[{"__error__": reason}])
 
     def _call(self, method: str, *args: Any) -> Any:
-        if method in _NOT_RECORDED:
-            return None
+        if method == "wait_until":
+            return args[0]
         key = call_key(method, args)
         responses = self.calls.get(key)
         if not responses:

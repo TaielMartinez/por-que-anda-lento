@@ -350,9 +350,11 @@ class WindowsPorts(Ports):
     def _monotonic(self) -> float:
         return time.monotonic()
 
-    def _sleep(self, seconds: float) -> None:
-        if seconds > 0:
-            time.sleep(seconds)
+    def _wait_until(self, deadline: float) -> float:
+        remaining = deadline - time.monotonic()
+        if remaining > 0:
+            time.sleep(remaining)
+        return time.monotonic()
 
 
 def _decode(data: bytes) -> str:

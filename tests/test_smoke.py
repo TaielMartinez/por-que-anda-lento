@@ -6,7 +6,7 @@ from pathlib import Path
 
 import pytest
 
-from lento.collector import DOMAINS, CollectOptions, collect
+from lento.collector import ALL_MODULES, CollectOptions, collect
 
 pytestmark = pytest.mark.smoke
 
@@ -27,7 +27,7 @@ def test_real_capture_matches_the_documented_schema(tmp_path):
     assert manifest["schema_version"] == 1
     assert re.fullmatch(r"\d{4}-\d{2}-\d{2}_\d{6}(_\d+)?", root.name)
     assert isinstance(summary, dict)
-    for module in DOMAINS:
+    for module in ALL_MODULES:
         assert module.NAME in manifest["domains"], module.NAME
     for entry in manifest["files"]:
         path = root / entry["path"]
