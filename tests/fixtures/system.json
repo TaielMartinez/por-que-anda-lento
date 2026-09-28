@@ -1,0 +1,153 @@
+{
+ "calls": {
+  "now[]": [
+   "2026-09-28T12:04:05-03:00",
+   "2026-09-28T12:04:06-03:00",
+   "2026-09-28T12:04:06-03:00"
+  ],
+  "wmi[\"SELECT Name, NumberOfCores, NumberOfLogicalProcessors, MaxClockSpeed, CurrentClockSpeed, L2CacheSize, L3CacheSize FROM Win32_Processor\", \"root\\\\cimv2\"]": [
+   [
+    {
+     "CurrentClockSpeed": 3701,
+     "DeviceID": "CPU0",
+     "L2CacheSize": 1536,
+     "L3CacheSize": 12288,
+     "MaxClockSpeed": 3701,
+     "Name": "Intel(R) Core(TM) i7-8700K CPU @ 3.70GHz",
+     "NumberOfCores": 6,
+     "NumberOfLogicalProcessors": 12
+    }
+   ]
+  ],
+  "wmi[\"SELECT Manufacturer, Model, TotalPhysicalMemory FROM Win32_ComputerSystem\", \"root\\\\cimv2\"]": [
+   [
+    {
+     "Manufacturer": "Gigabyte Technology Co., Ltd.",
+     "Model": "Z370 AORUS Ultra Gaming",
+     "Name": "TAIEL-PC",
+     "TotalPhysicalMemory": "25716088832"
+    }
+   ]
+  ],
+  "wmi[\"SELECT Capacity, Speed, ConfiguredClockSpeed, Manufacturer, PartNumber, DeviceLocator, BankLabel FROM Win32_PhysicalMemory\", \"root\\\\cimv2\"]": [
+   [
+    {
+     "BankLabel": "BANK 1",
+     "Capacity": "8589934592",
+     "ConfiguredClockSpeed": 2133,
+     "DeviceLocator": "ChannelA-DIMM1",
+     "Manufacturer": "029E",
+     "PartNumber": "CMR16GX4M2C3000C15  ",
+     "Speed": 2133,
+     "Tag": "Physical Memory 1"
+    },
+    {
+     "BankLabel": "BANK 2",
+     "Capacity": "8589934592",
+     "ConfiguredClockSpeed": 2133,
+     "DeviceLocator": "ChannelB-DIMM0",
+     "Manufacturer": "029E",
+     "PartNumber": "CMK8GX4M1D3000C16   ",
+     "Speed": 2133,
+     "Tag": "Physical Memory 2"
+    },
+    {
+     "BankLabel": "BANK 3",
+     "Capacity": "8589934592",
+     "ConfiguredClockSpeed": 2133,
+     "DeviceLocator": "ChannelB-DIMM1",
+     "Manufacturer": "029E",
+     "PartNumber": "CMR16GX4M2C3000C15  ",
+     "Speed": 2133,
+     "Tag": "Physical Memory 3"
+    }
+   ]
+  ],
+  "wmi[\"SELECT Manufacturer, Product, Version FROM Win32_BaseBoard\", \"root\\\\cimv2\"]": [
+   [
+    {
+     "Manufacturer": "Gigabyte Technology Co., Ltd.",
+     "Product": "Z370 AORUS Ultra Gaming-CF",
+     "Tag": "Base Board",
+     "Version": "Default string"
+    }
+   ]
+  ],
+  "wmi[\"SELECT Manufacturer, SMBIOSBIOSVersion, ReleaseDate FROM Win32_BIOS\", \"root\\\\cimv2\"]": [
+   [
+    {
+     "Manufacturer": "American Megatrends Inc.",
+     "Name": "F4",
+     "ReleaseDate": "20170906000000.000000+000",
+     "SMBIOSBIOSVersion": "F4",
+     "SoftwareElementID": "F4",
+     "SoftwareElementState": 3,
+     "TargetOperatingSystem": 0,
+     "Version": "ALASKA - 1072009"
+    }
+   ]
+  ],
+  "wmi[\"SELECT Name, DriverVersion, DriverDate, AdapterRAM, CurrentHorizontalResolution, CurrentVerticalResolution, CurrentRefreshRate FROM Win32_VideoController\", \"root\\\\cimv2\"]": [
+   [
+    {
+     "AdapterRAM": -1048576,
+     "CurrentHorizontalResolution": 1920,
+     "CurrentRefreshRate": 60,
+     "CurrentVerticalResolution": 1080,
+     "DeviceID": "VideoController1",
+     "DriverDate": "20260120000000.000000-000",
+     "DriverVersion": "32.0.15.9186",
+     "Name": "NVIDIA GeForce RTX 3090"
+    }
+   ]
+  ],
+  "wmi[\"SELECT Caption, Version, BuildNumber, OSArchitecture, LastBootUpTime, InstallDate FROM Win32_OperatingSystem\", \"root\\\\cimv2\"]": [
+   [
+    {
+     "BuildNumber": "26200",
+     "Caption": "Microsoft Windows 11 IoT Enterprise",
+     "InstallDate": "20260815015551.000000-180",
+     "LastBootUpTime": "20260924191508.223390-180",
+     "OSArchitecture": "64 bits",
+     "Version": "10.0.26200"
+    }
+   ]
+  ],
+  "wmi[\"SELECT Name, AllocatedBaseSize, CurrentUsage, PeakUsage FROM Win32_PageFileUsage\", \"root\\\\cimv2\"]": [
+   [
+    {
+     "AllocatedBaseSize": 19456,
+     "CurrentUsage": 1385,
+     "Name": "C:\\pagefile.sys",
+     "PeakUsage": 3154
+    }
+   ]
+  ],
+  "run[[\"powercfg\", \"/getactivescheme\"], 120]": [
+   {
+    "returncode": 0,
+    "stdout": "GUID de plan de energía: 381b4222-f694-41f0-9685-ff5bb260df2e  (Equilibrado)",
+    "stderr": ""
+   }
+  ],
+  "registry_values[\"HKLM\\\\SYSTEM\\\\CurrentControlSet\\\\Control\\\\Power\\\\User\\\\PowerSchemes\"]": [
+   {
+    "ActivePowerScheme": "381b4222-f694-41f0-9685-ff5bb260df2e",
+    "ActiveOverlayAcPowerScheme": "ded574b5-45a0-4f42-8737-46345c09c238"
+   }
+  ],
+  "registry_values[\"HKLM\\\\SYSTEM\\\\CurrentControlSet\\\\Control\\\\GraphicsDrivers\"]": [
+   {
+    "PlatformSupportMiracast": 1,
+    "DxgKrnlVersion": 69639,
+    "MinDxgKrnlVersion": 20499
+   }
+  ],
+  "registry_values[\"HKCU\\\\Software\\\\Microsoft\\\\GameBar\"]": [
+   {
+    "UseNexusForGameBarEnabled": 0,
+    "GamepadNexusChordEnabled": 0
+   }
+  ]
+ }
+}
