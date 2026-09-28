@@ -33,6 +33,11 @@ def counters(dpc=1.0, interrupt=0.5, queue=0.0, page_reads=0.0, available=8 * 10
     }
 
 
+def only_sampling(capture, ports, **options):
+    """Los escenarios fabricados son secuencias: solo la Ventana de muestreo debe consumirlas."""
+    return capture(ports, only=["sampling"], **options)
+
+
 def scenario(process_ticks, counter_ticks=None, cores=4):
     """Muestras fabricadas: una respuesta por tick, un segundo entre ticks."""
     ports = fixture_ports("sampling")
@@ -67,7 +72,7 @@ def test_process_rates_are_computed_between_samples(capture):
         [proc(10, "a.exe", cpu_s=1.0, read=0, write=0)],
         [proc(10, "a.exe", cpu_s=1.5, read=4 * MiB, write=2 * MiB)],
     ]
-    cap = capture(scenario(ticks, cores=4), duration_s=1, interval_s=1)
+    cap = only_sampling(capture, scenario(ticks, cores=4), duration_s=1, interval_s=1)
 
     rows = cap.csv("sampling/processes_all.csv")
     assert len(rows) == 1
@@ -84,7 +89,7 @@ def test_top_ram_reports_growth_since_the_window_started(capture):
         [proc(10, "fuga.exe", private=250 * MiB), proc(20, "estable.exe", private=500 * MiB)],
         [proc(10, "fuga.exe", private=400 * MiB), proc(20, "estable.exe", private=500 * MiB)],
     ]
-    cap = capture(scenario(ticks), duration_s=2, interval_s=1)
+    cap = only_sampling(capture, scenario(ticks), duration_s=2, interval_s=1)
 
     last = [r for r in cap.csv("sampling/processes_top_ram.csv") if r["t_s"] == "2.0"]
     assert [r["name"] for r in last] == ["estable.exe", "fuga.exe"]
@@ -98,7 +103,7 @@ def test_top_ram_reports_growth_since_the_window_started(capture):
 def test_each_top_keeps_at_most_20_processes_per_sample_and_all_keeps_everyone(capture):
     before = [proc(i, f"p{i}.exe", cpu_s=0.0) for i in range(25)]
     after = [proc(i, f"p{i}.exe", cpu_s=i / 100, read=i * MiB) for i in range(25)]
-    cap = capture(scenario([before, after]), duration_s=1, interval_s=1)
+    cap = only_sampling(capture, scenario([before, after]), duration_s=1, interval_s=1)
 
     assert len(cap.csv("sampling/processes_all.csv")) == 25
     for resource in ("cpu", "ram", "disk"):
@@ -113,7 +118,7 @@ def test_each_top_keeps_at_most_20_processes_per_sample_and_all_keeps_everyone(c
 def test_summary_has_peaks_and_means(capture):
     ticks = [[proc(1, "a.exe")]] * 4
     counter_ticks = [counters(dpc=1.0), counters(dpc=9.0), counters(dpc=2.0), counters(dpc=4.0)]
-    cap = capture(scenario(ticks, counter_ticks), duration_s=3, interval_s=1)
+    cap = only_sampling(capture, scenario(ticks, counter_ticks), duration_s=3, interval_s=1)
 
     dpc = cap.summary["sampling"]["dpc_time_percent"]
     assert dpc["max"] == 9.0
@@ -126,7 +131,7 @@ def test_processes_that_appear_mid_window_have_no_rate_until_the_next_sample(cap
         [proc(1, "a.exe", cpu_s=1.0)],
         [proc(1, "a.exe", cpu_s=1.2), proc(2, "nuevo.exe", cpu_s=50.0)],
     ]
-    cap = capture(scenario(ticks), duration_s=1, interval_s=1)
+    cap = only_sampling(capture, scenario(ticks), duration_s=1, interval_s=1)
 
     rows = {r["name"]: r for r in cap.csv("sampling/processes_all.csv")}
     assert rows["nuevo.exe"]["cpu_percent"] == ""

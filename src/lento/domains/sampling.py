@@ -90,13 +90,16 @@ def collect(ports: Ports, out: DomainWriter) -> None:
     duration, interval = options.duration_s, options.interval_s
     ticks = max(1, math.floor(duration / interval + 1e-9))
 
+    from lento.domains.gpu import GpuSampler
+
     cores = CpuCoreSampler(ports)
+    processes = ProcessSampler(ports, cores.logical_processors)
     samplers: list[Sampler] = [
         cores,
         SystemCounterSampler(ports),
-        ProcessSampler(ports, cores.logical_processors),
+        processes,
+        GpuSampler(ports, lambda: processes.names),
     ]
-    samplers += _extra_samplers(ports, out)
 
     start = ports.monotonic()
     for s in samplers:
@@ -110,14 +113,6 @@ def collect(ports: Ports, out: DomainWriter) -> None:
     summary["samples"] = ticks + 1
     for s in samplers:
         s.finish(out)
-
-
-def _extra_samplers(ports: Ports, out: DomainWriter) -> list[Sampler]:
-    """Samplers de otros tickets (GPU, temperaturas, ETW) registrados en SAMPLER_FACTORIES."""
-    return [factory(ports, out) for factory in SAMPLER_FACTORIES]
-
-
-SAMPLER_FACTORIES: list[Any] = []
 
 
 class CpuCoreSampler:
@@ -189,9 +184,11 @@ class ProcessSampler:
         self.previous: tuple[float, dict[int, dict[str, Any]]] | None = None
         self.first_private: dict[int, int] = {}
         self.rows: list[dict[str, Any]] = []
+        self.names: dict[int, str] = {}
 
     def tick(self, t_s: float) -> None:
         current = {p["pid"]: p for p in self.ports.process_samples()}
+        self.names = {pid: p["name"] for pid, p in current.items()}
         for pid, p in current.items():
             if p.get("private_bytes") is not None:
                 self.first_private.setdefault(pid, p["private_bytes"])

@@ -30,6 +30,10 @@ Cada archivo tiene una fila por muestra, incluida la inicial (`t_s = 0`).
 
 `available_bytes` y `committed_bytes`. Si la disponible baja de forma constante durante la Ventana, algo está consumiendo memoria.
 
+### `gpu`: ¿Cuánto se usó la GPU y a qué temperatura, clock y consumo estuvo en cada momento?
+
+Columnas: `utilization_percent`, `memory_used_bytes`, `temperature_c`, `graphics_clock_mhz`, `power_draw_w`, `pstate` y `clock_event_reasons` (motivos separados por `|`; ver [gpu.md](gpu.md)). Sin nvidia-smi solo hay uso (el del proceso con el motor más cargado) y memoria, y el archivo queda `partial`.
+
 ### `system_load`: ¿Cuántos hilos esperaban CPU y cuántos cambios de contexto hubo en cada momento?
 
 `processor_queue_length`: hilos listos esperando CPU. Si se mantiene por encima de 2 por núcleo, la CPU no alcanza. También `context_switches_per_s`.
@@ -61,6 +65,10 @@ Los 20 procesos que más usaron cada recurso **en cada muestra**, con una column
 
 Un proceso que no entra en el top de una muestra puede estar igual en `processes_all`.
 
+### `processes_top_gpu`
+
+Los 20 procesos que más usaron la GPU en cada muestra: `rank`, `pid`, `name`, `gpu_percent` (motor más cargado), `busiest_engine`, `dedicated_memory_bytes`. Sale de contadores distintos a los de `processes_all`, por eso va aparte.
+
 ## Sección del Resumen (`summary.sampling`)
 
 | Campo | Qué es |
@@ -71,5 +79,6 @@ Un proceso que no entra en el top de una muestra puede estar igual en `processes
 | `disk_queue_length`, `disk_time_percent` | `max`, `mean`, `p95`. |
 | `hard_page_reads_per_s` | `max`, `mean`, `p95` de `page_reads_per_s`. |
 | `available_bytes` | `min`, `mean`, `p5` (acá lo malo es lo bajo). |
-| `top_cpu_processes`, `top_ram_processes`, `top_disk_processes` | Los 5 procesos con mayor promedio en cada recurso (`mean`, `max`). |
+| `gpu_utilization_percent`, `gpu_temperature_c` | `max`, `mean`, `p95` de la GPU. |
+| `top_cpu_processes`, `top_ram_processes`, `top_disk_processes`, `top_gpu_processes` | Los 5 procesos con mayor promedio en cada recurso (`mean`, `max`). |
 | `largest_private_bytes_growth` | El proceso que más creció en private bytes durante la Ventana. |

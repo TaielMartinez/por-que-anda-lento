@@ -1,0 +1,3350 @@
+{
+ "calls": {
+  "now[]": [
+   "2026-09-28T12:04:05-03:00",
+   "2026-09-28T12:04:08-03:00"
+  ],
+  "tool_path[\"librehardwaremonitor\"]": [
+   null
+  ],
+  "tool_path[\"pawnio\"]": [
+   null
+  ],
+  "tool_path[\"autorunsc\"]": [
+   null
+  ],
+  "tool_path[\"sigcheck\"]": [
+   null
+  ],
+  "tool_path[\"handle\"]": [
+   null
+  ],
+  "tool_path[\"wpt\"]": [
+   null
+  ],
+  "tool_path[\"pooltag\"]": [
+   null
+  ],
+  "run[[\"nvidia-smi\", \"--query-gpu=name,driver_version,pstate,temperature.gpu,utilization.gpu,utilization.memory,memory.total,memory.used,clocks.gr,clocks.mem,clocks.max.gr,power.draw,power.limit,fan.speed,clocks_event_reasons.active,pcie.link.gen.current,pcie.link.width.current\", \"--format=csv,noheader,nounits\"], 30]": [
+   {
+    "returncode": 0,
+    "stdout": "NVIDIA GeForce RTX 3090, 591.86, P8, 58, 28, 15, 24576, 1154, 210, 405, 2115, 37.85, 370.00, 0, 0x0000000000000001, 1, 16\r\n",
+    "stderr": ""
+   }
+  ],
+  "counters[[\"\\\\GPU Engine(*)\\\\Utilization Percentage\", \"\\\\GPU Process Memory(*)\\\\Dedicated Usage\", \"\\\\GPU Adapter Memory(*)\\\\Dedicated Usage\"]]": [
+   {
+    "\\GPU Engine(*)\\Utilization Percentage": {
+     "pid_10520_luid_0x00000000_0x0000D0FF_phys_0_eng_0_engtype_3D": 0.0,
+     "pid_10520_luid_0x00000000_0x0000D0FF_phys_0_eng_1_engtype_LegacyOverlay": 0.0,
+     "pid_10520_luid_0x00000000_0x0000D0FF_phys_0_eng_2_engtype_VideoDecode": 0.0,
+     "pid_10520_luid_0x00000000_0x0000D0FF_phys_0_eng_3_engtype_Copy": 0.0,
+     "pid_10520_luid_0x00000000_0x0000D0FF_phys_0_eng_4_engtype_Copy": 0.0,
+     "pid_10520_luid_0x00000000_0x0000D0FF_phys_0_eng_5_engtype_Security": 0.0,
+     "pid_10520_luid_0x00000000_0x0000D0FF_phys_0_eng_6_engtype_VideoEncode": 0.0,
+     "pid_10520_luid_0x00000000_0x0000D0FF_phys_0_eng_7_engtype_OFA_0": 0.0,
+     "pid_10520_luid_0x00000000_0x0000D0FF_phys_0_eng_8_engtype_VR": 0.0,
+     "pid_1084_luid_0x00000000_0x0000D0FF_phys_0_eng_0_engtype_3D": 0.0,
+     "pid_1084_luid_0x00000000_0x0000D0FF_phys_0_eng_1_engtype_LegacyOverlay": 0.0,
+     "pid_1084_luid_0x00000000_0x0000D0FF_phys_0_eng_2_engtype_VideoDecode": 0.0,
+     "pid_1084_luid_0x00000000_0x0000D0FF_phys_0_eng_3_engtype_Copy": 0.0,
+     "pid_1084_luid_0x00000000_0x0000D0FF_phys_0_eng_4_engtype_Copy": 0.0,
+     "pid_1084_luid_0x00000000_0x0000D0FF_phys_0_eng_5_engtype_Security": 0.0,
+     "pid_1084_luid_0x00000000_0x0000D0FF_phys_0_eng_6_engtype_VideoEncode": 0.0,
+     "pid_1084_luid_0x00000000_0x0000D0FF_phys_0_eng_7_engtype_OFA_0": 0.0,
+     "pid_1084_luid_0x00000000_0x0000D0FF_phys_0_eng_8_engtype_VR": 0.0,
+     "pid_11140_luid_0x00000000_0x0000D0FF_phys_0_eng_0_engtype_3D": 0.0,
+     "pid_11140_luid_0x00000000_0x0000D0FF_phys_0_eng_1_engtype_LegacyOverlay": 0.0,
+     "pid_11140_luid_0x00000000_0x0000D0FF_phys_0_eng_2_engtype_VideoDecode": 0.0,
+     "pid_11140_luid_0x00000000_0x0000D0FF_phys_0_eng_3_engtype_Copy": 0.0,
+     "pid_11140_luid_0x00000000_0x0000D0FF_phys_0_eng_4_engtype_Copy": 0.0,
+     "pid_11140_luid_0x00000000_0x0000D0FF_phys_0_eng_5_engtype_Security": 0.0,
+     "pid_11140_luid_0x00000000_0x0000D0FF_phys_0_eng_6_engtype_VideoEncode": 0.0,
+     "pid_11140_luid_0x00000000_0x0000D0FF_phys_0_eng_7_engtype_OFA_0": 0.0,
+     "pid_11140_luid_0x00000000_0x0000D0FF_phys_0_eng_8_engtype_VR": 0.0,
+     "pid_11164_luid_0x00000000_0x0000D0FF_phys_0_eng_0_engtype_3D": 0.0,
+     "pid_11164_luid_0x00000000_0x0000D0FF_phys_0_eng_1_engtype_LegacyOverlay": 0.0,
+     "pid_11164_luid_0x00000000_0x0000D0FF_phys_0_eng_2_engtype_VideoDecode": 0.0,
+     "pid_11164_luid_0x00000000_0x0000D0FF_phys_0_eng_3_engtype_Copy": 0.0,
+     "pid_11164_luid_0x00000000_0x0000D0FF_phys_0_eng_4_engtype_Copy": 0.0,
+     "pid_11164_luid_0x00000000_0x0000D0FF_phys_0_eng_5_engtype_Security": 0.0,
+     "pid_11164_luid_0x00000000_0x0000D0FF_phys_0_eng_6_engtype_VideoEncode": 0.0,
+     "pid_11164_luid_0x00000000_0x0000D0FF_phys_0_eng_7_engtype_OFA_0": 0.0,
+     "pid_11164_luid_0x00000000_0x0000D0FF_phys_0_eng_8_engtype_VR": 0.0,
+     "pid_11780_luid_0x00000000_0x0000D0FF_phys_0_eng_0_engtype_3D": 0.0,
+     "pid_11780_luid_0x00000000_0x0000D0FF_phys_0_eng_1_engtype_LegacyOverlay": 0.0,
+     "pid_11780_luid_0x00000000_0x0000D0FF_phys_0_eng_2_engtype_VideoDecode": 0.0,
+     "pid_11780_luid_0x00000000_0x0000D0FF_phys_0_eng_3_engtype_Copy": 0.0,
+     "pid_11780_luid_0x00000000_0x0000D0FF_phys_0_eng_4_engtype_Copy": 0.0,
+     "pid_11780_luid_0x00000000_0x0000D0FF_phys_0_eng_5_engtype_Security": 0.0,
+     "pid_11780_luid_0x00000000_0x0000D0FF_phys_0_eng_6_engtype_VideoEncode": 0.0,
+     "pid_11780_luid_0x00000000_0x0000D0FF_phys_0_eng_7_engtype_OFA_0": 0.0,
+     "pid_11780_luid_0x00000000_0x0000D0FF_phys_0_eng_8_engtype_VR": 0.0,
+     "pid_12784_luid_0x00000000_0x0000D0FF_phys_0_eng_0_engtype_3D": 0.0,
+     "pid_12784_luid_0x00000000_0x0000D0FF_phys_0_eng_1_engtype_LegacyOverlay": 0.0,
+     "pid_12784_luid_0x00000000_0x0000D0FF_phys_0_eng_2_engtype_VideoDecode": 0.0,
+     "pid_12784_luid_0x00000000_0x0000D0FF_phys_0_eng_3_engtype_Copy": 0.0,
+     "pid_12784_luid_0x00000000_0x0000D0FF_phys_0_eng_4_engtype_Copy": 0.0,
+     "pid_12784_luid_0x00000000_0x0000D0FF_phys_0_eng_5_engtype_Security": 0.0,
+     "pid_12784_luid_0x00000000_0x0000D0FF_phys_0_eng_6_engtype_VideoEncode": 0.0,
+     "pid_12784_luid_0x00000000_0x0000D0FF_phys_0_eng_7_engtype_OFA_0": 0.0,
+     "pid_12784_luid_0x00000000_0x0000D0FF_phys_0_eng_8_engtype_VR": 0.0,
+     "pid_12784_luid_0x00000000_0x0000E486_phys_0_eng_0_engtype_3D": 0.0,
+     "pid_12784_luid_0x00000000_0x0000E486_phys_0_eng_10_engtype_3D": 0.0,
+     "pid_12784_luid_0x00000000_0x0000E486_phys_0_eng_11_engtype_3D": 0.0,
+     "pid_12784_luid_0x00000000_0x0000E486_phys_0_eng_12_engtype_3D": 0.0,
+     "pid_12784_luid_0x00000000_0x0000E486_phys_0_eng_1_engtype_3D": 0.0,
+     "pid_12784_luid_0x00000000_0x0000E486_phys_0_eng_2_engtype_3D": 0.0,
+     "pid_12784_luid_0x00000000_0x0000E486_phys_0_eng_3_engtype_3D": 0.0,
+     "pid_12784_luid_0x00000000_0x0000E486_phys_0_eng_4_engtype_3D": 0.0,
+     "pid_12784_luid_0x00000000_0x0000E486_phys_0_eng_5_engtype_3D": 0.0,
+     "pid_12784_luid_0x00000000_0x0000E486_phys_0_eng_6_engtype_3D": 0.0,
+     "pid_12784_luid_0x00000000_0x0000E486_phys_0_eng_7_engtype_3D": 0.0,
+     "pid_12784_luid_0x00000000_0x0000E486_phys_0_eng_8_engtype_3D": 0.0,
+     "pid_12784_luid_0x00000000_0x0000E486_phys_0_eng_9_engtype_3D": 0.0,
+     "pid_12892_luid_0x00000000_0x0000D0FF_phys_0_eng_0_engtype_3D": 0.0,
+     "pid_12892_luid_0x00000000_0x0000D0FF_phys_0_eng_1_engtype_LegacyOverlay": 0.0,
+     "pid_12892_luid_0x00000000_0x0000D0FF_phys_0_eng_2_engtype_VideoDecode": 0.0,
+     "pid_12892_luid_0x00000000_0x0000D0FF_phys_0_eng_3_engtype_Copy": 0.0,
+     "pid_12892_luid_0x00000000_0x0000D0FF_phys_0_eng_4_engtype_Copy": 0.0,
+     "pid_12892_luid_0x00000000_0x0000D0FF_phys_0_eng_5_engtype_Security": 0.0,
+     "pid_12892_luid_0x00000000_0x0000D0FF_phys_0_eng_6_engtype_VideoEncode": 0.0,
+     "pid_12892_luid_0x00000000_0x0000D0FF_phys_0_eng_7_engtype_OFA_0": 0.0,
+     "pid_12892_luid_0x00000000_0x0000D0FF_phys_0_eng_8_engtype_VR": 0.0,
+     "pid_13668_luid_0x00000000_0x0000D0FF_phys_0_eng_0_engtype_3D": 0.0,
+     "pid_13668_luid_0x00000000_0x0000D0FF_phys_0_eng_1_engtype_LegacyOverlay": 0.0,
+     "pid_13668_luid_0x00000000_0x0000D0FF_phys_0_eng_2_engtype_VideoDecode": 0.0,
+     "pid_13668_luid_0x00000000_0x0000D0FF_phys_0_eng_3_engtype_Copy": 0.0,
+     "pid_13668_luid_0x00000000_0x0000D0FF_phys_0_eng_4_engtype_Copy": 0.0,
+     "pid_13668_luid_0x00000000_0x0000D0FF_phys_0_eng_5_engtype_Security": 0.0,
+     "pid_13668_luid_0x00000000_0x0000D0FF_phys_0_eng_6_engtype_VideoEncode": 0.0,
+     "pid_13668_luid_0x00000000_0x0000D0FF_phys_0_eng_7_engtype_OFA_0": 0.0,
+     "pid_13668_luid_0x00000000_0x0000D0FF_phys_0_eng_8_engtype_VR": 0.0,
+     "pid_15088_luid_0x00000000_0x0000D0FF_phys_0_eng_0_engtype_3D": 0.0,
+     "pid_15088_luid_0x00000000_0x0000D0FF_phys_0_eng_1_engtype_LegacyOverlay": 0.0,
+     "pid_15088_luid_0x00000000_0x0000D0FF_phys_0_eng_2_engtype_VideoDecode": 0.0,
+     "pid_15088_luid_0x00000000_0x0000D0FF_phys_0_eng_3_engtype_Copy": 0.0,
+     "pid_15088_luid_0x00000000_0x0000D0FF_phys_0_eng_4_engtype_Copy": 0.0,
+     "pid_15088_luid_0x00000000_0x0000D0FF_phys_0_eng_5_engtype_Security": 0.0,
+     "pid_15088_luid_0x00000000_0x0000D0FF_phys_0_eng_6_engtype_VideoEncode": 0.0,
+     "pid_15088_luid_0x00000000_0x0000D0FF_phys_0_eng_7_engtype_OFA_0": 0.0,
+     "pid_15088_luid_0x00000000_0x0000D0FF_phys_0_eng_8_engtype_VR": 0.0,
+     "pid_15780_luid_0x00000000_0x0000D0FF_phys_0_eng_0_engtype_3D": 0.0,
+     "pid_15780_luid_0x00000000_0x0000D0FF_phys_0_eng_1_engtype_LegacyOverlay": 0.0,
+     "pid_15780_luid_0x00000000_0x0000D0FF_phys_0_eng_2_engtype_VideoDecode": 0.0,
+     "pid_15780_luid_0x00000000_0x0000D0FF_phys_0_eng_3_engtype_Copy": 0.0,
+     "pid_15780_luid_0x00000000_0x0000D0FF_phys_0_eng_4_engtype_Copy": 0.0,
+     "pid_15780_luid_0x00000000_0x0000D0FF_phys_0_eng_5_engtype_Security": 0.0,
+     "pid_15780_luid_0x00000000_0x0000D0FF_phys_0_eng_6_engtype_VideoEncode": 0.0,
+     "pid_15780_luid_0x00000000_0x0000D0FF_phys_0_eng_7_engtype_OFA_0": 0.0,
+     "pid_15780_luid_0x00000000_0x0000D0FF_phys_0_eng_8_engtype_VR": 0.0,
+     "pid_16296_luid_0x00000000_0x0000D0FF_phys_0_eng_0_engtype_3D": 0.0,
+     "pid_16296_luid_0x00000000_0x0000D0FF_phys_0_eng_1_engtype_LegacyOverlay": 0.0,
+     "pid_16296_luid_0x00000000_0x0000D0FF_phys_0_eng_2_engtype_VideoDecode": 0.0,
+     "pid_16296_luid_0x00000000_0x0000D0FF_phys_0_eng_3_engtype_Copy": 0.0,
+     "pid_16296_luid_0x00000000_0x0000D0FF_phys_0_eng_4_engtype_Copy": 0.0,
+     "pid_16296_luid_0x00000000_0x0000D0FF_phys_0_eng_5_engtype_Security": 0.0,
+     "pid_16296_luid_0x00000000_0x0000D0FF_phys_0_eng_6_engtype_VideoEncode": 0.0,
+     "pid_16296_luid_0x00000000_0x0000D0FF_phys_0_eng_7_engtype_OFA_0": 0.0,
+     "pid_16296_luid_0x00000000_0x0000D0FF_phys_0_eng_8_engtype_VR": 0.0,
+     "pid_16296_luid_0x00000000_0x0000E486_phys_0_eng_0_engtype_3D": 0.0,
+     "pid_16296_luid_0x00000000_0x0000E486_phys_0_eng_10_engtype_3D": 0.0,
+     "pid_16296_luid_0x00000000_0x0000E486_phys_0_eng_11_engtype_3D": 0.0,
+     "pid_16296_luid_0x00000000_0x0000E486_phys_0_eng_12_engtype_3D": 0.0,
+     "pid_16296_luid_0x00000000_0x0000E486_phys_0_eng_1_engtype_3D": 0.0,
+     "pid_16296_luid_0x00000000_0x0000E486_phys_0_eng_2_engtype_3D": 0.0,
+     "pid_16296_luid_0x00000000_0x0000E486_phys_0_eng_3_engtype_3D": 0.0,
+     "pid_16296_luid_0x00000000_0x0000E486_phys_0_eng_4_engtype_3D": 0.0,
+     "pid_16296_luid_0x00000000_0x0000E486_phys_0_eng_5_engtype_3D": 0.0,
+     "pid_16296_luid_0x00000000_0x0000E486_phys_0_eng_6_engtype_3D": 0.0,
+     "pid_16296_luid_0x00000000_0x0000E486_phys_0_eng_7_engtype_3D": 0.0,
+     "pid_16296_luid_0x00000000_0x0000E486_phys_0_eng_8_engtype_3D": 0.0,
+     "pid_16296_luid_0x00000000_0x0000E486_phys_0_eng_9_engtype_3D": 0.0,
+     "pid_17132_luid_0x00000000_0x0000E486_phys_0_eng_0_engtype_3D": 0.0,
+     "pid_17132_luid_0x00000000_0x0000E486_phys_0_eng_10_engtype_3D": 0.0,
+     "pid_17132_luid_0x00000000_0x0000E486_phys_0_eng_11_engtype_3D": 0.0,
+     "pid_17132_luid_0x00000000_0x0000E486_phys_0_eng_12_engtype_3D": 0.0,
+     "pid_17132_luid_0x00000000_0x0000E486_phys_0_eng_1_engtype_3D": 0.0,
+     "pid_17132_luid_0x00000000_0x0000E486_phys_0_eng_2_engtype_3D": 0.0,
+     "pid_17132_luid_0x00000000_0x0000E486_phys_0_eng_3_engtype_3D": 0.0,
+     "pid_17132_luid_0x00000000_0x0000E486_phys_0_eng_4_engtype_3D": 0.0,
+     "pid_17132_luid_0x00000000_0x0000E486_phys_0_eng_5_engtype_3D": 0.0,
+     "pid_17132_luid_0x00000000_0x0000E486_phys_0_eng_6_engtype_3D": 0.0,
+     "pid_17132_luid_0x00000000_0x0000E486_phys_0_eng_7_engtype_3D": 0.0,
+     "pid_17132_luid_0x00000000_0x0000E486_phys_0_eng_8_engtype_3D": 0.0,
+     "pid_17132_luid_0x00000000_0x0000E486_phys_0_eng_9_engtype_3D": 0.0,
+     "pid_17316_luid_0x00000000_0x0000D0FF_phys_0_eng_0_engtype_3D": 0.0,
+     "pid_17316_luid_0x00000000_0x0000D0FF_phys_0_eng_1_engtype_LegacyOverlay": 0.0,
+     "pid_17316_luid_0x00000000_0x0000D0FF_phys_0_eng_2_engtype_VideoDecode": 0.0,
+     "pid_17316_luid_0x00000000_0x0000D0FF_phys_0_eng_3_engtype_Copy": 0.0,
+     "pid_17316_luid_0x00000000_0x0000D0FF_phys_0_eng_4_engtype_Copy": 0.0,
+     "pid_17316_luid_0x00000000_0x0000D0FF_phys_0_eng_5_engtype_Security": 0.0,
+     "pid_17316_luid_0x00000000_0x0000D0FF_phys_0_eng_6_engtype_VideoEncode": 0.0,
+     "pid_17316_luid_0x00000000_0x0000D0FF_phys_0_eng_7_engtype_OFA_0": 0.0,
+     "pid_17316_luid_0x00000000_0x0000D0FF_phys_0_eng_8_engtype_VR": 0.0,
+     "pid_1732_luid_0x00000000_0x0000D0FF_phys_0_eng_0_engtype_3D": 3.1416961929860596,
+     "pid_1732_luid_0x00000000_0x0000D0FF_phys_0_eng_1_engtype_LegacyOverlay": 0.0,
+     "pid_1732_luid_0x00000000_0x0000D0FF_phys_0_eng_2_engtype_VideoDecode": 0.0,
+     "pid_1732_luid_0x00000000_0x0000D0FF_phys_0_eng_3_engtype_Copy": 0.0,
+     "pid_1732_luid_0x00000000_0x0000D0FF_phys_0_eng_4_engtype_Copy": 0.023313666419358166,
+     "pid_1732_luid_0x00000000_0x0000D0FF_phys_0_eng_5_engtype_Security": 0.0,
+     "pid_1732_luid_0x00000000_0x0000D0FF_phys_0_eng_6_engtype_VideoEncode": 0.0,
+     "pid_1732_luid_0x00000000_0x0000D0FF_phys_0_eng_7_engtype_OFA_0": 0.0,
+     "pid_1732_luid_0x00000000_0x0000D0FF_phys_0_eng_8_engtype_VR": 0.0,
+     "pid_1732_luid_0x00000000_0x0000E486_phys_0_eng_0_engtype_3D": 0.0,
+     "pid_1732_luid_0x00000000_0x0000E486_phys_0_eng_10_engtype_3D": 0.0,
+     "pid_1732_luid_0x00000000_0x0000E486_phys_0_eng_11_engtype_3D": 0.0,
+     "pid_1732_luid_0x00000000_0x0000E486_phys_0_eng_12_engtype_3D": 0.0,
+     "pid_1732_luid_0x00000000_0x0000E486_phys_0_eng_1_engtype_3D": 0.0,
+     "pid_1732_luid_0x00000000_0x0000E486_phys_0_eng_2_engtype_3D": 0.0,
+     "pid_1732_luid_0x00000000_0x0000E486_phys_0_eng_3_engtype_3D": 0.0,
+     "pid_1732_luid_0x00000000_0x0000E486_phys_0_eng_4_engtype_3D": 0.0,
+     "pid_1732_luid_0x00000000_0x0000E486_phys_0_eng_5_engtype_3D": 0.0,
+     "pid_1732_luid_0x00000000_0x0000E486_phys_0_eng_6_engtype_3D": 0.0,
+     "pid_1732_luid_0x00000000_0x0000E486_phys_0_eng_7_engtype_3D": 0.0,
+     "pid_1732_luid_0x00000000_0x0000E486_phys_0_eng_8_engtype_3D": 0.0,
+     "pid_1732_luid_0x00000000_0x0000E486_phys_0_eng_9_engtype_3D": 0.0,
+     "pid_18736_luid_0x00000000_0x0000D0FF_phys_0_eng_0_engtype_3D": 0.2362105551427094,
+     "pid_18736_luid_0x00000000_0x0000D0FF_phys_0_eng_1_engtype_LegacyOverlay": 0.0,
+     "pid_18736_luid_0x00000000_0x0000D0FF_phys_0_eng_2_engtype_VideoDecode": 0.0,
+     "pid_18736_luid_0x00000000_0x0000D0FF_phys_0_eng_3_engtype_Copy": 0.0,
+     "pid_18736_luid_0x00000000_0x0000D0FF_phys_0_eng_4_engtype_Copy": 0.005648773627293118,
+     "pid_18736_luid_0x00000000_0x0000D0FF_phys_0_eng_5_engtype_Security": 0.0,
+     "pid_18736_luid_0x00000000_0x0000D0FF_phys_0_eng_6_engtype_VideoEncode": 0.0,
+     "pid_18736_luid_0x00000000_0x0000D0FF_phys_0_eng_7_engtype_OFA_0": 0.0,
+     "pid_18736_luid_0x00000000_0x0000D0FF_phys_0_eng_8_engtype_VR": 0.0,
+     "pid_20296_luid_0x00000000_0x0000D0FF_phys_0_eng_0_engtype_3D": 0.0,
+     "pid_20296_luid_0x00000000_0x0000D0FF_phys_0_eng_1_engtype_LegacyOverlay": 0.0,
+     "pid_20296_luid_0x00000000_0x0000D0FF_phys_0_eng_2_engtype_VideoDecode": 0.0,
+     "pid_20296_luid_0x00000000_0x0000D0FF_phys_0_eng_3_engtype_Copy": 0.0,
+     "pid_20296_luid_0x00000000_0x0000D0FF_phys_0_eng_4_engtype_Copy": 0.0,
+     "pid_20296_luid_0x00000000_0x0000D0FF_phys_0_eng_5_engtype_Security": 0.0,
+     "pid_20296_luid_0x00000000_0x0000D0FF_phys_0_eng_6_engtype_VideoEncode": 0.0,
+     "pid_20296_luid_0x00000000_0x0000D0FF_phys_0_eng_7_engtype_OFA_0": 0.0,
+     "pid_20296_luid_0x00000000_0x0000D0FF_phys_0_eng_8_engtype_VR": 0.0,
+     "pid_2184_luid_0x00000000_0x0000D0FF_phys_0_eng_0_engtype_3D": 0.0,
+     "pid_2184_luid_0x00000000_0x0000D0FF_phys_0_eng_1_engtype_LegacyOverlay": 0.0,
+     "pid_2184_luid_0x00000000_0x0000D0FF_phys_0_eng_2_engtype_VideoDecode": 0.0,
+     "pid_2184_luid_0x00000000_0x0000D0FF_phys_0_eng_3_engtype_Copy": 0.0,
+     "pid_2184_luid_0x00000000_0x0000D0FF_phys_0_eng_4_engtype_Copy": 0.0,
+     "pid_2184_luid_0x00000000_0x0000D0FF_phys_0_eng_5_engtype_Security": 0.0,
+     "pid_2184_luid_0x00000000_0x0000D0FF_phys_0_eng_6_engtype_VideoEncode": 0.0,
+     "pid_2184_luid_0x00000000_0x0000D0FF_phys_0_eng_7_engtype_OFA_0": 0.0,
+     "pid_2184_luid_0x00000000_0x0000D0FF_phys_0_eng_8_engtype_VR": 0.0,
+     "pid_22068_luid_0x00000000_0x0000D0FF_phys_0_eng_0_engtype_3D": 0.0,
+     "pid_22068_luid_0x00000000_0x0000D0FF_phys_0_eng_1_engtype_LegacyOverlay": 0.0,
+     "pid_22068_luid_0x00000000_0x0000D0FF_phys_0_eng_2_engtype_VideoDecode": 0.0,
+     "pid_22068_luid_0x00000000_0x0000D0FF_phys_0_eng_3_engtype_Copy": 0.0,
+     "pid_22068_luid_0x00000000_0x0000D0FF_phys_0_eng_4_engtype_Copy": 0.0,
+     "pid_22068_luid_0x00000000_0x0000D0FF_phys_0_eng_5_engtype_Security": 0.0,
+     "pid_22068_luid_0x00000000_0x0000D0FF_phys_0_eng_6_engtype_VideoEncode": 0.0,
+     "pid_22068_luid_0x00000000_0x0000D0FF_phys_0_eng_7_engtype_OFA_0": 0.0,
+     "pid_22068_luid_0x00000000_0x0000D0FF_phys_0_eng_8_engtype_VR": 0.0,
+     "pid_22332_luid_0x00000000_0x0000D0FF_phys_0_eng_0_engtype_3D": 0.1465687093470437,
+     "pid_22332_luid_0x00000000_0x0000D0FF_phys_0_eng_1_engtype_LegacyOverlay": 0.0,
+     "pid_22332_luid_0x00000000_0x0000D0FF_phys_0_eng_2_engtype_VideoDecode": 0.0,
+     "pid_22332_luid_0x00000000_0x0000D0FF_phys_0_eng_3_engtype_Copy": 0.0,
+     "pid_22332_luid_0x00000000_0x0000D0FF_phys_0_eng_4_engtype_Copy": 0.00680647281592563,
+     "pid_22332_luid_0x00000000_0x0000D0FF_phys_0_eng_5_engtype_Security": 0.0,
+     "pid_22332_luid_0x00000000_0x0000D0FF_phys_0_eng_6_engtype_VideoEncode": 0.0,
+     "pid_22332_luid_0x00000000_0x0000D0FF_phys_0_eng_7_engtype_OFA_0": 0.0,
+     "pid_22332_luid_0x00000000_0x0000D0FF_phys_0_eng_8_engtype_VR": 0.0,
+     "pid_26308_luid_0x00000000_0x0000D0FF_phys_0_eng_0_engtype_3D": 0.5837797960333633,
+     "pid_26308_luid_0x00000000_0x0000D0FF_phys_0_eng_1_engtype_LegacyOverlay": 0.0,
+     "pid_26308_luid_0x00000000_0x0000D0FF_phys_0_eng_2_engtype_VideoDecode": 0.0,
+     "pid_26308_luid_0x00000000_0x0000D0FF_phys_0_eng_3_engtype_Copy": 0.0,
+     "pid_26308_luid_0x00000000_0x0000D0FF_phys_0_eng_4_engtype_Copy": 0.030100178904445305,
+     "pid_26308_luid_0x00000000_0x0000D0FF_phys_0_eng_5_engtype_Security": 0.0,
+     "pid_26308_luid_0x00000000_0x0000D0FF_phys_0_eng_6_engtype_VideoEncode": 0.0,
+     "pid_26308_luid_0x00000000_0x0000D0FF_phys_0_eng_7_engtype_OFA_0": 0.0,
+     "pid_26308_luid_0x00000000_0x0000D0FF_phys_0_eng_8_engtype_VR": 0.0,
+     "pid_26308_luid_0x00000000_0x0000E486_phys_0_eng_0_engtype_3D": 0.0,
+     "pid_26308_luid_0x00000000_0x0000E486_phys_0_eng_10_engtype_3D": 0.0,
+     "pid_26308_luid_0x00000000_0x0000E486_phys_0_eng_11_engtype_3D": 0.0,
+     "pid_26308_luid_0x00000000_0x0000E486_phys_0_eng_12_engtype_3D": 0.0,
+     "pid_26308_luid_0x00000000_0x0000E486_phys_0_eng_1_engtype_3D": 0.0,
+     "pid_26308_luid_0x00000000_0x0000E486_phys_0_eng_2_engtype_3D": 0.0,
+     "pid_26308_luid_0x00000000_0x0000E486_phys_0_eng_3_engtype_3D": 0.0,
+     "pid_26308_luid_0x00000000_0x0000E486_phys_0_eng_4_engtype_3D": 0.0,
+     "pid_26308_luid_0x00000000_0x0000E486_phys_0_eng_5_engtype_3D": 0.0,
+     "pid_26308_luid_0x00000000_0x0000E486_phys_0_eng_6_engtype_3D": 0.0,
+     "pid_26308_luid_0x00000000_0x0000E486_phys_0_eng_7_engtype_3D": 0.0,
+     "pid_26308_luid_0x00000000_0x0000E486_phys_0_eng_8_engtype_3D": 0.0,
+     "pid_26308_luid_0x00000000_0x0000E486_phys_0_eng_9_engtype_3D": 0.0,
+     "pid_28012_luid_0x00000000_0x0000D0FF_phys_0_eng_0_engtype_3D": 0.0,
+     "pid_28012_luid_0x00000000_0x0000D0FF_phys_0_eng_1_engtype_LegacyOverlay": 0.0,
+     "pid_28012_luid_0x00000000_0x0000D0FF_phys_0_eng_2_engtype_VideoDecode": 0.0,
+     "pid_28012_luid_0x00000000_0x0000D0FF_phys_0_eng_3_engtype_Copy": 0.0,
+     "pid_28012_luid_0x00000000_0x0000D0FF_phys_0_eng_4_engtype_Copy": 0.0,
+     "pid_28012_luid_0x00000000_0x0000D0FF_phys_0_eng_5_engtype_Security": 0.0,
+     "pid_28012_luid_0x00000000_0x0000D0FF_phys_0_eng_6_engtype_VideoEncode": 0.0,
+     "pid_28012_luid_0x00000000_0x0000D0FF_phys_0_eng_7_engtype_OFA_0": 0.0,
+     "pid_28012_luid_0x00000000_0x0000D0FF_phys_0_eng_8_engtype_VR": 0.0,
+     "pid_28164_luid_0x00000000_0x0000E486_phys_0_eng_0_engtype_3D": 0.0,
+     "pid_28164_luid_0x00000000_0x0000E486_phys_0_eng_10_engtype_3D": 0.0,
+     "pid_28164_luid_0x00000000_0x0000E486_phys_0_eng_11_engtype_3D": 0.0,
+     "pid_28164_luid_0x00000000_0x0000E486_phys_0_eng_12_engtype_3D": 0.0,
+     "pid_28164_luid_0x00000000_0x0000E486_phys_0_eng_1_engtype_3D": 0.0,
+     "pid_28164_luid_0x00000000_0x0000E486_phys_0_eng_2_engtype_3D": 0.0,
+     "pid_28164_luid_0x00000000_0x0000E486_phys_0_eng_3_engtype_3D": 0.0,
+     "pid_28164_luid_0x00000000_0x0000E486_phys_0_eng_4_engtype_3D": 0.0,
+     "pid_28164_luid_0x00000000_0x0000E486_phys_0_eng_5_engtype_3D": 0.0,
+     "pid_28164_luid_0x00000000_0x0000E486_phys_0_eng_6_engtype_3D": 0.0,
+     "pid_28164_luid_0x00000000_0x0000E486_phys_0_eng_7_engtype_3D": 0.0,
+     "pid_28164_luid_0x00000000_0x0000E486_phys_0_eng_8_engtype_3D": 0.0,
+     "pid_28164_luid_0x00000000_0x0000E486_phys_0_eng_9_engtype_3D": 0.0,
+     "pid_3504_luid_0x00000000_0x0000D0FF_phys_0_eng_0_engtype_3D": 0.0,
+     "pid_3504_luid_0x00000000_0x0000D0FF_phys_0_eng_1_engtype_LegacyOverlay": 0.0,
+     "pid_3504_luid_0x00000000_0x0000D0FF_phys_0_eng_2_engtype_VideoDecode": 0.0,
+     "pid_3504_luid_0x00000000_0x0000D0FF_phys_0_eng_3_engtype_Copy": 0.0,
+     "pid_3504_luid_0x00000000_0x0000D0FF_phys_0_eng_4_engtype_Copy": 0.0,
+     "pid_3504_luid_0x00000000_0x0000D0FF_phys_0_eng_5_engtype_Security": 0.0,
+     "pid_3504_luid_0x00000000_0x0000D0FF_phys_0_eng_6_engtype_VideoEncode": 0.0,
+     "pid_3504_luid_0x00000000_0x0000D0FF_phys_0_eng_7_engtype_OFA_0": 0.0,
+     "pid_3504_luid_0x00000000_0x0000D0FF_phys_0_eng_8_engtype_VR": 0.0,
+     "pid_3800_luid_0x00000000_0x0000D0FF_phys_0_eng_0_engtype_3D": 0.0,
+     "pid_3800_luid_0x00000000_0x0000D0FF_phys_0_eng_1_engtype_LegacyOverlay": 0.0,
+     "pid_3800_luid_0x00000000_0x0000D0FF_phys_0_eng_2_engtype_VideoDecode": 0.0,
+     "pid_3800_luid_0x00000000_0x0000D0FF_phys_0_eng_3_engtype_Copy": 0.0,
+     "pid_3800_luid_0x00000000_0x0000D0FF_phys_0_eng_4_engtype_Copy": 0.0,
+     "pid_3800_luid_0x00000000_0x0000D0FF_phys_0_eng_5_engtype_Security": 0.0,
+     "pid_3800_luid_0x00000000_0x0000D0FF_phys_0_eng_6_engtype_VideoEncode": 0.0,
+     "pid_3800_luid_0x00000000_0x0000D0FF_phys_0_eng_7_engtype_OFA_0": 0.0,
+     "pid_3800_luid_0x00000000_0x0000D0FF_phys_0_eng_8_engtype_VR": 0.0,
+     "pid_3800_luid_0x00000000_0x0000E486_phys_0_eng_0_engtype_3D": 0.0,
+     "pid_3800_luid_0x00000000_0x0000E486_phys_0_eng_10_engtype_3D": 0.0,
+     "pid_3800_luid_0x00000000_0x0000E486_phys_0_eng_11_engtype_3D": 0.0,
+     "pid_3800_luid_0x00000000_0x0000E486_phys_0_eng_12_engtype_3D": 0.0,
+     "pid_3800_luid_0x00000000_0x0000E486_phys_0_eng_1_engtype_3D": 0.0,
+     "pid_3800_luid_0x00000000_0x0000E486_phys_0_eng_2_engtype_3D": 0.0,
+     "pid_3800_luid_0x00000000_0x0000E486_phys_0_eng_3_engtype_3D": 0.0,
+     "pid_3800_luid_0x00000000_0x0000E486_phys_0_eng_4_engtype_3D": 0.0,
+     "pid_3800_luid_0x00000000_0x0000E486_phys_0_eng_5_engtype_3D": 0.0,
+     "pid_3800_luid_0x00000000_0x0000E486_phys_0_eng_6_engtype_3D": 0.0,
+     "pid_3800_luid_0x00000000_0x0000E486_phys_0_eng_7_engtype_3D": 0.0,
+     "pid_3800_luid_0x00000000_0x0000E486_phys_0_eng_8_engtype_3D": 0.0,
+     "pid_3800_luid_0x00000000_0x0000E486_phys_0_eng_9_engtype_3D": 0.0,
+     "pid_4_luid_0x00000000_0x0000D0FF_phys_0_eng_0_engtype_3D": 0.0,
+     "pid_4_luid_0x00000000_0x0000D0FF_phys_0_eng_1_engtype_LegacyOverlay": 0.0,
+     "pid_4_luid_0x00000000_0x0000D0FF_phys_0_eng_2_engtype_VideoDecode": 0.0,
+     "pid_4_luid_0x00000000_0x0000D0FF_phys_0_eng_3_engtype_Copy": 0.0,
+     "pid_4_luid_0x00000000_0x0000D0FF_phys_0_eng_4_engtype_Copy": 0.0,
+     "pid_4_luid_0x00000000_0x0000D0FF_phys_0_eng_5_engtype_Security": 0.0,
+     "pid_4_luid_0x00000000_0x0000D0FF_phys_0_eng_6_engtype_VideoEncode": 0.0,
+     "pid_4_luid_0x00000000_0x0000D0FF_phys_0_eng_7_engtype_OFA_0": 0.0,
+     "pid_4_luid_0x00000000_0x0000D0FF_phys_0_eng_8_engtype_VR": 0.0,
+     "pid_4_luid_0x00000000_0x0000E486_phys_0_eng_0_engtype_3D": 0.0,
+     "pid_4_luid_0x00000000_0x0000E486_phys_0_eng_10_engtype_3D": 0.0,
+     "pid_4_luid_0x00000000_0x0000E486_phys_0_eng_11_engtype_3D": 0.0,
+     "pid_4_luid_0x00000000_0x0000E486_phys_0_eng_12_engtype_3D": 0.0,
+     "pid_4_luid_0x00000000_0x0000E486_phys_0_eng_1_engtype_3D": 0.0,
+     "pid_4_luid_0x00000000_0x0000E486_phys_0_eng_2_engtype_3D": 0.0,
+     "pid_4_luid_0x00000000_0x0000E486_phys_0_eng_3_engtype_3D": 0.0,
+     "pid_4_luid_0x00000000_0x0000E486_phys_0_eng_4_engtype_3D": 0.0,
+     "pid_4_luid_0x00000000_0x0000E486_phys_0_eng_5_engtype_3D": 0.0,
+     "pid_4_luid_0x00000000_0x0000E486_phys_0_eng_6_engtype_3D": 0.0,
+     "pid_4_luid_0x00000000_0x0000E486_phys_0_eng_7_engtype_3D": 0.0,
+     "pid_4_luid_0x00000000_0x0000E486_phys_0_eng_8_engtype_3D": 0.0,
+     "pid_4_luid_0x00000000_0x0000E486_phys_0_eng_9_engtype_3D": 0.0,
+     "pid_9856_luid_0x00000000_0x0000D0FF_phys_0_eng_0_engtype_3D": 0.013533104308497294,
+     "pid_9856_luid_0x00000000_0x0000D0FF_phys_0_eng_1_engtype_LegacyOverlay": 0.0,
+     "pid_9856_luid_0x00000000_0x0000D0FF_phys_0_eng_2_engtype_VideoDecode": 0.0,
+     "pid_9856_luid_0x00000000_0x0000D0FF_phys_0_eng_3_engtype_Copy": 0.0,
+     "pid_9856_luid_0x00000000_0x0000D0FF_phys_0_eng_4_engtype_Copy": 0.003632780212605468,
+     "pid_9856_luid_0x00000000_0x0000D0FF_phys_0_eng_5_engtype_Security": 0.0,
+     "pid_9856_luid_0x00000000_0x0000D0FF_phys_0_eng_6_engtype_VideoEncode": 0.0,
+     "pid_9856_luid_0x00000000_0x0000D0FF_phys_0_eng_7_engtype_OFA_0": 0.0,
+     "pid_9856_luid_0x00000000_0x0000D0FF_phys_0_eng_8_engtype_VR": 0.0,
+     "pid_9856_luid_0x00000000_0x0000E486_phys_0_eng_0_engtype_3D": 0.0,
+     "pid_9856_luid_0x00000000_0x0000E486_phys_0_eng_10_engtype_3D": 0.0,
+     "pid_9856_luid_0x00000000_0x0000E486_phys_0_eng_11_engtype_3D": 0.0,
+     "pid_9856_luid_0x00000000_0x0000E486_phys_0_eng_12_engtype_3D": 0.0,
+     "pid_9856_luid_0x00000000_0x0000E486_phys_0_eng_1_engtype_3D": 0.0,
+     "pid_9856_luid_0x00000000_0x0000E486_phys_0_eng_2_engtype_3D": 0.0,
+     "pid_9856_luid_0x00000000_0x0000E486_phys_0_eng_3_engtype_3D": 0.0,
+     "pid_9856_luid_0x00000000_0x0000E486_phys_0_eng_4_engtype_3D": 0.0,
+     "pid_9856_luid_0x00000000_0x0000E486_phys_0_eng_5_engtype_3D": 0.0,
+     "pid_9856_luid_0x00000000_0x0000E486_phys_0_eng_6_engtype_3D": 0.0,
+     "pid_9856_luid_0x00000000_0x0000E486_phys_0_eng_7_engtype_3D": 0.0,
+     "pid_9856_luid_0x00000000_0x0000E486_phys_0_eng_8_engtype_3D": 0.0,
+     "pid_9856_luid_0x00000000_0x0000E486_phys_0_eng_9_engtype_3D": 0.0,
+     "pid_9972_luid_0x00000000_0x0000D0FF_phys_0_eng_0_engtype_3D": 0.0,
+     "pid_9972_luid_0x00000000_0x0000D0FF_phys_0_eng_1_engtype_LegacyOverlay": 0.0,
+     "pid_9972_luid_0x00000000_0x0000D0FF_phys_0_eng_2_engtype_VideoDecode": 0.0,
+     "pid_9972_luid_0x00000000_0x0000D0FF_phys_0_eng_3_engtype_Copy": 0.0,
+     "pid_9972_luid_0x00000000_0x0000D0FF_phys_0_eng_4_engtype_Copy": 0.0,
+     "pid_9972_luid_0x00000000_0x0000D0FF_phys_0_eng_5_engtype_Security": 0.0,
+     "pid_9972_luid_0x00000000_0x0000D0FF_phys_0_eng_6_engtype_VideoEncode": 0.0,
+     "pid_9972_luid_0x00000000_0x0000D0FF_phys_0_eng_7_engtype_OFA_0": 0.0,
+     "pid_9972_luid_0x00000000_0x0000D0FF_phys_0_eng_8_engtype_VR": 0.0
+    },
+    "\\GPU Process Memory(*)\\Dedicated Usage": {
+     "pid_10520_luid_0x00000000_0x0000D0FF_phys_0": 15048704.0,
+     "pid_1084_luid_0x00000000_0x0000D0FF_phys_0": 64487424.0,
+     "pid_11140_luid_0x00000000_0x0000D0FF_phys_0": 14270464.0,
+     "pid_11164_luid_0x00000000_0x0000D0FF_phys_0": 15978496.0,
+     "pid_11780_luid_0x00000000_0x0000D0FF_phys_0": 18665472.0,
+     "pid_12784_luid_0x00000000_0x0000D0FF_phys_0": 66306048.0,
+     "pid_12784_luid_0x00000000_0x0000E486_phys_0": 0.0,
+     "pid_12892_luid_0x00000000_0x0000D0FF_phys_0": 19079168.0,
+     "pid_13668_luid_0x00000000_0x0000D0FF_phys_0": 56963072.0,
+     "pid_15088_luid_0x00000000_0x0000D0FF_phys_0": 0.0,
+     "pid_15780_luid_0x00000000_0x0000D0FF_phys_0": 28979200.0,
+     "pid_15960_luid_0x00000000_0x0000E486_phys_0": 0.0,
+     "pid_16296_luid_0x00000000_0x0000D0FF_phys_0": 46981120.0,
+     "pid_16296_luid_0x00000000_0x0000E486_phys_0": 0.0,
+     "pid_16356_luid_0x00000000_0x0000D0FF_phys_0": 0.0,
+     "pid_17132_luid_0x00000000_0x0000E486_phys_0": 0.0,
+     "pid_17316_luid_0x00000000_0x0000D0FF_phys_0": 58609664.0,
+     "pid_1732_luid_0x00000000_0x0000D0FF_phys_0": 876351488.0,
+     "pid_1732_luid_0x00000000_0x0000E486_phys_0": 0.0,
+     "pid_18736_luid_0x00000000_0x0000D0FF_phys_0": 125771776.0,
+     "pid_18800_luid_0x00000000_0x0000E486_phys_0": 0.0,
+     "pid_20296_luid_0x00000000_0x0000D0FF_phys_0": 11808768.0,
+     "pid_20356_luid_0x00000000_0x0000D0FF_phys_0": 88473600.0,
+     "pid_2184_luid_0x00000000_0x0000D0FF_phys_0": 24576.0,
+     "pid_22068_luid_0x00000000_0x0000D0FF_phys_0": 11526144.0,
+     "pid_22332_luid_0x00000000_0x0000D0FF_phys_0": 143462400.0,
+     "pid_26308_luid_0x00000000_0x0000D0FF_phys_0": 67248128.0,
+     "pid_26308_luid_0x00000000_0x0000E486_phys_0": 0.0,
+     "pid_28012_luid_0x00000000_0x0000D0FF_phys_0": 9801728.0,
+     "pid_28164_luid_0x00000000_0x0000E486_phys_0": 0.0,
+     "pid_3504_luid_0x00000000_0x0000D0FF_phys_0": 9801728.0,
+     "pid_3800_luid_0x00000000_0x0000D0FF_phys_0": 14532608.0,
+     "pid_3800_luid_0x00000000_0x0000E486_phys_0": 0.0,
+     "pid_4148_luid_0x00000000_0x0000D0FF_phys_0": 0.0,
+     "pid_4_luid_0x00000000_0x0000D0FF_phys_0": 4235264.0,
+     "pid_4_luid_0x00000000_0x0000E486_phys_0": 0.0,
+     "pid_8864_luid_0x00000000_0x0000D0FF_phys_0": 0.0,
+     "pid_9856_luid_0x00000000_0x0000D0FF_phys_0": 81674240.0,
+     "pid_9856_luid_0x00000000_0x0000E486_phys_0": 0.0,
+     "pid_9972_luid_0x00000000_0x0000D0FF_phys_0": 9801728.0
+    },
+    "\\GPU Adapter Memory(*)\\Dedicated Usage": {
+     "luid_0x00000000_0x0000D0FF_phys_0": 1217929216.0,
+     "luid_0x00000000_0x0000E486_phys_0": 0.0
+    }
+   }
+  ],
+  "process_samples[]": [
+   [
+    {
+     "pid": 0,
+     "name": "System Idle Process",
+     "cpu_s": 2935877.40625,
+     "private_bytes": 61440,
+     "working_set_bytes": 8192,
+     "io_read_bytes": 0,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 4,
+     "name": "System",
+     "cpu_s": 35643.25,
+     "private_bytes": 73728,
+     "working_set_bytes": 7745536,
+     "io_read_bytes": 40401576,
+     "io_write_bytes": 6112060957
+    },
+    {
+     "pid": 188,
+     "name": "",
+     "cpu_s": 0.0,
+     "private_bytes": 180224,
+     "working_set_bytes": 94191616,
+     "io_read_bytes": 0,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 232,
+     "name": "Registry",
+     "cpu_s": 7.609375,
+     "private_bytes": 4468736,
+     "working_set_bytes": 60518400,
+     "io_read_bytes": 2121728,
+     "io_write_bytes": 725344256
+    },
+    {
+     "pid": 724,
+     "name": "csrss.exe",
+     "cpu_s": 12.671875,
+     "private_bytes": 2453504,
+     "working_set_bytes": 6070272,
+     "io_read_bytes": 426482,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 736,
+     "name": "smss.exe",
+     "cpu_s": 0.21875,
+     "private_bytes": 1183744,
+     "working_set_bytes": 1433600,
+     "io_read_bytes": 2858357,
+     "io_write_bytes": 69454
+    },
+    {
+     "pid": 1076,
+     "name": "wininit.exe",
+     "cpu_s": 0.796875,
+     "private_bytes": 1744896,
+     "working_set_bytes": 8916992,
+     "io_read_bytes": 36868,
+     "io_write_bytes": 98304
+    },
+    {
+     "pid": 1084,
+     "name": "csrss.exe",
+     "cpu_s": 800.078125,
+     "private_bytes": 4329472,
+     "working_set_bytes": 7352320,
+     "io_read_bytes": 1676295,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 1168,
+     "name": "services.exe",
+     "cpu_s": 575.96875,
+     "private_bytes": 6975488,
+     "working_set_bytes": 19275776,
+     "io_read_bytes": 446580,
+     "io_write_bytes": 409284
+    },
+    {
+     "pid": 1196,
+     "name": "winlogon.exe",
+     "cpu_s": 0.546875,
+     "private_bytes": 2736128,
+     "working_set_bytes": 18178048,
+     "io_read_bytes": 569304,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 1220,
+     "name": "LsaIso.exe",
+     "cpu_s": 1.6875,
+     "private_bytes": 1282048,
+     "working_set_bytes": 4743168,
+     "io_read_bytes": 0,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 1240,
+     "name": "lsass.exe",
+     "cpu_s": 96.3125,
+     "private_bytes": 12574720,
+     "working_set_bytes": 34189312,
+     "io_read_bytes": 13601366,
+     "io_write_bytes": 2180187
+    },
+    {
+     "pid": 1264,
+     "name": "svchost.exe",
+     "cpu_s": 3.078125,
+     "private_bytes": 2482176,
+     "working_set_bytes": 15507456,
+     "io_read_bytes": 0,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 1272,
+     "name": "svchost.exe",
+     "cpu_s": 3.28125,
+     "private_bytes": 2998272,
+     "working_set_bytes": 9883648,
+     "io_read_bytes": 0,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 1424,
+     "name": "svchost.exe",
+     "cpu_s": 96.296875,
+     "private_bytes": 14069760,
+     "working_set_bytes": 39546880,
+     "io_read_bytes": 3683188,
+     "io_write_bytes": 94208
+    },
+    {
+     "pid": 1456,
+     "name": "fontdrvhost.exe",
+     "cpu_s": 0.453125,
+     "private_bytes": 3526656,
+     "working_set_bytes": 8884224,
+     "io_read_bytes": 0,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 1460,
+     "name": "fontdrvhost.exe",
+     "cpu_s": 0.0625,
+     "private_bytes": 1462272,
+     "working_set_bytes": 4259840,
+     "io_read_bytes": 0,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 1480,
+     "name": "WUDFHost.exe",
+     "cpu_s": 0.046875,
+     "private_bytes": 1617920,
+     "working_set_bytes": 7303168,
+     "io_read_bytes": 0,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 1588,
+     "name": "svchost.exe",
+     "cpu_s": 120.375,
+     "private_bytes": 9252864,
+     "working_set_bytes": 19091456,
+     "io_read_bytes": 565248,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 1640,
+     "name": "svchost.exe",
+     "cpu_s": 9.578125,
+     "private_bytes": 3252224,
+     "working_set_bytes": 12341248,
+     "io_read_bytes": 3714,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 1684,
+     "name": "svchost.exe",
+     "cpu_s": 15.5625,
+     "private_bytes": 6070272,
+     "working_set_bytes": 16207872,
+     "io_read_bytes": 6,
+     "io_write_bytes": 33804484
+    },
+    {
+     "pid": 1732,
+     "name": "dwm.exe",
+     "cpu_s": 5001.109375,
+     "private_bytes": 381620224,
+     "working_set_bytes": 131837952,
+     "io_read_bytes": 79236416,
+     "io_write_bytes": 276
+    },
+    {
+     "pid": 1800,
+     "name": "svchost.exe",
+     "cpu_s": 179.453125,
+     "private_bytes": 1454080,
+     "working_set_bytes": 6971392,
+     "io_read_bytes": 0,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 1816,
+     "name": "svchost.exe",
+     "cpu_s": 31.65625,
+     "private_bytes": 12455936,
+     "working_set_bytes": 28876800,
+     "io_read_bytes": 26507868,
+     "io_write_bytes": 363606
+    },
+    {
+     "pid": 1840,
+     "name": "svchost.exe",
+     "cpu_s": 0.25,
+     "private_bytes": 1343488,
+     "working_set_bytes": 6762496,
+     "io_read_bytes": 0,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 1888,
+     "name": "svchost.exe",
+     "cpu_s": 1.15625,
+     "private_bytes": 2007040,
+     "working_set_bytes": 9895936,
+     "io_read_bytes": 0,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 1912,
+     "name": "svchost.exe",
+     "cpu_s": 1.46875,
+     "private_bytes": 3457024,
+     "working_set_bytes": 18104320,
+     "io_read_bytes": 0,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 1920,
+     "name": "svchost.exe",
+     "cpu_s": 4.984375,
+     "private_bytes": 3563520,
+     "working_set_bytes": 15306752,
+     "io_read_bytes": 0,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 1996,
+     "name": "svchost.exe",
+     "cpu_s": 0.65625,
+     "private_bytes": 7331840,
+     "working_set_bytes": 12812288,
+     "io_read_bytes": 917504,
+     "io_write_bytes": 118784
+    },
+    {
+     "pid": 2012,
+     "name": "svchost.exe",
+     "cpu_s": 1.234375,
+     "private_bytes": 3014656,
+     "working_set_bytes": 13373440,
+     "io_read_bytes": 0,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 2052,
+     "name": "svchost.exe",
+     "cpu_s": 0.984375,
+     "private_bytes": 2560000,
+     "working_set_bytes": 13787136,
+     "io_read_bytes": 2506752,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 2104,
+     "name": "svchost.exe",
+     "cpu_s": 1.75,
+     "private_bytes": 2027520,
+     "working_set_bytes": 9699328,
+     "io_read_bytes": 0,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 2184,
+     "name": "Plex Media Server.exe",
+     "cpu_s": 277.828125,
+     "private_bytes": 67006464,
+     "working_set_bytes": 50847744,
+     "io_read_bytes": 12387308,
+     "io_write_bytes": 4959782
+    },
+    {
+     "pid": 2256,
+     "name": "svchost.exe",
+     "cpu_s": 7.734375,
+     "private_bytes": 3399680,
+     "working_set_bytes": 16166912,
+     "io_read_bytes": 0,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 2264,
+     "name": "conhost.exe",
+     "cpu_s": 0.015625,
+     "private_bytes": 1187840,
+     "working_set_bytes": 7188480,
+     "io_read_bytes": 0,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 2272,
+     "name": "svchost.exe",
+     "cpu_s": 0.75,
+     "private_bytes": 1863680,
+     "working_set_bytes": 7467008,
+     "io_read_bytes": 380,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 2360,
+     "name": "svchost.exe",
+     "cpu_s": 4.15625,
+     "private_bytes": 6246400,
+     "working_set_bytes": 8265728,
+     "io_read_bytes": 0,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 2396,
+     "name": "svchost.exe",
+     "cpu_s": 1.171875,
+     "private_bytes": 1937408,
+     "working_set_bytes": 7843840,
+     "io_read_bytes": 0,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 2500,
+     "name": "svchost.exe",
+     "cpu_s": 51.609375,
+     "private_bytes": 6893568,
+     "working_set_bytes": 20926464,
+     "io_read_bytes": 116,
+     "io_write_bytes": 160
+    },
+    {
+     "pid": 2660,
+     "name": "msedgewebview2.exe",
+     "cpu_s": 1.0625,
+     "private_bytes": 2883584,
+     "working_set_bytes": 15847424,
+     "io_read_bytes": 1712,
+     "io_write_bytes": 84
+    },
+    {
+     "pid": 2720,
+     "name": "svchost.exe",
+     "cpu_s": 4.671875,
+     "private_bytes": 4825088,
+     "working_set_bytes": 22900736,
+     "io_read_bytes": 79844,
+     "io_write_bytes": 38619
+    },
+    {
+     "pid": 2744,
+     "name": "svchost.exe",
+     "cpu_s": 0.734375,
+     "private_bytes": 2555904,
+     "working_set_bytes": 9158656,
+     "io_read_bytes": 321,
+     "io_write_bytes": 24075
+    },
+    {
+     "pid": 2764,
+     "name": "chrome.exe",
+     "cpu_s": 505.859375,
+     "private_bytes": 121360384,
+     "working_set_bytes": 132046848,
+     "io_read_bytes": 459957584,
+     "io_write_bytes": 271115402
+    },
+    {
+     "pid": 2772,
+     "name": "msedgewebview2.exe",
+     "cpu_s": 47.4375,
+     "private_bytes": 42287104,
+     "working_set_bytes": 108941312,
+     "io_read_bytes": 56041327,
+     "io_write_bytes": 27257900
+    },
+    {
+     "pid": 2796,
+     "name": "svchost.exe",
+     "cpu_s": 0.84375,
+     "private_bytes": 2109440,
+     "working_set_bytes": 9596928,
+     "io_read_bytes": 0,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 2844,
+     "name": "heidisql.exe",
+     "cpu_s": 213.328125,
+     "private_bytes": 50683904,
+     "working_set_bytes": 53534720,
+     "io_read_bytes": 90068905,
+     "io_write_bytes": 2347
+    },
+    {
+     "pid": 2848,
+     "name": "cowork-svc.exe",
+     "cpu_s": 3.03125,
+     "private_bytes": 28180480,
+     "working_set_bytes": 26279936,
+     "io_read_bytes": 120628703,
+     "io_write_bytes": 56839
+    },
+    {
+     "pid": 2924,
+     "name": "dasHost.exe",
+     "cpu_s": 0.3125,
+     "private_bytes": 4694016,
+     "working_set_bytes": 15040512,
+     "io_read_bytes": 0,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 2932,
+     "name": "svchost.exe",
+     "cpu_s": 3612.046875,
+     "private_bytes": 4661248,
+     "working_set_bytes": 13033472,
+     "io_read_bytes": 10080,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 2948,
+     "name": "NVDisplay.Container.exe",
+     "cpu_s": 1103.03125,
+     "private_bytes": 27926528,
+     "working_set_bytes": 37490688,
+     "io_read_bytes": 11318249,
+     "io_write_bytes": 14837782
+    },
+    {
+     "pid": 2960,
+     "name": "Plex Tuner Service.exe",
+     "cpu_s": 177.640625,
+     "private_bytes": 5566464,
+     "working_set_bytes": 18374656,
+     "io_read_bytes": 24719,
+     "io_write_bytes": 1879
+    },
+    {
+     "pid": 3036,
+     "name": "svchost.exe",
+     "cpu_s": 43.46875,
+     "private_bytes": 2961408,
+     "working_set_bytes": 10321920,
+     "io_read_bytes": 0,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 3040,
+     "name": "svchost.exe",
+     "cpu_s": 13.421875,
+     "private_bytes": 18812928,
+     "working_set_bytes": 20357120,
+     "io_read_bytes": 377534048,
+     "io_write_bytes": 109845040
+    },
+    {
+     "pid": 3120,
+     "name": "svchost.exe",
+     "cpu_s": 26.3125,
+     "private_bytes": 1495040,
+     "working_set_bytes": 7581696,
+     "io_read_bytes": 0,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 3128,
+     "name": "svchost.exe",
+     "cpu_s": 1.21875,
+     "private_bytes": 2101248,
+     "working_set_bytes": 10252288,
+     "io_read_bytes": 754,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 3136,
+     "name": "svchost.exe",
+     "cpu_s": 1325.078125,
+     "private_bytes": 2584576,
+     "working_set_bytes": 18759680,
+     "io_read_bytes": 9660928,
+     "io_write_bytes": 119043744
+    },
+    {
+     "pid": 3248,
+     "name": "MemCompression",
+     "cpu_s": 492.75,
+     "private_bytes": 8445952,
+     "working_set_bytes": 1438752768,
+     "io_read_bytes": 0,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 3260,
+     "name": "chrome.exe",
+     "cpu_s": 4.28125,
+     "private_bytes": 27426816,
+     "working_set_bytes": 70348800,
+     "io_read_bytes": 5820240,
+     "io_write_bytes": 5510048
+    },
+    {
+     "pid": 3288,
+     "name": "svchost.exe",
+     "cpu_s": 2.640625,
+     "private_bytes": 4538368,
+     "working_set_bytes": 15937536,
+     "io_read_bytes": 482,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 3332,
+     "name": "svchost.exe",
+     "cpu_s": 0.71875,
+     "private_bytes": 2134016,
+     "working_set_bytes": 10956800,
+     "io_read_bytes": 2292,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 3352,
+     "name": "svchost.exe",
+     "cpu_s": 18.0,
+     "private_bytes": 2273280,
+     "working_set_bytes": 11227136,
+     "io_read_bytes": 0,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 3408,
+     "name": "svchost.exe",
+     "cpu_s": 1.21875,
+     "private_bytes": 2408448,
+     "working_set_bytes": 11317248,
+     "io_read_bytes": 0,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 3416,
+     "name": "svchost.exe",
+     "cpu_s": 1.859375,
+     "private_bytes": 2310144,
+     "working_set_bytes": 10702848,
+     "io_read_bytes": 0,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 3504,
+     "name": "ShellHost.exe",
+     "cpu_s": 0.390625,
+     "private_bytes": 54640640,
+     "working_set_bytes": 54628352,
+     "io_read_bytes": 28963,
+     "io_write_bytes": 8
+    },
+    {
+     "pid": 3544,
+     "name": "DiscordSystemHelper.exe",
+     "cpu_s": 33.59375,
+     "private_bytes": 3166208,
+     "working_set_bytes": 13295616,
+     "io_read_bytes": 211119993,
+     "io_write_bytes": 877
+    },
+    {
+     "pid": 3552,
+     "name": "svchost.exe",
+     "cpu_s": 0.828125,
+     "private_bytes": 1724416,
+     "working_set_bytes": 8929280,
+     "io_read_bytes": 0,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 3580,
+     "name": "svchost.exe",
+     "cpu_s": 22.21875,
+     "private_bytes": 4321280,
+     "working_set_bytes": 20164608,
+     "io_read_bytes": 0,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 3644,
+     "name": "svchost.exe",
+     "cpu_s": 2.109375,
+     "private_bytes": 2027520,
+     "working_set_bytes": 10960896,
+     "io_read_bytes": 0,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 3712,
+     "name": "svchost.exe",
+     "cpu_s": 15.140625,
+     "private_bytes": 20873216,
+     "working_set_bytes": 20402176,
+     "io_read_bytes": 0,
+     "io_write_bytes": 32768
+    },
+    {
+     "pid": 3724,
+     "name": "conhost.exe",
+     "cpu_s": 0.0625,
+     "private_bytes": 1716224,
+     "working_set_bytes": 9736192,
+     "io_read_bytes": 1584,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 3784,
+     "name": "svchost.exe",
+     "cpu_s": 0.90625,
+     "private_bytes": 1802240,
+     "working_set_bytes": 8163328,
+     "io_read_bytes": 0,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 3792,
+     "name": "svchost.exe",
+     "cpu_s": 2.421875,
+     "private_bytes": 2850816,
+     "working_set_bytes": 12685312,
+     "io_read_bytes": 0,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 3800,
+     "name": "SystemSettings.exe",
+     "cpu_s": 1.515625,
+     "private_bytes": 77889536,
+     "working_set_bytes": 3239936,
+     "io_read_bytes": 136806,
+     "io_write_bytes": 168
+    },
+    {
+     "pid": 3860,
+     "name": "svchost.exe",
+     "cpu_s": 59.296875,
+     "private_bytes": 16515072,
+     "working_set_bytes": 22163456,
+     "io_read_bytes": 205353113,
+     "io_write_bytes": 46746216
+    },
+    {
+     "pid": 3888,
+     "name": "svchost.exe",
+     "cpu_s": 0.859375,
+     "private_bytes": 2809856,
+     "working_set_bytes": 16060416,
+     "io_read_bytes": 0,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 3920,
+     "name": "svchost.exe",
+     "cpu_s": 7.984375,
+     "private_bytes": 12767232,
+     "working_set_bytes": 31461376,
+     "io_read_bytes": 2857193,
+     "io_write_bytes": 1600034
+    },
+    {
+     "pid": 3940,
+     "name": "svchost.exe",
+     "cpu_s": 1.5625,
+     "private_bytes": 1921024,
+     "working_set_bytes": 9490432,
+     "io_read_bytes": 0,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 3956,
+     "name": "claude.exe",
+     "cpu_s": 4.421875,
+     "private_bytes": 31666176,
+     "working_set_bytes": 125116416,
+     "io_read_bytes": 1135989,
+     "io_write_bytes": 30528
+    },
+    {
+     "pid": 3980,
+     "name": "svchost.exe",
+     "cpu_s": 131.734375,
+     "private_bytes": 23134208,
+     "working_set_bytes": 34459648,
+     "io_read_bytes": 79153,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 4012,
+     "name": "svchost.exe",
+     "cpu_s": 10.28125,
+     "private_bytes": 10133504,
+     "working_set_bytes": 28831744,
+     "io_read_bytes": 5029466,
+     "io_write_bytes": 185287
+    },
+    {
+     "pid": 4048,
+     "name": "svchost.exe",
+     "cpu_s": 1.109375,
+     "private_bytes": 3244032,
+     "working_set_bytes": 14217216,
+     "io_read_bytes": 0,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 4072,
+     "name": "svchost.exe",
+     "cpu_s": 87.109375,
+     "private_bytes": 9486336,
+     "working_set_bytes": 27308032,
+     "io_read_bytes": 123781833,
+     "io_write_bytes": 247548955
+    },
+    {
+     "pid": 4148,
+     "name": "chrome.exe",
+     "cpu_s": 6976.6875,
+     "private_bytes": 312877056,
+     "working_set_bytes": 428343296,
+     "io_read_bytes": 83199339074,
+     "io_write_bytes": 80298001040
+    },
+    {
+     "pid": 4184,
+     "name": "spoolsv.exe",
+     "cpu_s": 0.3125,
+     "private_bytes": 5963776,
+     "working_set_bytes": 19382272,
+     "io_read_bytes": 232,
+     "io_write_bytes": 320
+    },
+    {
+     "pid": 4344,
+     "name": "svchost.exe",
+     "cpu_s": 0.984375,
+     "private_bytes": 1839104,
+     "working_set_bytes": 9498624,
+     "io_read_bytes": 436,
+     "io_write_bytes": 866
+    },
+    {
+     "pid": 4420,
+     "name": "svchost.exe",
+     "cpu_s": 1.09375,
+     "private_bytes": 2088960,
+     "working_set_bytes": 10153984,
+     "io_read_bytes": 86520,
+     "io_write_bytes": 102752
+    },
+    {
+     "pid": 4448,
+     "name": "svchost.exe",
+     "cpu_s": 0.046875,
+     "private_bytes": 2031616,
+     "working_set_bytes": 10539008,
+     "io_read_bytes": 4723,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 4492,
+     "name": "svchost.exe",
+     "cpu_s": 24.21875,
+     "private_bytes": 12595200,
+     "working_set_bytes": 30650368,
+     "io_read_bytes": 143940299,
+     "io_write_bytes": 68655
+    },
+    {
+     "pid": 4544,
+     "name": "svchost.exe",
+     "cpu_s": 121.0625,
+     "private_bytes": 29786112,
+     "working_set_bytes": 57389056,
+     "io_read_bytes": 503446071,
+     "io_write_bytes": 59019996
+    },
+    {
+     "pid": 4552,
+     "name": "svchost.exe",
+     "cpu_s": 0.765625,
+     "private_bytes": 1613824,
+     "working_set_bytes": 8757248,
+     "io_read_bytes": 0,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 4560,
+     "name": "svchost.exe",
+     "cpu_s": 220.796875,
+     "private_bytes": 47529984,
+     "working_set_bytes": 42352640,
+     "io_read_bytes": 366239352,
+     "io_write_bytes": 372402162
+    },
+    {
+     "pid": 4568,
+     "name": "svchost.exe",
+     "cpu_s": 1.203125,
+     "private_bytes": 2916352,
+     "working_set_bytes": 10383360,
+     "io_read_bytes": 0,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 4576,
+     "name": "svchost.exe",
+     "cpu_s": 0.0625,
+     "private_bytes": 1388544,
+     "working_set_bytes": 7221248,
+     "io_read_bytes": 23552,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 4584,
+     "name": "svchost.exe",
+     "cpu_s": 2.125,
+     "private_bytes": 5156864,
+     "working_set_bytes": 27406336,
+     "io_read_bytes": 1845406,
+     "io_write_bytes": 16258784
+    },
+    {
+     "pid": 4592,
+     "name": "svchost.exe",
+     "cpu_s": 52.109375,
+     "private_bytes": 8974336,
+     "working_set_bytes": 22929408,
+     "io_read_bytes": 303684530,
+     "io_write_bytes": 2942744
+    },
+    {
+     "pid": 4600,
+     "name": "svchost.exe",
+     "cpu_s": 0.671875,
+     "private_bytes": 2314240,
+     "working_set_bytes": 10870784,
+     "io_read_bytes": 0,
+     "io_write_bytes": 15586
+    },
+    {
+     "pid": 4676,
+     "name": "chrome.exe",
+     "cpu_s": 1.609375,
+     "private_bytes": 2449408,
+     "working_set_bytes": 9555968,
+     "io_read_bytes": 208872,
+     "io_write_bytes": 69624
+    },
+    {
+     "pid": 4760,
+     "name": "remoting_host.exe",
+     "cpu_s": 0.203125,
+     "private_bytes": 7122944,
+     "working_set_bytes": 15273984,
+     "io_read_bytes": 166225,
+     "io_write_bytes": 5560
+    },
+    {
+     "pid": 4772,
+     "name": "nvcontainer.exe",
+     "cpu_s": 10.390625,
+     "private_bytes": 13021184,
+     "working_set_bytes": 37691392,
+     "io_read_bytes": 8151960,
+     "io_write_bytes": 2704757
+    },
+    {
+     "pid": 4780,
+     "name": "logi_lamparray_service.AMD64.exe",
+     "cpu_s": 407.65625,
+     "private_bytes": 4476928,
+     "working_set_bytes": 13160448,
+     "io_read_bytes": 2808,
+     "io_write_bytes": 315
+    },
+    {
+     "pid": 4788,
+     "name": "LogiSyncStub.exe",
+     "cpu_s": 0.109375,
+     "private_bytes": 2019328,
+     "working_set_bytes": 11563008,
+     "io_read_bytes": 0,
+     "io_write_bytes": 801
+    },
+    {
+     "pid": 4796,
+     "name": "MsMpEng.exe",
+     "cpu_s": 6585.4375,
+     "private_bytes": 495284224,
+     "working_set_bytes": 407568384,
+     "io_read_bytes": 41180840840,
+     "io_write_bytes": 18543838879
+    },
+    {
+     "pid": 4812,
+     "name": "wslservice.exe",
+     "cpu_s": 5.34375,
+     "private_bytes": 8130560,
+     "working_set_bytes": 31518720,
+     "io_read_bytes": 45371,
+     "io_write_bytes": 11489
+    },
+    {
+     "pid": 4820,
+     "name": "MpDefenderCoreService.exe",
+     "cpu_s": 18.71875,
+     "private_bytes": 14082048,
+     "working_set_bytes": 26664960,
+     "io_read_bytes": 31881884,
+     "io_write_bytes": 664948
+    },
+    {
+     "pid": 4880,
+     "name": "claude.exe",
+     "cpu_s": 11.46875,
+     "private_bytes": 57110528,
+     "working_set_bytes": 112365568,
+     "io_read_bytes": 4258115,
+     "io_write_bytes": 41853
+    },
+    {
+     "pid": 4900,
+     "name": "netbird.exe",
+     "cpu_s": 1201.328125,
+     "private_bytes": 77660160,
+     "working_set_bytes": 104648704,
+     "io_read_bytes": 106453,
+     "io_write_bytes": 2023767
+    },
+    {
+     "pid": 5124,
+     "name": "svchost.exe",
+     "cpu_s": 2.140625,
+     "private_bytes": 2646016,
+     "working_set_bytes": 12324864,
+     "io_read_bytes": 163824,
+     "io_write_bytes": 360216
+    },
+    {
+     "pid": 5212,
+     "name": "svchost.exe",
+     "cpu_s": 11.109375,
+     "private_bytes": 3362816,
+     "working_set_bytes": 12001280,
+     "io_read_bytes": 0,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 5284,
+     "name": "chrome.exe",
+     "cpu_s": 193.9375,
+     "private_bytes": 241139712,
+     "working_set_bytes": 175521792,
+     "io_read_bytes": 59010416,
+     "io_write_bytes": 72169426
+    },
+    {
+     "pid": 5568,
+     "name": "NVDisplay.Container.exe",
+     "cpu_s": 212.71875,
+     "private_bytes": 36610048,
+     "working_set_bytes": 43376640,
+     "io_read_bytes": 66487170,
+     "io_write_bytes": 15111873
+    },
+    {
+     "pid": 5648,
+     "name": "svchost.exe",
+     "cpu_s": 1.078125,
+     "private_bytes": 2142208,
+     "working_set_bytes": 10780672,
+     "io_read_bytes": 0,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 6092,
+     "name": "svchost.exe",
+     "cpu_s": 17.296875,
+     "private_bytes": 10485760,
+     "working_set_bytes": 44945408,
+     "io_read_bytes": 4075663,
+     "io_write_bytes": 45858016
+    },
+    {
+     "pid": 6120,
+     "name": "remoting_host.exe",
+     "cpu_s": 88.9375,
+     "private_bytes": 12025856,
+     "working_set_bytes": 32854016,
+     "io_read_bytes": 12867244,
+     "io_write_bytes": 477188
+    },
+    {
+     "pid": 6232,
+     "name": "svchost.exe",
+     "cpu_s": 4.421875,
+     "private_bytes": 3600384,
+     "working_set_bytes": 15605760,
+     "io_read_bytes": 109974,
+     "io_write_bytes": 131072
+    },
+    {
+     "pid": 6392,
+     "name": "svchost.exe",
+     "cpu_s": 1.078125,
+     "private_bytes": 2985984,
+     "working_set_bytes": 15556608,
+     "io_read_bytes": 0,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 6480,
+     "name": "docker.exe",
+     "cpu_s": 0.046875,
+     "private_bytes": 54738944,
+     "working_set_bytes": 22044672,
+     "io_read_bytes": 32428,
+     "io_write_bytes": 2344
+    },
+    {
+     "pid": 6544,
+     "name": "chrome-native-host.exe",
+     "cpu_s": 0.015625,
+     "private_bytes": 1613824,
+     "working_set_bytes": 6221824,
+     "io_read_bytes": 8594,
+     "io_write_bytes": 19216
+    },
+    {
+     "pid": 6560,
+     "name": "svchost.exe",
+     "cpu_s": 22175.171874999996,
+     "private_bytes": 14860288,
+     "working_set_bytes": 29573120,
+     "io_read_bytes": 1688820471646,
+     "io_write_bytes": 212422621
+    },
+    {
+     "pid": 6588,
+     "name": "steamservice.exe",
+     "cpu_s": 46.28125,
+     "private_bytes": 8024064,
+     "working_set_bytes": 15376384,
+     "io_read_bytes": 104658,
+     "io_write_bytes": 14253
+    },
+    {
+     "pid": 6704,
+     "name": "svchost.exe",
+     "cpu_s": 24601.0,
+     "private_bytes": 55738368,
+     "working_set_bytes": 63877120,
+     "io_read_bytes": 0,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 7416,
+     "name": "steamwebhelper.exe",
+     "cpu_s": 51.109375,
+     "private_bytes": 53850112,
+     "working_set_bytes": 32780288,
+     "io_read_bytes": 11093310,
+     "io_write_bytes": 38842637
+    },
+    {
+     "pid": 7608,
+     "name": "AggregatorHost.exe",
+     "cpu_s": 5.21875,
+     "private_bytes": 4124672,
+     "working_set_bytes": 17088512,
+     "io_read_bytes": 294968287,
+     "io_write_bytes": 412798
+    },
+    {
+     "pid": 7636,
+     "name": "svchost.exe",
+     "cpu_s": 1.046875,
+     "private_bytes": 2433024,
+     "working_set_bytes": 10604544,
+     "io_read_bytes": 0,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 7924,
+     "name": "claude.exe",
+     "cpu_s": 3.265625,
+     "private_bytes": 10878976,
+     "working_set_bytes": 110104576,
+     "io_read_bytes": 62796,
+     "io_write_bytes": 106680
+    },
+    {
+     "pid": 7956,
+     "name": "msedgewebview2.exe",
+     "cpu_s": 2436.453125,
+     "private_bytes": 114688000,
+     "working_set_bytes": 164651008,
+     "io_read_bytes": 208351787253,
+     "io_write_bytes": 26696958468
+    },
+    {
+     "pid": 7984,
+     "name": "svchost.exe",
+     "cpu_s": 56.890625,
+     "private_bytes": 4669440,
+     "working_set_bytes": 26624000,
+     "io_read_bytes": 1283820,
+     "io_write_bytes": 1455568
+    },
+    {
+     "pid": 8020,
+     "name": "conhost.exe",
+     "cpu_s": 0.03125,
+     "private_bytes": 1925120,
+     "working_set_bytes": 8220672,
+     "io_read_bytes": 0,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 8156,
+     "name": "svchost.exe",
+     "cpu_s": 1.0,
+     "private_bytes": 1875968,
+     "working_set_bytes": 9670656,
+     "io_read_bytes": 0,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 8164,
+     "name": "chrome.exe",
+     "cpu_s": 408.0,
+     "private_bytes": 183250944,
+     "working_set_bytes": 147800064,
+     "io_read_bytes": 458288784,
+     "io_write_bytes": 235413293
+    },
+    {
+     "pid": 8196,
+     "name": "nvcontainer.exe",
+     "cpu_s": 494.796875,
+     "private_bytes": 13852672,
+     "working_set_bytes": 38617088,
+     "io_read_bytes": 3620598,
+     "io_write_bytes": 2380081
+    },
+    {
+     "pid": 8300,
+     "name": "vmcompute.exe",
+     "cpu_s": 23.234375,
+     "private_bytes": 3112960,
+     "working_set_bytes": 16183296,
+     "io_read_bytes": 0,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 8324,
+     "name": "backgroundTaskHost.exe",
+     "cpu_s": 4.640625,
+     "private_bytes": 28184576,
+     "working_set_bytes": 68960256,
+     "io_read_bytes": 6360994,
+     "io_write_bytes": 171498
+    },
+    {
+     "pid": 8388,
+     "name": "Docker Desktop.exe",
+     "cpu_s": 0.015625,
+     "private_bytes": 9785344,
+     "working_set_bytes": 34279424,
+     "io_read_bytes": 180,
+     "io_write_bytes": 60
+    },
+    {
+     "pid": 8412,
+     "name": "claude.exe",
+     "cpu_s": 430.328125,
+     "private_bytes": 474288128,
+     "working_set_bytes": 164478976,
+     "io_read_bytes": 5366414,
+     "io_write_bytes": 1295972
+    },
+    {
+     "pid": 8424,
+     "name": "svchost.exe",
+     "cpu_s": 3.390625,
+     "private_bytes": 3563520,
+     "working_set_bytes": 17498112,
+     "io_read_bytes": 311540,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 8580,
+     "name": "svchost.exe",
+     "cpu_s": 0.21875,
+     "private_bytes": 1687552,
+     "working_set_bytes": 9318400,
+     "io_read_bytes": 0,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 8588,
+     "name": "svchost.exe",
+     "cpu_s": 1.0625,
+     "private_bytes": 2187264,
+     "working_set_bytes": 11374592,
+     "io_read_bytes": 0,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 8596,
+     "name": "chrome.exe",
+     "cpu_s": 37.28125,
+     "private_bytes": 50741248,
+     "working_set_bytes": 59125760,
+     "io_read_bytes": 393211760,
+     "io_write_bytes": 166766264
+    },
+    {
+     "pid": 8608,
+     "name": "chrome.exe",
+     "cpu_s": 69.4375,
+     "private_bytes": 85405696,
+     "working_set_bytes": 96272384,
+     "io_read_bytes": 65894264,
+     "io_write_bytes": 55880760
+    },
+    {
+     "pid": 8668,
+     "name": "svchost.exe",
+     "cpu_s": 1.359375,
+     "private_bytes": 2994176,
+     "working_set_bytes": 11931648,
+     "io_read_bytes": 116,
+     "io_write_bytes": 160
+    },
+    {
+     "pid": 8720,
+     "name": "RuntimeBroker.exe",
+     "cpu_s": 1.234375,
+     "private_bytes": 2506752,
+     "working_set_bytes": 15233024,
+     "io_read_bytes": 0,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 8864,
+     "name": "nvcontainer.exe",
+     "cpu_s": 466.125,
+     "private_bytes": 67293184,
+     "working_set_bytes": 74870784,
+     "io_read_bytes": 102441597,
+     "io_write_bytes": 17917825
+    },
+    {
+     "pid": 8896,
+     "name": "DefenderSessionHelper.exe",
+     "cpu_s": 0.8125,
+     "private_bytes": 1236992,
+     "working_set_bytes": 6635520,
+     "io_read_bytes": 0,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 8956,
+     "name": "msedgewebview2.exe",
+     "cpu_s": 6.125,
+     "private_bytes": 68288512,
+     "working_set_bytes": 70782976,
+     "io_read_bytes": 1425729,
+     "io_write_bytes": 8635555
+    },
+    {
+     "pid": 9164,
+     "name": "sihost.exe",
+     "cpu_s": 132.8125,
+     "private_bytes": 9478144,
+     "working_set_bytes": 54489088,
+     "io_read_bytes": 3924701,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 9292,
+     "name": "svchost.exe",
+     "cpu_s": 11.8125,
+     "private_bytes": 4222976,
+     "working_set_bytes": 26636288,
+     "io_read_bytes": 0,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 9392,
+     "name": "DiscordSystemHelper.exe",
+     "cpu_s": 2.125,
+     "private_bytes": 3383296,
+     "working_set_bytes": 12578816,
+     "io_read_bytes": 211110841,
+     "io_write_bytes": 487
+    },
+    {
+     "pid": 9408,
+     "name": "chrome.exe",
+     "cpu_s": 4.5,
+     "private_bytes": 24256512,
+     "working_set_bytes": 54935552,
+     "io_read_bytes": 3466872,
+     "io_write_bytes": 3555072
+    },
+    {
+     "pid": 9424,
+     "name": "claude.exe",
+     "cpu_s": 82.0,
+     "private_bytes": 457076736,
+     "working_set_bytes": 167936000,
+     "io_read_bytes": 2967650,
+     "io_write_bytes": 1285754
+    },
+    {
+     "pid": 9456,
+     "name": "svchost.exe",
+     "cpu_s": 0.671875,
+     "private_bytes": 3915776,
+     "working_set_bytes": 15929344,
+     "io_read_bytes": 580,
+     "io_write_bytes": 800
+    },
+    {
+     "pid": 9492,
+     "name": "taskhostw.exe",
+     "cpu_s": 49.21875,
+     "private_bytes": 7192576,
+     "working_set_bytes": 23003136,
+     "io_read_bytes": 4599808,
+     "io_write_bytes": 33517568
+    },
+    {
+     "pid": 9500,
+     "name": "svchost.exe",
+     "cpu_s": 8.0,
+     "private_bytes": 5222400,
+     "working_set_bytes": 22847488,
+     "io_read_bytes": 4821,
+     "io_write_bytes": 4167
+    },
+    {
+     "pid": 9856,
+     "name": "explorer.exe",
+     "cpu_s": 426.5625,
+     "private_bytes": 267747328,
+     "working_set_bytes": 315293696,
+     "io_read_bytes": 116532818,
+     "io_write_bytes": 485874
+    },
+    {
+     "pid": 9972,
+     "name": "CrossDeviceResume.exe",
+     "cpu_s": 4.140625,
+     "private_bytes": 55390208,
+     "working_set_bytes": 61435904,
+     "io_read_bytes": 84783,
+     "io_write_bytes": 8
+    },
+    {
+     "pid": 10072,
+     "name": "svchost.exe",
+     "cpu_s": 25.3125,
+     "private_bytes": 2904064,
+     "working_set_bytes": 16977920,
+     "io_read_bytes": 1208320,
+     "io_write_bytes": 155648
+    },
+    {
+     "pid": 10128,
+     "name": "msedgewebview2.exe",
+     "cpu_s": 2.53125,
+     "private_bytes": 9420800,
+     "working_set_bytes": 12926976,
+     "io_read_bytes": 2268079,
+     "io_write_bytes": 7986994
+    },
+    {
+     "pid": 10132,
+     "name": "NisSrv.exe",
+     "cpu_s": 54.40625,
+     "private_bytes": 5890048,
+     "working_set_bytes": 16138240,
+     "io_read_bytes": 0,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 10156,
+     "name": "msedgewebview2.exe",
+     "cpu_s": 7.78125,
+     "private_bytes": 12103680,
+     "working_set_bytes": 40927232,
+     "io_read_bytes": 14244414,
+     "io_write_bytes": 12141172
+    },
+    {
+     "pid": 10168,
+     "name": "cmd.exe",
+     "cpu_s": 0.03125,
+     "private_bytes": 4079616,
+     "working_set_bytes": 5558272,
+     "io_read_bytes": 3290,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 10280,
+     "name": "msedgewebview2.exe",
+     "cpu_s": 1.015625,
+     "private_bytes": 9146368,
+     "working_set_bytes": 21192704,
+     "io_read_bytes": 67874,
+     "io_write_bytes": 2633873
+    },
+    {
+     "pid": 10360,
+     "name": "com.docker.backend.exe",
+     "cpu_s": 152132.515625,
+     "private_bytes": 496128000,
+     "working_set_bytes": 482332672,
+     "io_read_bytes": 134236958262,
+     "io_write_bytes": 246855500864
+    },
+    {
+     "pid": 10520,
+     "name": "msedgewebview2.exe",
+     "cpu_s": 7.078125,
+     "private_bytes": 61161472,
+     "working_set_bytes": 59695104,
+     "io_read_bytes": 777304,
+     "io_write_bytes": 3795400
+    },
+    {
+     "pid": 10572,
+     "name": "RuntimeBroker.exe",
+     "cpu_s": 8.328125,
+     "private_bytes": 13504512,
+     "working_set_bytes": 61263872,
+     "io_read_bytes": 4202530,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 10748,
+     "name": "svchost.exe",
+     "cpu_s": 7.640625,
+     "private_bytes": 52318208,
+     "working_set_bytes": 61681664,
+     "io_read_bytes": 194842,
+     "io_write_bytes": 320
+    },
+    {
+     "pid": 10808,
+     "name": "svchost.exe",
+     "cpu_s": 1.25,
+     "private_bytes": 4141056,
+     "working_set_bytes": 26140672,
+     "io_read_bytes": 41693,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 11032,
+     "name": "msedgewebview2.exe",
+     "cpu_s": 1.6875,
+     "private_bytes": 2891776,
+     "working_set_bytes": 16121856,
+     "io_read_bytes": 48872,
+     "io_write_bytes": 15804
+    },
+    {
+     "pid": 11140,
+     "name": "SearchHost.exe",
+     "cpu_s": 16.28125,
+     "private_bytes": 90124288,
+     "working_set_bytes": 125292544,
+     "io_read_bytes": 7131501,
+     "io_write_bytes": 4121007
+    },
+    {
+     "pid": 11164,
+     "name": "StartMenuExperienceHost.exe",
+     "cpu_s": 33.4375,
+     "private_bytes": 147804160,
+     "working_set_bytes": 140419072,
+     "io_read_bytes": 8183268,
+     "io_write_bytes": 529474
+    },
+    {
+     "pid": 11192,
+     "name": "msedgewebview2.exe",
+     "cpu_s": 22.28125,
+     "private_bytes": 10092544,
+     "working_set_bytes": 29401088,
+     "io_read_bytes": 435280,
+     "io_write_bytes": 3188252
+    },
+    {
+     "pid": 11200,
+     "name": "record-fixture.exe",
+     "cpu_s": 0.015625,
+     "private_bytes": 995328,
+     "working_set_bytes": 6074368,
+     "io_read_bytes": 3039,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 11340,
+     "name": "conhost.exe",
+     "cpu_s": 0.078125,
+     "private_bytes": 1728512,
+     "working_set_bytes": 9707520,
+     "io_read_bytes": 1584,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 11364,
+     "name": "msedgewebview2.exe",
+     "cpu_s": 1.078125,
+     "private_bytes": 2916352,
+     "working_set_bytes": 15835136,
+     "io_read_bytes": 1676,
+     "io_write_bytes": 72
+    },
+    {
+     "pid": 11448,
+     "name": "chrome.exe",
+     "cpu_s": 2156.25,
+     "private_bytes": 43577344,
+     "working_set_bytes": 74072064,
+     "io_read_bytes": 2296364115,
+     "io_write_bytes": 9055100375
+    },
+    {
+     "pid": 11452,
+     "name": "steamwebhelper.exe",
+     "cpu_s": 1814.46875,
+     "private_bytes": 107696128,
+     "working_set_bytes": 156983296,
+     "io_read_bytes": 1985894892,
+     "io_write_bytes": 53980350
+    },
+    {
+     "pid": 11532,
+     "name": "msedgewebview2.exe",
+     "cpu_s": 12.734375,
+     "private_bytes": 49041408,
+     "working_set_bytes": 71196672,
+     "io_read_bytes": 3811904,
+     "io_write_bytes": 10598040
+    },
+    {
+     "pid": 11620,
+     "name": "Discord.exe",
+     "cpu_s": 1503.09375,
+     "private_bytes": 128221184,
+     "working_set_bytes": 161415168,
+     "io_read_bytes": 2071481806,
+     "io_write_bytes": 1903896133
+    },
+    {
+     "pid": 11692,
+     "name": "msedgewebview2.exe",
+     "cpu_s": 34.796875,
+     "private_bytes": 40419328,
+     "working_set_bytes": 112099328,
+     "io_read_bytes": 31554910,
+     "io_write_bytes": 5362412
+    },
+    {
+     "pid": 11756,
+     "name": "svchost.exe",
+     "cpu_s": 1.296875,
+     "private_bytes": 3543040,
+     "working_set_bytes": 23830528,
+     "io_read_bytes": 0,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 11780,
+     "name": "ShellExperienceHost.exe",
+     "cpu_s": 41.3125,
+     "private_bytes": 159248384,
+     "working_set_bytes": 108355584,
+     "io_read_bytes": 12212477,
+     "io_write_bytes": 8
+    },
+    {
+     "pid": 12016,
+     "name": "msedgewebview2.exe",
+     "cpu_s": 2377.203125,
+     "private_bytes": 657551360,
+     "working_set_bytes": 613552128,
+     "io_read_bytes": 886215585,
+     "io_write_bytes": 9627457274
+    },
+    {
+     "pid": 12296,
+     "name": "steamwebhelper.exe",
+     "cpu_s": 16.734375,
+     "private_bytes": 40767488,
+     "working_set_bytes": 19914752,
+     "io_read_bytes": 3362962,
+     "io_write_bytes": 3084232
+    },
+    {
+     "pid": 12784,
+     "name": "msedgewebview2.exe",
+     "cpu_s": 1130.65625,
+     "private_bytes": 287162368,
+     "working_set_bytes": 165601280,
+     "io_read_bytes": 8119757684,
+     "io_write_bytes": 90984200
+    },
+    {
+     "pid": 12828,
+     "name": "conhost.exe",
+     "cpu_s": 0.046875,
+     "private_bytes": 1908736,
+     "working_set_bytes": 8372224,
+     "io_read_bytes": 0,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 12868,
+     "name": "msedgewebview2.exe",
+     "cpu_s": 6.453125,
+     "private_bytes": 12640256,
+     "working_set_bytes": 43134976,
+     "io_read_bytes": 3106605,
+     "io_write_bytes": 3489443
+    },
+    {
+     "pid": 12892,
+     "name": "msedgewebview2.exe",
+     "cpu_s": 7.96875,
+     "private_bytes": 70852608,
+     "working_set_bytes": 61239296,
+     "io_read_bytes": 1327808,
+     "io_write_bytes": 3860536
+    },
+    {
+     "pid": 13072,
+     "name": "msedgewebview2.exe",
+     "cpu_s": 0.984375,
+     "private_bytes": 8241152,
+     "working_set_bytes": 21655552,
+     "io_read_bytes": 123626,
+     "io_write_bytes": 2616128
+    },
+    {
+     "pid": 13156,
+     "name": "svchost.exe",
+     "cpu_s": 0.15625,
+     "private_bytes": 1474560,
+     "working_set_bytes": 8626176,
+     "io_read_bytes": 0,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 13524,
+     "name": "msedgewebview2.exe",
+     "cpu_s": 51.171875,
+     "private_bytes": 16441344,
+     "working_set_bytes": 37019648,
+     "io_read_bytes": 126036813,
+     "io_write_bytes": 286191560
+    },
+    {
+     "pid": 13668,
+     "name": "Docker Desktop.exe",
+     "cpu_s": 451.578125,
+     "private_bytes": 133439488,
+     "working_set_bytes": 88231936,
+     "io_read_bytes": 148839452,
+     "io_write_bytes": 15885936
+    },
+    {
+     "pid": 13744,
+     "name": "com.docker.build.exe",
+     "cpu_s": 28.640625,
+     "private_bytes": 83288064,
+     "working_set_bytes": 46411776,
+     "io_read_bytes": 8871852,
+     "io_write_bytes": 1311328
+    },
+    {
+     "pid": 13800,
+     "name": "Docker Desktop.exe",
+     "cpu_s": 9.0,
+     "private_bytes": 13348864,
+     "working_set_bytes": 55627776,
+     "io_read_bytes": 1154226,
+     "io_write_bytes": 356506
+    },
+    {
+     "pid": 13868,
+     "name": "Docker Desktop.exe",
+     "cpu_s": 968.640625,
+     "private_bytes": 128229376,
+     "working_set_bytes": 126578688,
+     "io_read_bytes": 1128825113,
+     "io_write_bytes": 544739867
+    },
+    {
+     "pid": 13996,
+     "name": "ctfmon.exe",
+     "cpu_s": 91.09375,
+     "private_bytes": 11751424,
+     "working_set_bytes": 36810752,
+     "io_read_bytes": 26303,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 14056,
+     "name": "SecurityHealthSystray.exe",
+     "cpu_s": 0.109375,
+     "private_bytes": 2191360,
+     "working_set_bytes": 12951552,
+     "io_read_bytes": 0,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 14092,
+     "name": "SecurityHealthService.exe",
+     "cpu_s": 3.9375,
+     "private_bytes": 8056832,
+     "working_set_bytes": 24186880,
+     "io_read_bytes": 2179268,
+     "io_write_bytes": 107135
+    },
+    {
+     "pid": 14164,
+     "name": "Docker Desktop.exe",
+     "cpu_s": 0.296875,
+     "private_bytes": 50503680,
+     "working_set_bytes": 11882496,
+     "io_read_bytes": 50982,
+     "io_write_bytes": 2055
+    },
+    {
+     "pid": 14196,
+     "name": "com.docker.backend.exe",
+     "cpu_s": 11463.390625,
+     "private_bytes": 106106880,
+     "working_set_bytes": 79831040,
+     "io_read_bytes": 19317426667,
+     "io_write_bytes": 22635726887
+    },
+    {
+     "pid": 14204,
+     "name": "conhost.exe",
+     "cpu_s": 4890.53125,
+     "private_bytes": 6852608,
+     "working_set_bytes": 13160448,
+     "io_read_bytes": 0,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 14228,
+     "name": "Discord.exe",
+     "cpu_s": 0.1875,
+     "private_bytes": 9576448,
+     "working_set_bytes": 33009664,
+     "io_read_bytes": 324,
+     "io_write_bytes": 108
+    },
+    {
+     "pid": 14736,
+     "name": "wsl.exe",
+     "cpu_s": 0.015625,
+     "private_bytes": 1327104,
+     "working_set_bytes": 7426048,
+     "io_read_bytes": 0,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 14744,
+     "name": "wsl.exe",
+     "cpu_s": 0.015625,
+     "private_bytes": 1335296,
+     "working_set_bytes": 7426048,
+     "io_read_bytes": 0,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 14840,
+     "name": "dllhost.exe",
+     "cpu_s": 0.140625,
+     "private_bytes": 2953216,
+     "working_set_bytes": 10817536,
+     "io_read_bytes": 6097,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 14864,
+     "name": "wsl.exe",
+     "cpu_s": 23920.375,
+     "private_bytes": 2367488,
+     "working_set_bytes": 11677696,
+     "io_read_bytes": 336395192367,
+     "io_write_bytes": 336395192367
+    },
+    {
+     "pid": 14872,
+     "name": "wsl.exe",
+     "cpu_s": 0.03125,
+     "private_bytes": 2170880,
+     "working_set_bytes": 11808768,
+     "io_read_bytes": 7659,
+     "io_write_bytes": 7659
+    },
+    {
+     "pid": 14972,
+     "name": "Docker Desktop.exe",
+     "cpu_s": 8264.984375,
+     "private_bytes": 113319936,
+     "working_set_bytes": 154460160,
+     "io_read_bytes": 530302440,
+     "io_write_bytes": 161528089
+    },
+    {
+     "pid": 14980,
+     "name": "conhost.exe",
+     "cpu_s": 0.09375,
+     "private_bytes": 1736704,
+     "working_set_bytes": 9699328,
+     "io_read_bytes": 1584,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 14988,
+     "name": "msrdc.exe",
+     "cpu_s": 135.453125,
+     "private_bytes": 63799296,
+     "working_set_bytes": 45973504,
+     "io_read_bytes": 1210480910,
+     "io_write_bytes": 307463168
+    },
+    {
+     "pid": 15088,
+     "name": "vmwp.exe",
+     "cpu_s": 157.375,
+     "private_bytes": 17068032,
+     "working_set_bytes": 21663744,
+     "io_read_bytes": 57828021,
+     "io_write_bytes": 2913168
+    },
+    {
+     "pid": 15304,
+     "name": "vmmemWSL",
+     "cpu_s": 437773.421875,
+     "private_bytes": 8799952896,
+     "working_set_bytes": 4700295168,
+     "io_read_bytes": 0,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 15508,
+     "name": "dllhost.exe",
+     "cpu_s": 33366.390625,
+     "private_bytes": 5357568,
+     "working_set_bytes": 12136448,
+     "io_read_bytes": 39826230,
+     "io_write_bytes": 338813979
+    },
+    {
+     "pid": 15668,
+     "name": "wslrelay.exe",
+     "cpu_s": 34.03125,
+     "private_bytes": 4435968,
+     "working_set_bytes": 11542528,
+     "io_read_bytes": 83738497,
+     "io_write_bytes": 83732461
+    },
+    {
+     "pid": 15780,
+     "name": "TextInputHost.exe",
+     "cpu_s": 61.890625,
+     "private_bytes": 175505408,
+     "working_set_bytes": 149884928,
+     "io_read_bytes": 1446234,
+     "io_write_bytes": 174035
+    },
+    {
+     "pid": 15812,
+     "name": "netbird-ui.exe",
+     "cpu_s": 33.1875,
+     "private_bytes": 41857024,
+     "working_set_bytes": 75198464,
+     "io_read_bytes": 2160742,
+     "io_write_bytes": 6933238
+    },
+    {
+     "pid": 15904,
+     "name": "chrome.exe",
+     "cpu_s": 1055.734375,
+     "private_bytes": 11624448,
+     "working_set_bytes": 26894336,
+     "io_read_bytes": 13765004,
+     "io_write_bytes": 30573032
+    },
+    {
+     "pid": 15960,
+     "name": "chrome.exe",
+     "cpu_s": 70.28125,
+     "private_bytes": 14635008,
+     "working_set_bytes": 42237952,
+     "io_read_bytes": 8608472,
+     "io_write_bytes": 8807800
+    },
+    {
+     "pid": 15968,
+     "name": "wslhost.exe",
+     "cpu_s": 0.078125,
+     "private_bytes": 2138112,
+     "working_set_bytes": 11370496,
+     "io_read_bytes": 6613,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 16080,
+     "name": "conhost.exe",
+     "cpu_s": 0.0625,
+     "private_bytes": 1716224,
+     "working_set_bytes": 9662464,
+     "io_read_bytes": 1584,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 16128,
+     "name": "chrome.exe",
+     "cpu_s": 28.203125,
+     "private_bytes": 13942784,
+     "working_set_bytes": 21123072,
+     "io_read_bytes": 258807782,
+     "io_write_bytes": 127278618
+    },
+    {
+     "pid": 16152,
+     "name": "wslhost.exe",
+     "cpu_s": 0.046875,
+     "private_bytes": 2039808,
+     "working_set_bytes": 11026432,
+     "io_read_bytes": 0,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 16196,
+     "name": "wslhost.exe",
+     "cpu_s": 0.015625,
+     "private_bytes": 1974272,
+     "working_set_bytes": 10895360,
+     "io_read_bytes": 0,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 16296,
+     "name": "WhatsApp.Root.exe",
+     "cpu_s": 1488.046875,
+     "private_bytes": 198012928,
+     "working_set_bytes": 326426624,
+     "io_read_bytes": 248112648,
+     "io_write_bytes": 197091022
+    },
+    {
+     "pid": 16336,
+     "name": "wslhost.exe",
+     "cpu_s": 0.015625,
+     "private_bytes": 1949696,
+     "working_set_bytes": 10891264,
+     "io_read_bytes": 0,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 16356,
+     "name": "DataExchangeHost.exe",
+     "cpu_s": 3.125,
+     "private_bytes": 14819328,
+     "working_set_bytes": 43257856,
+     "io_read_bytes": 105131,
+     "io_write_bytes": 24
+    },
+    {
+     "pid": 16368,
+     "name": "conhost.exe",
+     "cpu_s": 0.046875,
+     "private_bytes": 1609728,
+     "working_set_bytes": 9695232,
+     "io_read_bytes": 1584,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 16392,
+     "name": "steamwebhelper.exe",
+     "cpu_s": 0.21875,
+     "private_bytes": 39665664,
+     "working_set_bytes": 14376960,
+     "io_read_bytes": 22258,
+     "io_write_bytes": 480
+    },
+    {
+     "pid": 16620,
+     "name": "chrome.exe",
+     "cpu_s": 27.71875,
+     "private_bytes": 50450432,
+     "working_set_bytes": 66756608,
+     "io_read_bytes": 74023224,
+     "io_write_bytes": 16966280
+    },
+    {
+     "pid": 16772,
+     "name": "steam.exe",
+     "cpu_s": 1759.453125,
+     "private_bytes": 135802880,
+     "working_set_bytes": 140886016,
+     "io_read_bytes": 572358666,
+     "io_write_bytes": 659763994
+    },
+    {
+     "pid": 17024,
+     "name": "steamwebhelper.exe",
+     "cpu_s": 316.8125,
+     "private_bytes": 517832704,
+     "working_set_bytes": 301105152,
+     "io_read_bytes": 1188575467,
+     "io_write_bytes": 45912203
+    },
+    {
+     "pid": 17132,
+     "name": "chrome.exe",
+     "cpu_s": 9767.890625,
+     "private_bytes": 58634240,
+     "working_set_bytes": 92426240,
+     "io_read_bytes": 26234116896,
+     "io_write_bytes": 899557432
+    },
+    {
+     "pid": 17232,
+     "name": "chrome.exe",
+     "cpu_s": 64.078125,
+     "private_bytes": 331776000,
+     "working_set_bytes": 141303808,
+     "io_read_bytes": 29146584,
+     "io_write_bytes": 32929714
+    },
+    {
+     "pid": 17316,
+     "name": "steamwebhelper.exe",
+     "cpu_s": 421.15625,
+     "private_bytes": 145793024,
+     "working_set_bytes": 69419008,
+     "io_read_bytes": 16558228,
+     "io_write_bytes": 16564384
+    },
+    {
+     "pid": 17524,
+     "name": "msedgewebview2.exe",
+     "cpu_s": 12.625,
+     "private_bytes": 47296512,
+     "working_set_bytes": 70955008,
+     "io_read_bytes": 3812104,
+     "io_write_bytes": 10625288
+    },
+    {
+     "pid": 17576,
+     "name": "SearchIndexer.exe",
+     "cpu_s": 155.53125,
+     "private_bytes": 23396352,
+     "working_set_bytes": 35151872,
+     "io_read_bytes": 1870222068,
+     "io_write_bytes": 18231026
+    },
+    {
+     "pid": 17756,
+     "name": "RuntimeBroker.exe",
+     "cpu_s": 4.65625,
+     "private_bytes": 4411392,
+     "working_set_bytes": 33017856,
+     "io_read_bytes": 24704,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 18092,
+     "name": "python.exe",
+     "cpu_s": 1.78125,
+     "private_bytes": 23715840,
+     "working_set_bytes": 35049472,
+     "io_read_bytes": 4402943,
+     "io_write_bytes": 47604
+    },
+    {
+     "pid": 18164,
+     "name": "chrome.exe",
+     "cpu_s": 958.796875,
+     "private_bytes": 183554048,
+     "working_set_bytes": 120635392,
+     "io_read_bytes": 113970670,
+     "io_write_bytes": 247352064
+    },
+    {
+     "pid": 18180,
+     "name": "chrome.exe",
+     "cpu_s": 22.03125,
+     "private_bytes": 54857728,
+     "working_set_bytes": 93179904,
+     "io_read_bytes": 14941776,
+     "io_write_bytes": 18847744
+    },
+    {
+     "pid": 18220,
+     "name": "steamwebhelper.exe",
+     "cpu_s": 291.34375,
+     "private_bytes": 185708544,
+     "working_set_bytes": 130478080,
+     "io_read_bytes": 3894560,
+     "io_write_bytes": 27201777
+    },
+    {
+     "pid": 18696,
+     "name": "Discord.exe",
+     "cpu_s": 82.609375,
+     "private_bytes": 20103168,
+     "working_set_bytes": 61833216,
+     "io_read_bytes": 91762972,
+     "io_write_bytes": 209497629
+    },
+    {
+     "pid": 18736,
+     "name": "Discord.exe",
+     "cpu_s": 705.390625,
+     "private_bytes": 285253632,
+     "working_set_bytes": 148471808,
+     "io_read_bytes": 2690202848,
+     "io_write_bytes": 163599896
+    },
+    {
+     "pid": 18800,
+     "name": "claude.exe",
+     "cpu_s": 1110.6875,
+     "private_bytes": 235798528,
+     "working_set_bytes": 293826560,
+     "io_read_bytes": 825544853,
+     "io_write_bytes": 1187941271
+    },
+    {
+     "pid": 19012,
+     "name": "taskhostw.exe",
+     "cpu_s": 0.96875,
+     "private_bytes": 8269824,
+     "working_set_bytes": 35794944,
+     "io_read_bytes": 68684,
+     "io_write_bytes": 29741
+    },
+    {
+     "pid": 19756,
+     "name": "svchost.exe",
+     "cpu_s": 2.046875,
+     "private_bytes": 3313664,
+     "working_set_bytes": 21663744,
+     "io_read_bytes": 0,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 19772,
+     "name": "svchost.exe",
+     "cpu_s": 2.828125,
+     "private_bytes": 3481600,
+     "working_set_bytes": 12886016,
+     "io_read_bytes": 0,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 19788,
+     "name": "claude.exe",
+     "cpu_s": 110.59375,
+     "private_bytes": 474959872,
+     "working_set_bytes": 246083584,
+     "io_read_bytes": 4044785,
+     "io_write_bytes": 2009392
+    },
+    {
+     "pid": 19876,
+     "name": "chrome.exe",
+     "cpu_s": 1235.0625,
+     "private_bytes": 239628288,
+     "working_set_bytes": 276217856,
+     "io_read_bytes": 310711448,
+     "io_write_bytes": 275458108
+    },
+    {
+     "pid": 20296,
+     "name": "ApplicationFrameHost.exe",
+     "cpu_s": 3.46875,
+     "private_bytes": 54702080,
+     "working_set_bytes": 52301824,
+     "io_read_bytes": 1316,
+     "io_write_bytes": 8
+    },
+    {
+     "pid": 20356,
+     "name": "Discord.exe",
+     "cpu_s": 11132.375,
+     "private_bytes": 644657152,
+     "working_set_bytes": 636690432,
+     "io_read_bytes": 1092883690,
+     "io_write_bytes": 3138484041
+    },
+    {
+     "pid": 20788,
+     "name": "claude.exe",
+     "cpu_s": 1.0,
+     "private_bytes": 31944704,
+     "working_set_bytes": 87158784,
+     "io_read_bytes": 815432,
+     "io_write_bytes": 161400
+    },
+    {
+     "pid": 20832,
+     "name": "svchost.exe",
+     "cpu_s": 58.375,
+     "private_bytes": 8323072,
+     "working_set_bytes": 27545600,
+     "io_read_bytes": 77564875,
+     "io_write_bytes": 113931381
+    },
+    {
+     "pid": 20996,
+     "name": "bash.exe",
+     "cpu_s": 0.015625,
+     "private_bytes": 1650688,
+     "working_set_bytes": 7606272,
+     "io_read_bytes": 0,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 21320,
+     "name": "Plex Update Service.exe",
+     "cpu_s": 0.09375,
+     "private_bytes": 2863104,
+     "working_set_bytes": 11313152,
+     "io_read_bytes": 0,
+     "io_write_bytes": 1572
+    },
+    {
+     "pid": 21360,
+     "name": "svchost.exe",
+     "cpu_s": 0.4375,
+     "private_bytes": 2027520,
+     "working_set_bytes": 10522624,
+     "io_read_bytes": 0,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 21488,
+     "name": "Discord.exe",
+     "cpu_s": 15.046875,
+     "private_bytes": 12103680,
+     "working_set_bytes": 91037696,
+     "io_read_bytes": 1784264,
+     "io_write_bytes": 1567228
+    },
+    {
+     "pid": 22012,
+     "name": "smartscreen.exe",
+     "cpu_s": 0.046875,
+     "private_bytes": 2797568,
+     "working_set_bytes": 13221888,
+     "io_read_bytes": 6475,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 22068,
+     "name": "claude.exe",
+     "cpu_s": 114.546875,
+     "private_bytes": 62148608,
+     "working_set_bytes": 138838016,
+     "io_read_bytes": 20790,
+     "io_write_bytes": 11073
+    },
+    {
+     "pid": 22148,
+     "name": "conhost.exe",
+     "cpu_s": 0.078125,
+     "private_bytes": 2150400,
+     "working_set_bytes": 14688256,
+     "io_read_bytes": 1584,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 22224,
+     "name": "PlexScriptHost.exe",
+     "cpu_s": 143.96875,
+     "private_bytes": 40366080,
+     "working_set_bytes": 13516800,
+     "io_read_bytes": 3229297,
+     "io_write_bytes": 83066
+    },
+    {
+     "pid": 22244,
+     "name": "conhost.exe",
+     "cpu_s": 0.078125,
+     "private_bytes": 1691648,
+     "working_set_bytes": 9723904,
+     "io_read_bytes": 1584,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 22332,
+     "name": "mstsc.exe",
+     "cpu_s": 7.28125,
+     "private_bytes": 277704704,
+     "working_set_bytes": 156577792,
+     "io_read_bytes": 210327835,
+     "io_write_bytes": 368
+    },
+    {
+     "pid": 22560,
+     "name": "svchost.exe",
+     "cpu_s": 0.34375,
+     "private_bytes": 1945600,
+     "working_set_bytes": 9322496,
+     "io_read_bytes": 0,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 22680,
+     "name": "RuntimeBroker.exe",
+     "cpu_s": 1.8125,
+     "private_bytes": 4628480,
+     "working_set_bytes": 30244864,
+     "io_read_bytes": 85285,
+     "io_write_bytes": 76136
+    },
+    {
+     "pid": 22840,
+     "name": "svchost.exe",
+     "cpu_s": 0.953125,
+     "private_bytes": 2023424,
+     "working_set_bytes": 14700544,
+     "io_read_bytes": 7983,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 23112,
+     "name": "audiodg.exe",
+     "cpu_s": 2261.90625,
+     "private_bytes": 11055104,
+     "working_set_bytes": 20922368,
+     "io_read_bytes": 6443,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 23884,
+     "name": "python.exe",
+     "cpu_s": 0.03125,
+     "private_bytes": 929792,
+     "working_set_bytes": 4820992,
+     "io_read_bytes": 187,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 24088,
+     "name": "svchost.exe",
+     "cpu_s": 0.546875,
+     "private_bytes": 4435968,
+     "working_set_bytes": 17489920,
+     "io_read_bytes": 0,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 24244,
+     "name": "svchost.exe",
+     "cpu_s": 0.09375,
+     "private_bytes": 1495040,
+     "working_set_bytes": 9138176,
+     "io_read_bytes": 10383,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 24336,
+     "name": "claude.exe",
+     "cpu_s": 6.203125,
+     "private_bytes": 60481536,
+     "working_set_bytes": 122757120,
+     "io_read_bytes": 177836614,
+     "io_write_bytes": 7360
+    },
+    {
+     "pid": 24656,
+     "name": "claude.exe",
+     "cpu_s": 33.203125,
+     "private_bytes": 71307264,
+     "working_set_bytes": 120066048,
+     "io_read_bytes": 13152786,
+     "io_write_bytes": 2077343
+    },
+    {
+     "pid": 24676,
+     "name": "python.exe",
+     "cpu_s": 0.015625,
+     "private_bytes": 802816,
+     "working_set_bytes": 3825664,
+     "io_read_bytes": 2255,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 24720,
+     "name": "chrome.exe",
+     "cpu_s": 453.96875,
+     "private_bytes": 148316160,
+     "working_set_bytes": 167104512,
+     "io_read_bytes": 1497857544,
+     "io_write_bytes": 433852592
+    },
+    {
+     "pid": 24924,
+     "name": "python.exe",
+     "cpu_s": 49.734375,
+     "private_bytes": 26804224,
+     "working_set_bytes": 21909504,
+     "io_read_bytes": 4338253,
+     "io_write_bytes": 224
+    },
+    {
+     "pid": 25028,
+     "name": "claude.exe",
+     "cpu_s": 55.53125,
+     "private_bytes": 20602880,
+     "working_set_bytes": 71245824,
+     "io_read_bytes": 141512301,
+     "io_write_bytes": 212529317
+    },
+    {
+     "pid": 25672,
+     "name": "claude.exe",
+     "cpu_s": 6.59375,
+     "private_bytes": 66895872,
+     "working_set_bytes": 105496576,
+     "io_read_bytes": 12339439,
+     "io_write_bytes": 75774
+    },
+    {
+     "pid": 26008,
+     "name": "conhost.exe",
+     "cpu_s": 0.015625,
+     "private_bytes": 1208320,
+     "working_set_bytes": 7872512,
+     "io_read_bytes": 0,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 26176,
+     "name": "claude.exe",
+     "cpu_s": 3286.015625,
+     "private_bytes": 722944000,
+     "working_set_bytes": 564584448,
+     "io_read_bytes": 189080836,
+     "io_write_bytes": 14528242282
+    },
+    {
+     "pid": 26224,
+     "name": "claude.exe",
+     "cpu_s": 0.1875,
+     "private_bytes": 9613312,
+     "working_set_bytes": 36720640,
+     "io_read_bytes": 864,
+     "io_write_bytes": 288
+    },
+    {
+     "pid": 26280,
+     "name": "chrome.exe",
+     "cpu_s": 1.890625,
+     "private_bytes": 48082944,
+     "working_set_bytes": 61808640,
+     "io_read_bytes": 3458944,
+     "io_write_bytes": 1024880
+    },
+    {
+     "pid": 26308,
+     "name": "claude.exe",
+     "cpu_s": 959.4375,
+     "private_bytes": 218640384,
+     "working_set_bytes": 147914752,
+     "io_read_bytes": 14420406606,
+     "io_write_bytes": 109558880
+    },
+    {
+     "pid": 26532,
+     "name": "powershell.exe",
+     "cpu_s": 45.546875,
+     "private_bytes": 60305408,
+     "working_set_bytes": 59224064,
+     "io_read_bytes": 327474,
+     "io_write_bytes": 4694
+    },
+    {
+     "pid": 26616,
+     "name": "RuntimeBroker.exe",
+     "cpu_s": 0.28125,
+     "private_bytes": 1765376,
+     "working_set_bytes": 10354688,
+     "io_read_bytes": 0,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 27292,
+     "name": "svchost.exe",
+     "cpu_s": 0.46875,
+     "private_bytes": 3485696,
+     "working_set_bytes": 11726848,
+     "io_read_bytes": 0,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 27916,
+     "name": "claude.exe",
+     "cpu_s": 149.671875,
+     "private_bytes": 592191488,
+     "working_set_bytes": 336613376,
+     "io_read_bytes": 11388243,
+     "io_write_bytes": 20275624
+    },
+    {
+     "pid": 27948,
+     "name": "chrome.exe",
+     "cpu_s": 1627.90625,
+     "private_bytes": 243126272,
+     "working_set_bytes": 216428544,
+     "io_read_bytes": 204947448,
+     "io_write_bytes": 932481976
+    },
+    {
+     "pid": 28000,
+     "name": "chrome.exe",
+     "cpu_s": 104.375,
+     "private_bytes": 66191360,
+     "working_set_bytes": 93859840,
+     "io_read_bytes": 85387280,
+     "io_write_bytes": 275850248
+    },
+    {
+     "pid": 28012,
+     "name": "TabTip.exe",
+     "cpu_s": 2.09375,
+     "private_bytes": 57626624,
+     "working_set_bytes": 70422528,
+     "io_read_bytes": 41521,
+     "io_write_bytes": 8
+    },
+    {
+     "pid": 28132,
+     "name": "conhost.exe",
+     "cpu_s": 0.140625,
+     "private_bytes": 2146304,
+     "working_set_bytes": 15089664,
+     "io_read_bytes": 1584,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 28164,
+     "name": "svchost.exe",
+     "cpu_s": 0.296875,
+     "private_bytes": 33017856,
+     "working_set_bytes": 56500224,
+     "io_read_bytes": 23415,
+     "io_write_bytes": 24576
+    },
+    {
+     "pid": 28264,
+     "name": "claude.exe",
+     "cpu_s": 5.25,
+     "private_bytes": 49360896,
+     "working_set_bytes": 131084288,
+     "io_read_bytes": 311477,
+     "io_write_bytes": 90867
+    },
+    {
+     "pid": 28320,
+     "name": "svchost.exe",
+     "cpu_s": 0.03125,
+     "private_bytes": 1904640,
+     "working_set_bytes": 10125312,
+     "io_read_bytes": 4790,
+     "io_write_bytes": 276
+    },
+    {
+     "pid": 28644,
+     "name": "conhost.exe",
+     "cpu_s": 0.046875,
+     "private_bytes": 1523712,
+     "working_set_bytes": 9191424,
+     "io_read_bytes": 246,
+     "io_write_bytes": 2091
+    },
+    {
+     "pid": 29624,
+     "name": "conhost.exe",
+     "cpu_s": 0.015625,
+     "private_bytes": 1208320,
+     "working_set_bytes": 7876608,
+     "io_read_bytes": 0,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 29640,
+     "name": "python.exe",
+     "cpu_s": 0.0,
+     "private_bytes": 802816,
+     "working_set_bytes": 3825664,
+     "io_read_bytes": 331,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 30328,
+     "name": "python.exe",
+     "cpu_s": 48.625,
+     "private_bytes": 26533888,
+     "working_set_bytes": 21848064,
+     "io_read_bytes": 4303907,
+     "io_write_bytes": 155
+    },
+    {
+     "pid": 30344,
+     "name": "svchost.exe",
+     "cpu_s": 0.171875,
+     "private_bytes": 5652480,
+     "working_set_bytes": 34607104,
+     "io_read_bytes": 100669,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 30660,
+     "name": "chrome.exe",
+     "cpu_s": 331.125,
+     "private_bytes": 200683520,
+     "working_set_bytes": 211288064,
+     "io_read_bytes": 50961858,
+     "io_write_bytes": 438054900
+    },
+    {
+     "pid": 30928,
+     "name": "uv.exe",
+     "cpu_s": 0.046875,
+     "private_bytes": 43683840,
+     "working_set_bytes": 23207936,
+     "io_read_bytes": 87395,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 31048,
+     "name": "svchost.exe",
+     "cpu_s": 0.0625,
+     "private_bytes": 4263936,
+     "working_set_bytes": 19185664,
+     "io_read_bytes": 8907,
+     "io_write_bytes": 312
+    },
+    {
+     "pid": 31292,
+     "name": "chrome.exe",
+     "cpu_s": 31.109375,
+     "private_bytes": 406446080,
+     "working_set_bytes": 324489216,
+     "io_read_bytes": 15206256,
+     "io_write_bytes": 44666908
+    },
+    {
+     "pid": 31860,
+     "name": "claude.exe",
+     "cpu_s": 1.09375,
+     "private_bytes": 57081856,
+     "working_set_bytes": 137056256,
+     "io_read_bytes": 4249939,
+     "io_write_bytes": 35661
+    },
+    {
+     "pid": 32284,
+     "name": "bash.exe",
+     "cpu_s": 0.109375,
+     "private_bytes": 6651904,
+     "working_set_bytes": 11706368,
+     "io_read_bytes": 7159,
+     "io_write_bytes": 3648
+    },
+    {
+     "pid": 32728,
+     "name": "conhost.exe",
+     "cpu_s": 0.078125,
+     "private_bytes": 2142208,
+     "working_set_bytes": 14671872,
+     "io_read_bytes": 1584,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 33056,
+     "name": "conhost.exe",
+     "cpu_s": 0.0625,
+     "private_bytes": 1933312,
+     "working_set_bytes": 8368128,
+     "io_read_bytes": 0,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 33112,
+     "name": "chrome.exe",
+     "cpu_s": 18.21875,
+     "private_bytes": 304287744,
+     "working_set_bytes": 248451072,
+     "io_read_bytes": 6200032,
+     "io_write_bytes": 16654865
+    },
+    {
+     "pid": 33968,
+     "name": "chrome.exe",
+     "cpu_s": 48.796875,
+     "private_bytes": 243884032,
+     "working_set_bytes": 233607168,
+     "io_read_bytes": 27313700,
+     "io_write_bytes": 38178664
+    },
+    {
+     "pid": 35152,
+     "name": "python.exe",
+     "cpu_s": 50.125,
+     "private_bytes": 27074560,
+     "working_set_bytes": 22102016,
+     "io_read_bytes": 4307331,
+     "io_write_bytes": 67438
+    },
+    {
+     "pid": 35528,
+     "name": "chrome.exe",
+     "cpu_s": 7.40625,
+     "private_bytes": 110587904,
+     "working_set_bytes": 93147136,
+     "io_read_bytes": 5541728,
+     "io_write_bytes": 17655616
+    },
+    {
+     "pid": 35848,
+     "name": "tail.exe",
+     "cpu_s": 0.03125,
+     "private_bytes": 4890624,
+     "working_set_bytes": 5603328,
+     "io_read_bytes": 0,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 36028,
+     "name": "svchost.exe",
+     "cpu_s": 0.078125,
+     "private_bytes": 5492736,
+     "working_set_bytes": 16318464,
+     "io_read_bytes": 310151,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 36100,
+     "name": "python.exe",
+     "cpu_s": 0.109375,
+     "private_bytes": 9400320,
+     "working_set_bytes": 15151104,
+     "io_read_bytes": 757413,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 36428,
+     "name": "chrome.exe",
+     "cpu_s": 2.0,
+     "private_bytes": 49680384,
+     "working_set_bytes": 81113088,
+     "io_read_bytes": 4170891,
+     "io_write_bytes": 6635361
+    },
+    {
+     "pid": 37272,
+     "name": "conhost.exe",
+     "cpu_s": 0.015625,
+     "private_bytes": 1208320,
+     "working_set_bytes": 7876608,
+     "io_read_bytes": 0,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 37372,
+     "name": "conhost.exe",
+     "cpu_s": 0.015625,
+     "private_bytes": 1228800,
+     "working_set_bytes": 7741440,
+     "io_read_bytes": 0,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 38512,
+     "name": "svchost.exe",
+     "cpu_s": 0.03125,
+     "private_bytes": 1708032,
+     "working_set_bytes": 9838592,
+     "io_read_bytes": 4529,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 38628,
+     "name": "conhost.exe",
+     "cpu_s": 0.078125,
+     "private_bytes": 1470464,
+     "working_set_bytes": 9179136,
+     "io_read_bytes": 81,
+     "io_write_bytes": 9697
+    },
+    {
+     "pid": 38976,
+     "name": "docker.exe",
+     "cpu_s": 0.03125,
+     "private_bytes": 55201792,
+     "working_set_bytes": 21942272,
+     "io_read_bytes": 32428,
+     "io_write_bytes": 2344
+    },
+    {
+     "pid": 39516,
+     "name": "python.exe",
+     "cpu_s": 0.03125,
+     "private_bytes": 798720,
+     "working_set_bytes": 3825664,
+     "io_read_bytes": 331,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 39980,
+     "name": "chrome.exe",
+     "cpu_s": 9.421875,
+     "private_bytes": 62734336,
+     "working_set_bytes": 88633344,
+     "io_read_bytes": 5341175,
+     "io_write_bytes": 10461064
+    },
+    {
+     "pid": 40564,
+     "name": "chrome.exe",
+     "cpu_s": 168.25,
+     "private_bytes": 256397312,
+     "working_set_bytes": 172400640,
+     "io_read_bytes": 44724466,
+     "io_write_bytes": 246040770
+    },
+    {
+     "pid": 40704,
+     "name": "chrome.exe",
+     "cpu_s": 0.03125,
+     "private_bytes": 16322560,
+     "working_set_bytes": 33562624,
+     "io_read_bytes": 161672,
+     "io_write_bytes": 8512
+    },
+    {
+     "pid": 41272,
+     "name": "powershell.exe",
+     "cpu_s": 3.125,
+     "private_bytes": 57253888,
+     "working_set_bytes": 59203584,
+     "io_read_bytes": 330698,
+     "io_write_bytes": 311
+    },
+    {
+     "pid": 41704,
+     "name": "bash.exe",
+     "cpu_s": 0.015625,
+     "private_bytes": 6225920,
+     "working_set_bytes": 9314304,
+     "io_read_bytes": 0,
+     "io_write_bytes": 0
+    },
+    {
+     "pid": 41896,
+     "name": "docker.exe",
+     "cpu_s": 0.03125,
+     "private_bytes": 55046144,
+     "working_set_bytes": 21745664,
+     "io_read_bytes": 32428,
+     "io_write_bytes": 2344
+    },
+    {
+     "pid": 42528,
+     "name": "conhost.exe",
+     "cpu_s": 0.03125,
+     "private_bytes": 1933312,
+     "working_set_bytes": 8392704,
+     "io_read_bytes": 5390,
+     "io_write_bytes": 0
+    }
+   ]
+  ]
+ }
+}

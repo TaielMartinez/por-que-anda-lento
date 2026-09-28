@@ -6,9 +6,9 @@
 
 **Status:** ready-for-agent
 
-- [ ] Foto de GPU desde nvidia-smi; fallback a contadores genéricos, con el origen indicado en el manifest.
-- [ ] Serie temporal de uso de GPU y VRAM en la Ventana de muestreo.
-- [ ] Top 20 por GPU (uso de motor + VRAM dedicada) en archivo separado.
-- [ ] Resumen: picos de uso y de VRAM.
-- [ ] Tests con fixtures de nvidia-smi y de contadores genéricos.
-- [ ] Documento del dominio `gpu`.
+- [x] Foto de GPU desde nvidia-smi; fallback a contadores genéricos, con el origen indicado en el manifest.
+- [x] Serie temporal de uso de GPU y VRAM en la Ventana de muestreo.
+- [x] Top 20 por GPU (uso de motor + VRAM dedicada) en archivo separado.
+- [x] Resumen: picos de uso y de VRAM.
+- [x] Tests con fixtures de nvidia-smi y de contadores genéricos.
+- [x] Documento del dominio `gpu`.
