@@ -6,9 +6,9 @@
 
 **Status:** ready-for-agent
 
-- [ ] Archivos separados para lista, árbol, líneas de comando, I/O y handles, cada uno con su entrada en el manifest.
-- [ ] Procesos protegidos o que terminan durante la lectura no rompen el dominio; el manifest marca `partial` con motivo si faltan datos.
-- [ ] Líneas de comando sin enmascarar.
-- [ ] Resumen: cantidad de procesos, suma de private bytes y de working set.
-- [ ] Tests con fixtures grabadas de esta PC a través de los puertos.
-- [ ] Documento del dominio `processes`.
+- [x] Archivos separados para lista, árbol, líneas de comando, I/O y handles, cada uno con su entrada en el manifest.
+- [x] Procesos protegidos o que terminan durante la lectura no rompen el dominio; el manifest marca `partial` con motivo si faltan datos.
+- [x] Líneas de comando sin enmascarar.
+- [x] Resumen: cantidad de procesos, suma de private bytes y de working set.
+- [x] Tests con fixtures grabadas de esta PC a través de los puertos.
+- [x] Documento del dominio `processes`.

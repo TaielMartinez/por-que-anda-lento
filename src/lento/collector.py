@@ -8,11 +8,11 @@ from pathlib import Path
 from types import ModuleType
 
 from lento.capture import CaptureWriter
-from lento.domains import system
+from lento.domains import processes, system
 from lento.ports import Ports
 
 # Cada dominio es un módulo con NAME, BASE (carpeta dentro de la Captura) y collect(ports, out).
-DOMAINS: list[ModuleType] = [system]
+DOMAINS: list[ModuleType] = [system, processes]
 
 
 @dataclass
