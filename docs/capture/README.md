@@ -45,8 +45,9 @@ Las Capturas no se borran solas. Los datos se guardan **sin filtrar** (líneas d
 | `is_reference` | `true` si se tomó con la PC andando bien (Referencia). |
 | `sampling` | `duration_s` e `interval_s` de la Ventana de muestreo. |
 | `missing_tools` | Herramientas de la Preparación que faltaban (los datos que dependen de ellas quedan `partial`/`failed`). |
+| `missing_tools_hint` | Qué hacer si faltan herramientas (`null` si no falta ninguna). Cada elemento de `missing_tools` tiene `name`, `description` y `needed_for` (qué datos faltan por eso). |
 | `domains.<nombre>` | `status` (`complete` / `partial` / `failed`) y `reasons` (por qué no está completo). |
-| `files[]` | Un elemento por archivo: `path`, `domain`, `question` (la pregunta que responde), `bytes`, `status`, `reason`. |
+| `files[]` | Un elemento por archivo: `path`, `domain`, `question` (la pregunta que responde), `bytes`, `status`, `reason` y `note` (aclaraciones, como un truncado). |
 | `errors` | Traza de la excepción de cada dominio que falló (para depurar el Colector). |
 
 Estados:

@@ -11,6 +11,19 @@ Herramienta para diagnosticar por qué una PC Windows anda lenta. Un **Colector*
 - Windows 10 u 11, Python 3.12 o superior y [uv](https://docs.astral.sh/uv/).
 - Permisos de administrador: el Colector los pide solo, por UAC.
 
+## Preparación
+
+`uv run setup` descarga desde las fuentes oficiales, verifica por SHA256 e instala:
+
+| Herramienta | Para qué |
+|---|---|
+| LibreHardwareMonitor 0.9.6 + driver PawnIO 2.2.0 | temperaturas, ventiladores y clocks |
+| Sysinternals Autoruns, Sigcheck, Handle | programas de inicio, firmas de drivers, handles |
+| Windows Performance Toolkit (ADK 10.1.26100.9457) | latencia DPC/ISR por driver y red por proceso |
+| Debugging Tools (SDK 10.0.26100.9169) | `pooltag.txt`, para traducir tags del pool a drivers |
+
+Pide confirmación porque instalar implica aceptar sus licencias (o `--yes`), y pide admin por UAC. Es idempotente: lo instalado se saltea. `uv run setup --status` muestra qué falta. Las versiones y hashes están fijados en `src/lento/tools.py`. Si una fuente publica otra versión, la verificación falla y hay que actualizarlos a mano (ADR 0003).
+
 ## Uso
 
 ```bash

@@ -10,7 +10,8 @@ from types import ModuleType
 from lento.capture import CaptureWriter
 from lento.domains import devices, history, memory, network, processes, sampling, software, storage, system
 from lento.domains import windows as windows_domain
-from lento.ports import Ports
+from lento.ports import PortError, Ports
+from lento.tools import TOOLS
 
 # Cada dominio es un módulo con NAME, BASE (carpeta dentro de la Captura) y collect(ports, out).
 DOMAINS: list[ModuleType] = [
@@ -40,6 +41,13 @@ def collect(ports: Ports, captures_dir: Path, options: CollectOptions) -> Path:
         is_reference=options.reference,
         sampling={"duration_s": options.duration_s, "interval_s": options.interval_s},
     )
+    missing = _missing_tools(ports)
+    writer.metadata["missing_tools"] = missing
+    writer.metadata["missing_tools_hint"] = (
+        "Faltan herramientas: correr `uv run setup` (Preparación, requiere admin) y repetir la Captura."
+        if missing
+        else None
+    )
 
     modules = [*DOMAINS, *([sampling] if options.duration_s > 0 else [])]
     for module in modules:
@@ -55,6 +63,18 @@ def collect(ports: Ports, captures_dir: Path, options: CollectOptions) -> Path:
     writer.metadata["finished_at"] = ports.now()
     writer.write_manifest()
     return root
+
+
+def _missing_tools(ports: Ports) -> list[dict[str, str]]:
+    missing = []
+    for tool in TOOLS:
+        try:
+            present = ports.tool_path(tool.name) is not None
+        except PortError:
+            present = False
+        if not present:
+            missing.append({"name": tool.name, "description": tool.description, "needed_for": tool.needed_for})
+    return missing
 
 
 def _new_capture_dir(captures_dir: Path, started_at: str) -> Path:

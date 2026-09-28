@@ -36,7 +36,7 @@ Elegí los argumentos según los Síntomas:
 
 Avisale al usuario que va a aparecer un pedido de UAC y que tiene que aceptarlo. Ejecutá el comando con un timeout de la duración más 5 minutos. La última línea de la salida es la ruta de la Captura. Si el comando sale con código 2, el usuario rechazó el UAC: preguntale si quiere reintentar.
 
-Leé `summary.json` y `manifest.json`. Si `missing_tools` no está vacío, decile qué datos faltan por eso y ofrecele correr `uv run setup` (instala herramientas, requiere su permiso) y repetir la Captura.
+Leé `summary.json` y `manifest.json`. Si `missing_tools` no está vacío, decile qué datos faltan por eso (`needed_for`) y ofrecele la Preparación. Mostrale `uv run setup --status`. Solo si acepta de forma explícita (instala herramientas y el driver PawnIO, y acepta sus licencias), corré `uv run setup --yes` y repetí la Captura.
 
 **Listo cuando:** tenés la ruta de una Captura y leíste su Resumen y su manifest.
 

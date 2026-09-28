@@ -13,6 +13,14 @@ from lento.collector import CollectOptions, collect
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 CAPTURES_DIR = PROJECT_ROOT / "captures"
 
+def _utf8_output() -> None:
+    """La salida la leen agentes por tubería: UTF-8 siempre, en lugar de la página de códigos de la consola."""
+    for stream in (sys.stdout, sys.stderr):
+        reconfigure = getattr(stream, "reconfigure", None)
+        if reconfigure:
+            reconfigure(encoding="utf-8", errors="replace")
+
+
 EXIT_OK = 0
 EXIT_FAILED = 1
 EXIT_UAC_CANCELLED = 2
@@ -30,6 +38,7 @@ def _collect_parser() -> argparse.ArgumentParser:
 
 
 def collect_main(argv: list[str] | None = None) -> int:
+    _utf8_output()
     argv = sys.argv[1:] if argv is None else argv
     args = _collect_parser().parse_args(argv)
     from lento import elevation
@@ -84,6 +93,7 @@ def _report(code: int, result: dict) -> int:
 def setup_main(argv: list[str] | None = None) -> int:
     from lento.setup import main
 
+    _utf8_output()
     return main(sys.argv[1:] if argv is None else argv)
 
 
