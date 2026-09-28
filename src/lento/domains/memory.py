@@ -185,7 +185,9 @@ def _owners(ports: Ports, tags: list[dict[str, Any]]) -> tuple[list[dict[str, An
 
     owners = []
     for name, t in selected.items():
-        drivers, description, source = [], None, "unknown"
+        drivers: list[str] = []
+        description: str | None = None
+        source = "unknown"
         if name.rstrip() in known:
             drivers, description = known[name.rstrip()]
             source = "pooltag.txt"
