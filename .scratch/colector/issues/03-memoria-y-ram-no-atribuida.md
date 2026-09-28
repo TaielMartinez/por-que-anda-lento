@@ -6,8 +6,8 @@
 
 **Status:** ready-for-agent
 
-- [ ] Archivos separados para totales de memoria, listas de páginas (standby/modificada/libre/zero), compresión y pool por tag (tag, paginado/no paginado, bytes, asignaciones).
-- [ ] Pool por tag leído vía API nativa (sin herramientas externas); el mapeo tag→driver es el ticket 12.
-- [ ] Resumen: RAM usada, atribuida a procesos, no atribuida y desglose (pool no paginado, pool paginado, caché, compresión, resto).
-- [ ] Tests con fixtures, incluido un caso con pool no paginado inflado que se refleja en el Resumen.
-- [ ] Documento del dominio `memory` explicando cada término y cómo se calcula la RAM no atribuida.
+- [x] Archivos separados para totales de memoria, listas de páginas (standby/modificada/libre/zero), compresión y pool por tag (tag, paginado/no paginado, bytes, asignaciones).
+- [x] Pool por tag leído vía API nativa (sin herramientas externas); el mapeo tag→driver es el ticket 12.
+- [x] Resumen: RAM usada, atribuida a procesos, no atribuida y desglose (pool no paginado, pool paginado, caché, compresión, resto).
+- [x] Tests con fixtures, incluido un caso con pool no paginado inflado que se refleja en el Resumen.
+- [x] Documento del dominio `memory` explicando cada término y cómo se calcula la RAM no atribuida.

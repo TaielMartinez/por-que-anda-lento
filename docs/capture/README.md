@@ -64,6 +64,7 @@ Un objeto con una sección por dominio. Cada documento de dominio describe su se
 |---|---|---|
 | [system.md](system.md) | Foto | Hardware, Windows, uptime, energía, Game Mode, HAGS |
 | [processes.md](processes.md) | Foto | Procesos: memoria, CPU, árbol, líneas de comando, I/O, handles |
+| [memory.md](memory.md) | Foto | RAM usada, standby, compresión, pool del kernel, RAM no atribuida a procesos |
 
 ## Unidades y convenciones
 
