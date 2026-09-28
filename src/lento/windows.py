@@ -378,6 +378,8 @@ def _process_names() -> dict[int, str]:
 
 
 def _decode(data: bytes) -> str:
+    if data.startswith((b"\xff\xfe", b"\xfe\xff")) or (len(data) > 3 and data[1] == 0 and data[3] == 0):
+        return data.decode("utf-16").lstrip("﻿")  # Sysinternals con -c escribe UTF-16
     oem = f"cp{ctypes.windll.kernel32.GetOEMCP()}"
     for encoding in ("utf-8", oem):
         try:

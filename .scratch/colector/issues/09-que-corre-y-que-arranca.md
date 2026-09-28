@@ -6,8 +6,8 @@
 
 **Status:** ready-for-agent
 
-- [ ] Cada dominio en archivos de una sola pregunta.
-- [ ] Sin Sysinternals, `startup` y `drivers` quedan `partial` con lo que se pueda leer sin ellas y el motivo en el manifest.
-- [ ] Resumen: servicios en ejecución, entradas de inicio, drivers sin firmar, si hay escaneo o update en curso.
-- [ ] Tests con fixtures de salidas de autorunsc y sigcheck.
-- [ ] Un documento por dominio.
+- [x] Cada dominio en archivos de una sola pregunta.
+- [x] Sin Sysinternals, `startup` y `drivers` quedan `partial` con lo que se pueda leer sin ellas y el motivo en el manifest.
+- [x] Resumen: servicios en ejecución, entradas de inicio, drivers sin firmar, si hay escaneo o update en curso.
+- [x] Tests con fixtures de salidas de autorunsc y sigcheck.
+- [x] Un documento por dominio.

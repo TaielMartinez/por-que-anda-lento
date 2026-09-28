@@ -8,14 +8,18 @@ from pathlib import Path
 from types import ModuleType
 
 from lento.capture import CaptureWriter
-from lento.domains import devices, history, memory, network, processes, sampling, software, storage, system
+from lento.domains import (
+    devices, drivers, history, memory, network, processes, sampling, scheduled_tasks, security, services,
+    software, startup, storage, system, updates,
+)
 from lento.domains import windows as windows_domain
 from lento.ports import PortError, Ports
 from lento.tools import TOOLS
 
 # Cada dominio es un módulo con NAME, BASE (carpeta dentro de la Captura) y collect(ports, out).
 DOMAINS: list[ModuleType] = [
-    system, processes, memory, storage, devices, network, windows_domain, software, history,
+    system, processes, memory, storage, devices, network, windows_domain, software,
+    services, startup, scheduled_tasks, drivers, security, updates, history,
 ]
 # Todo lo que puede aparecer en una Captura: los dominios de la Foto y la Ventana de muestreo.
 ALL_MODULES: list[ModuleType] = [*DOMAINS, sampling]

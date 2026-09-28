@@ -71,6 +71,12 @@ Un objeto con una sección por dominio. Cada documento de dominio describe su se
 | [network.md](network.md) | Foto | Adaptadores, IP y conexiones abiertas por proceso |
 | [windows.md](windows.md) | Foto | Ventana activa y ventanas visibles (qué hace el usuario) |
 | [software.md](software.md) | Foto | Programas instalados e instalaciones recientes |
+| [services.md](services.md) | Foto | Servicios, estado, modo de inicio y proceso que los hospeda |
+| [startup.md](startup.md) | Foto | Programas que arrancan con Windows o al iniciar sesión |
+| [scheduled_tasks.md](scheduled_tasks.md) | Foto | Tareas programadas habilitadas y cuáles corrieron hace poco |
+| [drivers.md](drivers.md) | Foto | Drivers cargados, versión y fecha por dispositivo, drivers sin firma |
+| [security.md](security.md) | Foto | Defender (¿escaneando?), exclusiones, antivirus activos |
+| [updates.md](updates.md) | Foto | Windows Update instalando, reinicio pendiente, actualizaciones recientes |
 | [sampling.md](sampling.md) | Ventana de muestreo | CPU por núcleo, DPC/interrupciones, disco, hard page faults, memoria y tops de procesos por recurso |
 | [history.md](history.md) | Historial | Errores de disco, WHEA, falta de memoria, arranques lentos, TDR de GPU, apagados inesperados, cierres de apps (7 días) |
 
