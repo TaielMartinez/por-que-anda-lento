@@ -75,6 +75,15 @@ class Ports:
     def sensors(self) -> list[dict[str, Any]]:
         return self._call("sensors")
 
+    def etw_start(self, xperf: str) -> dict[str, Any]:
+        """Inicia la traza del kernel (DPC, ISR, red, procesos e imágenes)."""
+        return self._call("etw_start", xperf)
+
+    def etw_stop(self, xperf: str, keep: bool) -> dict[str, Any]:
+        """Detiene la traza y la procesa: {"dpcisr": texto de `xperf -a dpcisr`,
+        "network_dump": encabezado y eventos TcpIp/UdpIp del volcado, "etl": ruta si se conservó}."""
+        return self._call("etw_stop", xperf, keep)
+
     def file_text(self, path: str) -> str:
         return self._call("file_text", path)
 

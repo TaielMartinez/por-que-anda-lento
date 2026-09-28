@@ -90,12 +90,14 @@ def collect(ports: Ports, out: DomainWriter) -> None:
     duration, interval = options.duration_s, options.interval_s
     ticks = max(1, math.floor(duration / interval + 1e-9))
 
+    from lento.domains.etw import EtwSampler
     from lento.domains.gpu import GpuSampler
     from lento.domains.thermals import ThermalSampler
 
     cores = CpuCoreSampler(ports)
     processes = ProcessSampler(ports, cores.logical_processors)
     samplers: list[Sampler] = [
+        EtwSampler(ports, out),  # primero: la traza debe cubrir toda la Ventana
         cores,
         SystemCounterSampler(ports),
         processes,

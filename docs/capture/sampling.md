@@ -42,6 +42,29 @@ Una columna por sensor de tipo temperatura, clock, ventilador o potencia, con el
 
 `processor_queue_length`: hilos listos esperando CPU. Si se mantiene por encima de 2 por núcleo, la CPU no alcanza. También `context_switches_per_s`.
 
+## Traza ETW
+
+Con la Preparación hecha (Windows Performance Toolkit), el Colector graba una traza del kernel con xperf exactamente durante la Ventana y la procesa al terminar. El `.etl` crudo se borra, salvo que se pase `--keep-etl`. `manifest.etw` indica `trace` (si hubo traza), `etl_kept` y `etl_path`. Sin WPT, estos dos archivos quedan `failed` y el resto de la Ventana se genera igual.
+
+### `dpc_isr_by_driver`: ¿Qué drivers generaron DPC e interrupciones (ISR), cuántas y cuánto duraron?
+
+Una fila por driver y tipo, sacada de los histogramas de `xperf -a dpcisr`:
+
+| Columna | Qué es |
+|---|---|
+| `kind` | `dpc` o `isr`. |
+| `module` | El driver, por ejemplo `nvlddmkm.sys` (NVIDIA), `ndis.sys` (red), `USBPORT.SYS`/`USBXHCI.SYS` (USB), `storport.sys` (disco), `ACPI.sys`, `dxgkrnl.sys` (gráficos). |
+| `count` | Cantidad durante la Ventana. |
+| `count_over_100us`, `count_over_1ms` | Cuántas duraron más de 100 µs o de 1 ms. |
+| `max_usecs_bucket` | Límite superior del intervalo más lento con eventos: la duración máxima aproximada. |
+| `approx_total_usecs` | Tiempo total aproximado (cantidad × punto medio de cada intervalo). |
+
+**Cómo interpretarlo.** Un DPC o ISR de más de 1 ms bloquea ese núcleo y es suficiente para que el mouse "salte" o el audio se corte. Un driver con `count_over_1ms` mayor que 0 de forma repetida es el sospechoso principal. Cruzar `module` con `snapshot/drivers/loaded` y `snapshot/drivers/device_drivers` para ver su versión y fecha.
+
+### `processes_top_net`: ¿Cuáles fueron los 20 procesos que más usaron red en cada muestra?
+
+Desde los eventos TCP/UDP de la traza: `rank`, `pid`, `name`, `sent_bytes_per_s`, `recv_bytes_per_s` y `total_bytes_per_s`. Cada evento se asigna a la muestra que lo cierra.
+
 ## Procesos
 
 Las tasas se calculan entre dos muestras consecutivas, así que la primera muestra no genera filas. Un proceso que aparece a mitad de la Ventana no tiene tasa en su primera muestra.
@@ -87,4 +110,6 @@ Los 20 procesos que más usaron la GPU en cada muestra: `rank`, `pid`, `name`, `
 | `temperature_max_c_by_hardware` | Temperatura máxima alcanzada por componente durante la Ventana. |
 | `cpu_average_clock_mhz` | `min`, `mean`, `p5` del promedio de clocks de los núcleos (una caída indica throttling). |
 | `top_cpu_processes`, `top_ram_processes`, `top_disk_processes`, `top_gpu_processes` | Los 5 procesos con mayor promedio en cada recurso (`mean`, `max`). |
+| `dpc_isr_top_drivers` | Los 5 drivers con más tiempo de DPC/ISR (`kind`, `module`, `count`, `count_over_1ms`, `max_usecs_bucket`, `approx_total_usecs`). |
+| `top_net_processes` | Los 5 procesos con más tráfico de red promedio. |
 | `largest_private_bytes_growth` | El proceso que más creció en private bytes durante la Ventana. |

@@ -25,6 +25,7 @@ class WindowsPorts(Ports):
     def __init__(self, tools_dir: Path = TOOLS_DIR):
         self.tools_dir = tools_dir
         self._queries: dict[tuple[str, ...], Any] = {}
+        self._etw_dir = Path()
 
     def _call(self, method: str, *args: Any) -> Any:
         impl = getattr(self, f"_{method}", None)
@@ -343,6 +344,43 @@ class WindowsPorts(Ports):
             raise PortError("LibreHardwareMonitor no está instalado (correr la Preparación)")
         return read_sensors(Path(dll))
 
+    def _etw_start(self, xperf: str) -> dict[str, Any]:
+        import tempfile
+
+        self._etw_dir = Path(tempfile.mkdtemp(prefix="lento-etw-"))
+        result = self._run(
+            [
+                xperf, "-on", "PROC_THREAD+LOADER+DPC+INTERRUPT+NETWORKTRACE",
+                "-BufferSize", "1024", "-MinBuffers", "64", "-MaxBuffers", "1024",
+                "-f", str(self._etw_dir / "kernel.etl"),
+            ],
+            60,
+        )
+        if result["returncode"] != 0:
+            raise PortError(f"xperf -on falló: {(result['stderr'] or result['stdout']).strip()[:300]}")
+        return {"started": True}
+
+    def _etw_stop(self, xperf: str, keep: bool) -> dict[str, Any]:
+        import shutil
+
+        work = self._etw_dir
+        merged = work / "trace.etl"
+        result = self._run([xperf, "-d", str(merged)], 600)
+        if result["returncode"] != 0:
+            raise PortError(f"xperf -d falló: {(result['stderr'] or result['stdout']).strip()[:300]}")
+        dpcisr = self._run([xperf, "-i", str(merged), "-a", "dpcisr"], 600)["stdout"]
+        dump = work / "dump.txt"
+        self._run([xperf, "-i", str(merged), "-o", str(dump), "-a", "dumper"], 1200)
+        network = _network_lines(dump) if dump.exists() else ""
+        etl = None
+        if keep:
+            etl = str(merged)
+            (work / "kernel.etl").unlink(missing_ok=True)
+            dump.unlink(missing_ok=True)
+        else:
+            shutil.rmtree(work, ignore_errors=True)
+        return {"dpcisr": dpcisr, "network_dump": network, "etl": etl}
+
     def _file_text(self, path: str) -> str:
         try:
             return Path(path).read_text(encoding="utf-8", errors="replace")
@@ -371,6 +409,22 @@ class WindowsPorts(Ports):
         if remaining > 0:
             time.sleep(remaining)
         return time.monotonic()
+
+
+def _network_lines(dump: Path) -> str:
+    """Del volcado de xperf, solo el encabezado y los eventos TcpIp/UdpIp (el resto es enorme)."""
+    kept = []
+    in_header = False
+    with open(dump, encoding="utf-8", errors="replace") as f:
+        for line in f:
+            stripped = line.strip()
+            if stripped == "BeginHeader":
+                in_header = True
+            if in_header or stripped.startswith(("TcpIp/", "UdpIp/")):
+                kept.append(line.rstrip("\n"))
+            if stripped == "EndHeader":
+                in_header = False
+    return "\n".join(kept)
 
 
 def _process_names() -> dict[int, str]:

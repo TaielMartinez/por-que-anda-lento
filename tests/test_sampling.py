@@ -58,7 +58,8 @@ def test_one_csv_per_metric_for_the_whole_window(capture):
         assert len(rows) == 4, name  # muestra inicial + 3 ticks
         assert rows[0]["t_s"] == "0.0"
     assert cap.manifest["sampling"] == {"duration_s": 3, "interval_s": 1}
-    assert cap.domain("sampling")["status"] == "complete"
+    for name in ("cpu_per_core", "dpc_interrupt", "disk", "page_faults", "memory_available", "system_load"):
+        assert cap.entry(f"sampling/{name}.csv")["status"] == "complete", name
 
 
 def test_duration_and_interval_decide_the_number_of_samples(capture):

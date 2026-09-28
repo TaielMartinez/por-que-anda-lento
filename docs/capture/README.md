@@ -48,6 +48,7 @@ Las Capturas no se borran solas. Los datos se guardan **sin filtrar** (líneas d
 | `missing_tools_hint` | Qué hacer si faltan herramientas (`null` si no falta ninguna). Cada elemento de `missing_tools` tiene `name`, `description` y `needed_for` (qué datos faltan por eso). |
 | `domains.<nombre>` | `status` (`complete` / `partial` / `failed`) y `reasons` (por qué no está completo). |
 | `files[]` | Un elemento por archivo: `path`, `domain`, `question` (la pregunta que responde), `bytes`, `status`, `reason` y `note` (aclaraciones, como un truncado). |
+| `etw` | Si hubo traza ETW en la Ventana (`trace`), si se conservó el `.etl` (`etl_kept`) y dónde (`etl_path`). |
 | `errors` | Traza de la excepción de cada dominio que falló (para depurar el Colector). |
 
 Estados:
@@ -79,7 +80,7 @@ Un objeto con una sección por dominio. Cada documento de dominio describe su se
 | [drivers.md](drivers.md) | Foto | Drivers cargados, versión y fecha por dispositivo, drivers sin firma |
 | [security.md](security.md) | Foto | Defender (¿escaneando?), exclusiones, antivirus activos |
 | [updates.md](updates.md) | Foto | Windows Update instalando, reinicio pendiente, actualizaciones recientes |
-| [sampling.md](sampling.md) | Ventana de muestreo | CPU por núcleo, DPC/interrupciones, disco, hard page faults, memoria, GPU, temperaturas y tops de procesos por recurso |
+| [sampling.md](sampling.md) | Ventana de muestreo | CPU por núcleo, DPC/interrupciones, disco, hard page faults, memoria, GPU, temperaturas, DPC/ISR por driver (ETW) y tops de procesos por recurso |
 | [history.md](history.md) | Historial | Errores de disco, WHEA, falta de memoria, arranques lentos, TDR de GPU, apagados inesperados, cierres de apps (7 días) |
 
 ## Unidades y convenciones

@@ -107,23 +107,30 @@ class DomainWriter:
         question: str,
         columns: list[str],
         reason: str | None = None,
+        failed: bool = False,
     ) -> None:
         buf = io.StringIO()
         writer = csv.DictWriter(buf, fieldnames=columns, extrasaction="ignore", lineterminator="\n")
         writer.writeheader()
         for row in rows:
             writer.writerow(row)
-        self._register(f"{name}.csv", buf.getvalue(), question, reason)
+        self._register(f"{name}.csv", buf.getvalue(), question, reason, failed=failed)
 
     def text(self, name: str, text: str, question: str, reason: str | None = None) -> None:
         self._register(name, text, question, reason)
 
     def _register(
-        self, filename: str, text: str, question: str, reason: str | None, note: str | None = None
+        self,
+        filename: str,
+        text: str,
+        question: str,
+        reason: str | None,
+        note: str | None = None,
+        failed: bool = False,
     ) -> None:
         rel = f"{self.base}/{filename}" if self.base else filename
         size = self.capture._write_text(rel, text)
-        status = PARTIAL if reason else COMPLETE
+        status = FAILED if failed else PARTIAL if reason else COMPLETE
         if reason:
             self.partial(f"{filename}: {reason}")
         self.capture.files.append(FileEntry(rel, self.name, question, size, status, reason, note))
