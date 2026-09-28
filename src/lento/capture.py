@@ -24,6 +24,7 @@ class FileEntry:
     bytes: int
     status: str
     reason: str | None
+    note: str | None = None
 
 
 @dataclass
@@ -94,8 +95,10 @@ class DomainWriter:
         """Sección del Resumen donde este dominio deja sus métricas derivadas."""
         return self.capture.summary.setdefault(section or self.name, {})
 
-    def json(self, name: str, data: Any, question: str, reason: str | None = None) -> None:
-        self._register(f"{name}.json", _dumps(data), question, reason)
+    def json(
+        self, name: str, data: Any, question: str, reason: str | None = None, note: str | None = None
+    ) -> None:
+        self._register(f"{name}.json", _dumps(data), question, reason, note)
 
     def csv(
         self,
@@ -115,13 +118,15 @@ class DomainWriter:
     def text(self, name: str, text: str, question: str, reason: str | None = None) -> None:
         self._register(name, text, question, reason)
 
-    def _register(self, filename: str, text: str, question: str, reason: str | None) -> None:
+    def _register(
+        self, filename: str, text: str, question: str, reason: str | None, note: str | None = None
+    ) -> None:
         rel = f"{self.base}/{filename}" if self.base else filename
         size = self.capture._write_text(rel, text)
         status = PARTIAL if reason else COMPLETE
         if reason:
             self.partial(f"{filename}: {reason}")
-        self.capture.files.append(FileEntry(rel, self.name, question, size, status, reason))
+        self.capture.files.append(FileEntry(rel, self.name, question, size, status, reason, note))
 
 
 def _dumps(data: Any) -> str:

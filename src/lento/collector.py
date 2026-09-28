@@ -8,11 +8,11 @@ from pathlib import Path
 from types import ModuleType
 
 from lento.capture import CaptureWriter
-from lento.domains import memory, processes, sampling, system
+from lento.domains import history, memory, processes, sampling, system
 from lento.ports import Ports
 
 # Cada dominio es un módulo con NAME, BASE (carpeta dentro de la Captura) y collect(ports, out).
-DOMAINS: list[ModuleType] = [system, processes, memory]
+DOMAINS: list[ModuleType] = [system, processes, memory, history]
 # Todo lo que puede aparecer en una Captura: los dominios de la Foto y la Ventana de muestreo.
 ALL_MODULES: list[ModuleType] = [*DOMAINS, sampling]
 

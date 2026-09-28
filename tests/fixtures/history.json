@@ -1,0 +1,80 @@
+{
+ "calls": {
+  "now[]": [
+   "2026-09-28T12:04:05-03:00",
+   "2026-09-28T12:04:05-03:00"
+  ],
+  "events[\"System\", \"*[System[(Provider[@Name='disk' or @Name='Ntfs' or @Name='stornvme' or @Name='storahci' or @Name='volmgr' or @Name='Microsoft-Windows-Ntfs'] and (Level=1 or Level=2 or Level=3)) and TimeCreated[timediff(@SystemTime) <= 604800000]]]\", 200]": [
+   []
+  ],
+  "events[\"System\", \"*[System[(Provider[@Name='Microsoft-Windows-WHEA-Logger']) and TimeCreated[timediff(@SystemTime) <= 604800000]]]\", 200]": [
+   []
+  ],
+  "events[\"System\", \"*[System[(Provider[@Name='Microsoft-Windows-Resource-Exhaustion-Detector']) and TimeCreated[timediff(@SystemTime) <= 604800000]]]\", 200]": [
+   []
+  ],
+  "events[\"Microsoft-Windows-Diagnostics-Performance/Operational\", \"*[System[((Level=1 or Level=2 or Level=3)) and TimeCreated[timediff(@SystemTime) <= 604800000]]]\", 200]": [
+   {
+    "__error__": "error: (5, 'EvtQuery', 'Acceso denegado.')"
+   }
+  ],
+  "events[\"System\", \"*[System[((Provider[@Name='Display'] and EventID=4101) or Provider[@Name='nvlddmkm'] or Provider[@Name='amdkmdag']) and TimeCreated[timediff(@SystemTime) <= 604800000]]]\", 200]": [
+   []
+  ],
+  "events[\"System\", \"*[System[((Provider[@Name='Microsoft-Windows-Kernel-Power'] and EventID=41) or (Provider[@Name='EventLog'] and EventID=6008)) and TimeCreated[timediff(@SystemTime) <= 604800000]]]\", 200]": [
+   [
+    {
+     "provider": "Microsoft-Windows-Kernel-Power",
+     "event_id": 41,
+     "level": 1,
+     "time_created": "2026-09-24T19:15:14-03:00",
+     "record_id": 7053,
+     "data": {
+      "BugcheckCode": "0",
+      "BugcheckParameter1": "0x0",
+      "BugcheckParameter2": "0x0",
+      "BugcheckParameter3": "0x0",
+      "BugcheckParameter4": "0x0",
+      "SleepInProgress": "0",
+      "PowerButtonTimestamp": "0",
+      "BootAppStatus": "0",
+      "Checkpoint": "0",
+      "ConnectedStandbyInProgress": "false",
+      "SystemSleepTransitionsToOn": "0",
+      "CsEntryScenarioInstanceId": "0",
+      "BugcheckInfoFromEFI": "false",
+      "CheckpointStatus": "0",
+      "CsEntryScenarioInstanceIdV2": "0",
+      "LongPowerButtonPressDetected": "false",
+      "LidReliability": "false",
+      "InputSuppressionState": "0",
+      "PowerButtonSuppressionState": "0",
+      "LidState": "3",
+      "WHEABootErrorCount": "0"
+     },
+     "message": "Se reinició el sistema sin apagarlo limpiamente primero. Este error puede producirse si el sistema dejó de responder, se bloqueó o se interrumpió el suministro eléctrico de forma inesperada."
+    },
+    {
+     "provider": "EventLog",
+     "event_id": 6008,
+     "level": 2,
+     "time_created": "2026-09-24T19:15:22-03:00",
+     "record_id": 7033,
+     "data": {
+      "param1": "10:51:35 AM",
+      "param2": "‎9/‎24/‎2026",
+      "param3": null,
+      "param4": null,
+      "param5": "804020",
+      "param6": null,
+      "param7": null
+     },
+     "message": "El cierre anterior del sistema a las 10:51:35 AM del ‎9/‎24/‎2026 resultó inesperado."
+    }
+   ]
+  ],
+  "events[\"Application\", \"*[System[((Provider[@Name='Application Error'] and EventID=1000) or (Provider[@Name='Application Hang'] and EventID=1002)) and TimeCreated[timediff(@SystemTime) <= 604800000]]]\", 200]": [
+   []
+  ]
+ }
+}

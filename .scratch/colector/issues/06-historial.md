@@ -6,8 +6,8 @@
 
 **Status:** ready-for-agent
 
-- [ ] Un archivo por fuente con tope configurable; el manifest indica si se truncó.
-- [ ] Fuentes inaccesibles quedan `partial`/`failed` con motivo.
-- [ ] Resumen: cantidad de eventos por fuente y por día.
-- [ ] Tests con fixtures de eventos grabados.
-- [ ] Documento del Historial con qué significa cada fuente.
+- [x] Un archivo por fuente con tope configurable; el manifest indica si se truncó.
+- [x] Fuentes inaccesibles quedan `partial`/`failed` con motivo.
+- [x] Resumen: cantidad de eventos por fuente y por día.
+- [x] Tests con fixtures de eventos grabados.
+- [x] Documento del Historial con qué significa cada fuente.

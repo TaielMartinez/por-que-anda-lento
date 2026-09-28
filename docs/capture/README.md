@@ -66,6 +66,7 @@ Un objeto con una sección por dominio. Cada documento de dominio describe su se
 | [processes.md](processes.md) | Foto | Procesos: memoria, CPU, árbol, líneas de comando, I/O, handles |
 | [memory.md](memory.md) | Foto | RAM usada, standby, compresión, pool del kernel, RAM no atribuida a procesos |
 | [sampling.md](sampling.md) | Ventana de muestreo | CPU por núcleo, DPC/interrupciones, disco, hard page faults, memoria y tops de procesos por recurso |
+| [history.md](history.md) | Historial | Errores de disco, WHEA, falta de memoria, arranques lentos, TDR de GPU, apagados inesperados, cierres de apps (7 días) |
 
 ## Unidades y convenciones
 
