@@ -41,6 +41,10 @@ class Ports:
     def registry_subkeys(self, path: str) -> list[str]:
         return self._call("registry_subkeys", path)
 
+    def registry_subkey_values(self, path: str) -> dict[str, dict[str, Any]]:
+        """Los valores de cada subclave directa de `path`: {subclave: {valor: dato}}."""
+        return self._call("registry_subkey_values", path)
+
     def events(self, log: str, xpath: str, max_events: int) -> list[dict[str, Any]]:
         return self._call("events", log, xpath, max_events)
 

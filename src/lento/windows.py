@@ -129,6 +129,15 @@ class WindowsPorts(Ports):
                 i += 1
             return names
 
+    def _registry_subkey_values(self, path: str) -> dict[str, dict[str, Any]]:
+        result = {}
+        for sub in self._registry_subkeys(path):
+            try:
+                result[sub] = self._registry_values(f"{path}\{sub}")
+            except (PortError, OSError):
+                continue
+        return result
+
     def _events(self, log: str, xpath: str, max_events: int) -> list[dict[str, Any]]:
         import win32evtlog
 
@@ -283,15 +292,20 @@ class WindowsPorts(Ports):
             return True
 
         user32.EnumWindows(callback, 0)
+        names = _process_names()
+        for row in rows:
+            row["process_name"] = names.get(row["pid"])
         return rows
 
     def _connections(self) -> list[dict[str, Any]]:
         import psutil
 
+        names = _process_names()
         rows = []
         for c in psutil.net_connections(kind="inet"):
             rows.append({
                 "pid": c.pid,
+                "process_name": names.get(c.pid),
                 "protocol": "tcp" if c.type == 1 else "udp",
                 "family": "ipv6" if c.family == 23 else "ipv4",
                 "local_address": f"{c.laddr.ip}:{c.laddr.port}" if c.laddr else None,
@@ -355,6 +369,12 @@ class WindowsPorts(Ports):
         if remaining > 0:
             time.sleep(remaining)
         return time.monotonic()
+
+
+def _process_names() -> dict[int, str]:
+    import psutil
+
+    return {p.pid: p.info["name"] for p in psutil.process_iter(["name"])}
 
 
 def _decode(data: bytes) -> str:

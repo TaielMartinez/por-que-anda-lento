@@ -65,6 +65,11 @@ Un objeto con una sección por dominio. Cada documento de dominio describe su se
 | [system.md](system.md) | Foto | Hardware, Windows, uptime, energía, Game Mode, HAGS |
 | [processes.md](processes.md) | Foto | Procesos: memoria, CPU, árbol, líneas de comando, I/O, handles |
 | [memory.md](memory.md) | Foto | RAM usada, standby, compresión, pool del kernel, RAM no atribuida a procesos |
+| [storage.md](storage.md) | Foto | Espacio libre, discos físicos, salud y SMART |
+| [devices.md](devices.md) | Foto | Dispositivos PnP, USB/HID y dispositivos con error |
+| [network.md](network.md) | Foto | Adaptadores, IP y conexiones abiertas por proceso |
+| [windows.md](windows.md) | Foto | Ventana activa y ventanas visibles (qué hace el usuario) |
+| [software.md](software.md) | Foto | Programas instalados e instalaciones recientes |
 | [sampling.md](sampling.md) | Ventana de muestreo | CPU por núcleo, DPC/interrupciones, disco, hard page faults, memoria y tops de procesos por recurso |
 | [history.md](history.md) | Historial | Errores de disco, WHEA, falta de memoria, arranques lentos, TDR de GPU, apagados inesperados, cierres de apps (7 días) |
 

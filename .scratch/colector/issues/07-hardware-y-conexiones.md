@@ -6,9 +6,9 @@
 
 **Status:** ready-for-agent
 
-- [ ] Cada dominio en archivos de una sola pregunta, con entradas en el manifest.
-- [ ] Si SMART no está disponible para un disco, el dominio no se rompe (`partial` con motivo).
-- [ ] Títulos de ventana sin enmascarar.
-- [ ] Resumen: espacio libre por volumen, dispositivos con error, conexiones activas.
-- [ ] Tests con fixtures de cada dominio.
-- [ ] Un documento por dominio.
+- [x] Cada dominio en archivos de una sola pregunta, con entradas en el manifest.
+- [x] Si SMART no está disponible para un disco, el dominio no se rompe (`partial` con motivo).
+- [x] Títulos de ventana sin enmascarar.
+- [x] Resumen: espacio libre por volumen, dispositivos con error, conexiones activas.
+- [x] Tests con fixtures de cada dominio.
+- [x] Un documento por dominio.
