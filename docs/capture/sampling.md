@@ -34,6 +34,10 @@ Cada archivo tiene una fila por muestra, incluida la inicial (`t_s = 0`).
 
 Columnas: `utilization_percent`, `memory_used_bytes`, `temperature_c`, `graphics_clock_mhz`, `power_draw_w`, `pstate` y `clock_event_reasons` (motivos separados por `|`; ver [gpu.md](gpu.md)). Sin nvidia-smi solo hay uso (el del proceso con el motor más cargado) y memoria, y el archivo queda `partial`.
 
+### `thermals`: ¿Cómo evolucionaron temperaturas, clocks, ventiladores y consumo durante la Ventana?
+
+Una columna por sensor de tipo temperatura, clock, ventilador o potencia, con el nombre `<hardware> / <sensor> [<unidad>]`, por ejemplo `Intel Core i7-8700K / CPU Package [°C]`. Una temperatura que sube mientras los clocks de la CPU bajan es thermal throttling. Sin LibreHardwareMonitor queda vacío y `partial`. Ver [thermals.md](thermals.md).
+
 ### `system_load`: ¿Cuántos hilos esperaban CPU y cuántos cambios de contexto hubo en cada momento?
 
 `processor_queue_length`: hilos listos esperando CPU. Si se mantiene por encima de 2 por núcleo, la CPU no alcanza. También `context_switches_per_s`.
@@ -80,5 +84,7 @@ Los 20 procesos que más usaron la GPU en cada muestra: `rank`, `pid`, `name`, `
 | `hard_page_reads_per_s` | `max`, `mean`, `p95` de `page_reads_per_s`. |
 | `available_bytes` | `min`, `mean`, `p5` (acá lo malo es lo bajo). |
 | `gpu_utilization_percent`, `gpu_temperature_c` | `max`, `mean`, `p95` de la GPU. |
+| `temperature_max_c_by_hardware` | Temperatura máxima alcanzada por componente durante la Ventana. |
+| `cpu_average_clock_mhz` | `min`, `mean`, `p5` del promedio de clocks de los núcleos (una caída indica throttling). |
 | `top_cpu_processes`, `top_ram_processes`, `top_disk_processes`, `top_gpu_processes` | Los 5 procesos con mayor promedio en cada recurso (`mean`, `max`). |
 | `largest_private_bytes_growth` | El proceso que más creció en private bytes durante la Ventana. |

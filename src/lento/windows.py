@@ -7,6 +7,7 @@ testea con fixtures; se valida con la prueba de humo.
 from __future__ import annotations
 
 import ctypes
+import os
 import subprocess
 import time
 from ctypes import wintypes
@@ -16,7 +17,8 @@ from typing import Any
 
 from lento.ports import PortError, Ports
 
-TOOLS_DIR = Path(__file__).resolve().parents[2] / "tools"
+# LENTO_TOOLS_DIR permite apuntar a otra carpeta de herramientas (desarrollo y fixtures).
+TOOLS_DIR = Path(os.environ.get("LENTO_TOOLS_DIR") or Path(__file__).resolve().parents[2] / "tools")
 
 
 class WindowsPorts(Ports):

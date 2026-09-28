@@ -91,6 +91,7 @@ def collect(ports: Ports, out: DomainWriter) -> None:
     ticks = max(1, math.floor(duration / interval + 1e-9))
 
     from lento.domains.gpu import GpuSampler
+    from lento.domains.thermals import ThermalSampler
 
     cores = CpuCoreSampler(ports)
     processes = ProcessSampler(ports, cores.logical_processors)
@@ -99,6 +100,7 @@ def collect(ports: Ports, out: DomainWriter) -> None:
         SystemCounterSampler(ports),
         processes,
         GpuSampler(ports, lambda: processes.names),
+        ThermalSampler(ports),
     ]
 
     start = ports.monotonic()

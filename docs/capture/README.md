@@ -67,6 +67,7 @@ Un objeto con una sección por dominio. Cada documento de dominio describe su se
 | [processes.md](processes.md) | Foto | Procesos: memoria, CPU, árbol, líneas de comando, I/O, handles |
 | [memory.md](memory.md) | Foto | RAM usada, standby, compresión, pool del kernel, RAM no atribuida a procesos |
 | [gpu.md](gpu.md) | Foto | GPU: uso, VRAM, temperatura, clocks, limitaciones y uso por proceso |
+| [thermals.md](thermals.md) | Foto | Temperaturas, clocks, ventiladores y consumo (thermal throttling) |
 | [storage.md](storage.md) | Foto | Espacio libre, discos físicos, salud y SMART |
 | [devices.md](devices.md) | Foto | Dispositivos PnP, USB/HID y dispositivos con error |
 | [network.md](network.md) | Foto | Adaptadores, IP y conexiones abiertas por proceso |
@@ -78,7 +79,7 @@ Un objeto con una sección por dominio. Cada documento de dominio describe su se
 | [drivers.md](drivers.md) | Foto | Drivers cargados, versión y fecha por dispositivo, drivers sin firma |
 | [security.md](security.md) | Foto | Defender (¿escaneando?), exclusiones, antivirus activos |
 | [updates.md](updates.md) | Foto | Windows Update instalando, reinicio pendiente, actualizaciones recientes |
-| [sampling.md](sampling.md) | Ventana de muestreo | CPU por núcleo, DPC/interrupciones, disco, hard page faults, memoria, GPU y tops de procesos por recurso |
+| [sampling.md](sampling.md) | Ventana de muestreo | CPU por núcleo, DPC/interrupciones, disco, hard page faults, memoria, GPU, temperaturas y tops de procesos por recurso |
 | [history.md](history.md) | Historial | Errores de disco, WHEA, falta de memoria, arranques lentos, TDR de GPU, apagados inesperados, cierres de apps (7 días) |
 
 ## Unidades y convenciones

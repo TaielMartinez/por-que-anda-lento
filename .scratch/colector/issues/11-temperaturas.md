@@ -6,8 +6,8 @@
 
 **Status:** ready-for-agent
 
-- [ ] Foto de sensores y serie temporal durante la Ventana de muestreo.
-- [ ] Sin LibreHardwareMonitor, `thermals` queda `failed` con motivo y el resto de la Captura se genera.
-- [ ] Resumen: temperatura máxima por componente y caída de clocks.
-- [ ] Tests con fixtures de lecturas de sensores.
-- [ ] Documento del dominio `thermals`.
+- [x] Foto de sensores y serie temporal durante la Ventana de muestreo.
+- [x] Sin LibreHardwareMonitor, `thermals` queda `failed` con motivo y el resto de la Captura se genera.
+- [x] Resumen: temperatura máxima por componente y caída de clocks.
+- [x] Tests con fixtures de lecturas de sensores.
+- [x] Documento del dominio `thermals`.

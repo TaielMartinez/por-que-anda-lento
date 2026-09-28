@@ -1,0 +1,902 @@
+{
+ "calls": {
+  "now[]": [
+   "2026-09-28T12:04:05-03:00",
+   "2026-09-28T12:04:07-03:00"
+  ],
+  "tool_path[\"librehardwaremonitor\"]": [
+   "C:\\tools\\librehardwaremonitor\\LibreHardwareMonitorLib.dll"
+  ],
+  "tool_path[\"pawnio\"]": [
+   null
+  ],
+  "tool_path[\"autorunsc\"]": [
+   null
+  ],
+  "tool_path[\"sigcheck\"]": [
+   null
+  ],
+  "tool_path[\"handle\"]": [
+   null
+  ],
+  "tool_path[\"wpt\"]": [
+   null
+  ],
+  "tool_path[\"pooltag\"]": [
+   null
+  ],
+  "sensors[]": [
+   [
+    {
+     "hardware": "Intel Core i7-8700K",
+     "hardware_type": "Cpu",
+     "parent": null,
+     "sensor": "CPU Core #1 Thread #1",
+     "type": "Load",
+     "value": 81.63,
+     "min": 81.63,
+     "max": 100,
+     "id": "/intelcpu/0/load/2"
+    },
+    {
+     "hardware": "Intel Core i7-8700K",
+     "hardware_type": "Cpu",
+     "parent": null,
+     "sensor": "CPU Core #1 Thread #2",
+     "type": "Load",
+     "value": 48.98,
+     "min": 11.11,
+     "max": 48.98,
+     "id": "/intelcpu/0/load/3"
+    },
+    {
+     "hardware": "Intel Core i7-8700K",
+     "hardware_type": "Cpu",
+     "parent": null,
+     "sensor": "CPU Core #2 Thread #1",
+     "type": "Load",
+     "value": 65.31,
+     "min": 44.44,
+     "max": 65.31,
+     "id": "/intelcpu/0/load/4"
+    },
+    {
+     "hardware": "Intel Core i7-8700K",
+     "hardware_type": "Cpu",
+     "parent": null,
+     "sensor": "CPU Core #2 Thread #2",
+     "type": "Load",
+     "value": 65.31,
+     "min": 0,
+     "max": 65.31,
+     "id": "/intelcpu/0/load/5"
+    },
+    {
+     "hardware": "Intel Core i7-8700K",
+     "hardware_type": "Cpu",
+     "parent": null,
+     "sensor": "CPU Core #3 Thread #1",
+     "type": "Load",
+     "value": 63.27,
+     "min": 33.33,
+     "max": 63.27,
+     "id": "/intelcpu/0/load/6"
+    },
+    {
+     "hardware": "Intel Core i7-8700K",
+     "hardware_type": "Cpu",
+     "parent": null,
+     "sensor": "CPU Core #3 Thread #2",
+     "type": "Load",
+     "value": 55.1,
+     "min": 22.22,
+     "max": 55.1,
+     "id": "/intelcpu/0/load/7"
+    },
+    {
+     "hardware": "Intel Core i7-8700K",
+     "hardware_type": "Cpu",
+     "parent": null,
+     "sensor": "CPU Core #4 Thread #1",
+     "type": "Load",
+     "value": 65.31,
+     "min": 55.56,
+     "max": 65.31,
+     "id": "/intelcpu/0/load/8"
+    },
+    {
+     "hardware": "Intel Core i7-8700K",
+     "hardware_type": "Cpu",
+     "parent": null,
+     "sensor": "CPU Core #4 Thread #2",
+     "type": "Load",
+     "value": 65.31,
+     "min": 0,
+     "max": 65.31,
+     "id": "/intelcpu/0/load/9"
+    },
+    {
+     "hardware": "Intel Core i7-8700K",
+     "hardware_type": "Cpu",
+     "parent": null,
+     "sensor": "CPU Core #5 Thread #1",
+     "type": "Load",
+     "value": 75.51,
+     "min": 22.22,
+     "max": 75.51,
+     "id": "/intelcpu/0/load/10"
+    },
+    {
+     "hardware": "Intel Core i7-8700K",
+     "hardware_type": "Cpu",
+     "parent": null,
+     "sensor": "CPU Core #5 Thread #2",
+     "type": "Load",
+     "value": 59.18,
+     "min": 11.11,
+     "max": 59.18,
+     "id": "/intelcpu/0/load/11"
+    },
+    {
+     "hardware": "Intel Core i7-8700K",
+     "hardware_type": "Cpu",
+     "parent": null,
+     "sensor": "CPU Core #6 Thread #1",
+     "type": "Load",
+     "value": 75.51,
+     "min": 33.33,
+     "max": 75.51,
+     "id": "/intelcpu/0/load/12"
+    },
+    {
+     "hardware": "Intel Core i7-8700K",
+     "hardware_type": "Cpu",
+     "parent": null,
+     "sensor": "CPU Core #6 Thread #2",
+     "type": "Load",
+     "value": 57.14,
+     "min": 22.22,
+     "max": 57.14,
+     "id": "/intelcpu/0/load/13"
+    },
+    {
+     "hardware": "Intel Core i7-8700K",
+     "hardware_type": "Cpu",
+     "parent": null,
+     "sensor": "CPU Total",
+     "type": "Load",
+     "value": 64.8,
+     "min": 29.63,
+     "max": 64.8,
+     "id": "/intelcpu/0/load/0"
+    },
+    {
+     "hardware": "Intel Core i7-8700K",
+     "hardware_type": "Cpu",
+     "parent": null,
+     "sensor": "CPU Core Max",
+     "type": "Load",
+     "value": 81.63,
+     "min": 81.63,
+     "max": 100,
+     "id": "/intelcpu/0/load/1"
+    },
+    {
+     "hardware": "Intel Core i7-8700K",
+     "hardware_type": "Cpu",
+     "parent": null,
+     "sensor": "Core Max",
+     "type": "Temperature",
+     "value": null,
+     "min": null,
+     "max": null,
+     "id": "/intelcpu/0/temperature/0"
+    },
+    {
+     "hardware": "Intel Core i7-8700K",
+     "hardware_type": "Cpu",
+     "parent": null,
+     "sensor": "Core Average",
+     "type": "Temperature",
+     "value": null,
+     "min": null,
+     "max": null,
+     "id": "/intelcpu/0/temperature/1"
+    },
+    {
+     "hardware": "Intel Core i7-8700K",
+     "hardware_type": "Cpu",
+     "parent": null,
+     "sensor": "CPU Core #1",
+     "type": "Temperature",
+     "value": null,
+     "min": null,
+     "max": null,
+     "id": "/intelcpu/0/temperature/2"
+    },
+    {
+     "hardware": "Intel Core i7-8700K",
+     "hardware_type": "Cpu",
+     "parent": null,
+     "sensor": "CPU Core #2",
+     "type": "Temperature",
+     "value": null,
+     "min": null,
+     "max": null,
+     "id": "/intelcpu/0/temperature/3"
+    },
+    {
+     "hardware": "Intel Core i7-8700K",
+     "hardware_type": "Cpu",
+     "parent": null,
+     "sensor": "CPU Core #3",
+     "type": "Temperature",
+     "value": null,
+     "min": null,
+     "max": null,
+     "id": "/intelcpu/0/temperature/4"
+    },
+    {
+     "hardware": "Intel Core i7-8700K",
+     "hardware_type": "Cpu",
+     "parent": null,
+     "sensor": "CPU Core #4",
+     "type": "Temperature",
+     "value": null,
+     "min": null,
+     "max": null,
+     "id": "/intelcpu/0/temperature/5"
+    },
+    {
+     "hardware": "Intel Core i7-8700K",
+     "hardware_type": "Cpu",
+     "parent": null,
+     "sensor": "CPU Core #5",
+     "type": "Temperature",
+     "value": null,
+     "min": null,
+     "max": null,
+     "id": "/intelcpu/0/temperature/6"
+    },
+    {
+     "hardware": "Intel Core i7-8700K",
+     "hardware_type": "Cpu",
+     "parent": null,
+     "sensor": "CPU Core #6",
+     "type": "Temperature",
+     "value": null,
+     "min": null,
+     "max": null,
+     "id": "/intelcpu/0/temperature/7"
+    },
+    {
+     "hardware": "Intel Core i7-8700K",
+     "hardware_type": "Cpu",
+     "parent": null,
+     "sensor": "CPU Package",
+     "type": "Temperature",
+     "value": null,
+     "min": null,
+     "max": null,
+     "id": "/intelcpu/0/temperature/8"
+    },
+    {
+     "hardware": "Intel Core i7-8700K",
+     "hardware_type": "Cpu",
+     "parent": null,
+     "sensor": "CPU Core #1 Distance to TjMax",
+     "type": "Temperature",
+     "value": null,
+     "min": null,
+     "max": null,
+     "id": "/intelcpu/0/temperature/9"
+    },
+    {
+     "hardware": "Intel Core i7-8700K",
+     "hardware_type": "Cpu",
+     "parent": null,
+     "sensor": "CPU Core #2 Distance to TjMax",
+     "type": "Temperature",
+     "value": null,
+     "min": null,
+     "max": null,
+     "id": "/intelcpu/0/temperature/10"
+    },
+    {
+     "hardware": "Intel Core i7-8700K",
+     "hardware_type": "Cpu",
+     "parent": null,
+     "sensor": "CPU Core #3 Distance to TjMax",
+     "type": "Temperature",
+     "value": null,
+     "min": null,
+     "max": null,
+     "id": "/intelcpu/0/temperature/11"
+    },
+    {
+     "hardware": "Intel Core i7-8700K",
+     "hardware_type": "Cpu",
+     "parent": null,
+     "sensor": "CPU Core #4 Distance to TjMax",
+     "type": "Temperature",
+     "value": null,
+     "min": null,
+     "max": null,
+     "id": "/intelcpu/0/temperature/12"
+    },
+    {
+     "hardware": "Intel Core i7-8700K",
+     "hardware_type": "Cpu",
+     "parent": null,
+     "sensor": "CPU Core #5 Distance to TjMax",
+     "type": "Temperature",
+     "value": null,
+     "min": null,
+     "max": null,
+     "id": "/intelcpu/0/temperature/13"
+    },
+    {
+     "hardware": "Intel Core i7-8700K",
+     "hardware_type": "Cpu",
+     "parent": null,
+     "sensor": "CPU Core #6 Distance to TjMax",
+     "type": "Temperature",
+     "value": null,
+     "min": null,
+     "max": null,
+     "id": "/intelcpu/0/temperature/14"
+    },
+    {
+     "hardware": "Intel Core i7-8700K",
+     "hardware_type": "Cpu",
+     "parent": null,
+     "sensor": "CPU Core #1",
+     "type": "Clock",
+     "value": null,
+     "min": null,
+     "max": null,
+     "id": "/intelcpu/0/clock/1"
+    },
+    {
+     "hardware": "Intel Core i7-8700K",
+     "hardware_type": "Cpu",
+     "parent": null,
+     "sensor": "CPU Core #2",
+     "type": "Clock",
+     "value": null,
+     "min": null,
+     "max": null,
+     "id": "/intelcpu/0/clock/2"
+    },
+    {
+     "hardware": "Intel Core i7-8700K",
+     "hardware_type": "Cpu",
+     "parent": null,
+     "sensor": "CPU Core #3",
+     "type": "Clock",
+     "value": null,
+     "min": null,
+     "max": null,
+     "id": "/intelcpu/0/clock/3"
+    },
+    {
+     "hardware": "Intel Core i7-8700K",
+     "hardware_type": "Cpu",
+     "parent": null,
+     "sensor": "CPU Core #4",
+     "type": "Clock",
+     "value": null,
+     "min": null,
+     "max": null,
+     "id": "/intelcpu/0/clock/4"
+    },
+    {
+     "hardware": "Intel Core i7-8700K",
+     "hardware_type": "Cpu",
+     "parent": null,
+     "sensor": "CPU Core #5",
+     "type": "Clock",
+     "value": null,
+     "min": null,
+     "max": null,
+     "id": "/intelcpu/0/clock/5"
+    },
+    {
+     "hardware": "Intel Core i7-8700K",
+     "hardware_type": "Cpu",
+     "parent": null,
+     "sensor": "CPU Core #6",
+     "type": "Clock",
+     "value": null,
+     "min": null,
+     "max": null,
+     "id": "/intelcpu/0/clock/6"
+    },
+    {
+     "hardware": "Intel Core i7-8700K",
+     "hardware_type": "Cpu",
+     "parent": null,
+     "sensor": "CPU Package",
+     "type": "Power",
+     "value": 0,
+     "min": 0,
+     "max": 0,
+     "id": "/intelcpu/0/power/0"
+    },
+    {
+     "hardware": "Intel Core i7-8700K",
+     "hardware_type": "Cpu",
+     "parent": null,
+     "sensor": "CPU Cores",
+     "type": "Power",
+     "value": 0,
+     "min": 0,
+     "max": 0,
+     "id": "/intelcpu/0/power/1"
+    },
+    {
+     "hardware": "Intel Core i7-8700K",
+     "hardware_type": "Cpu",
+     "parent": null,
+     "sensor": "CPU Memory",
+     "type": "Power",
+     "value": 0,
+     "min": 0,
+     "max": 0,
+     "id": "/intelcpu/0/power/3"
+    },
+    {
+     "hardware": "Intel Core i7-8700K",
+     "hardware_type": "Cpu",
+     "parent": null,
+     "sensor": "CPU Platform",
+     "type": "Power",
+     "value": 0,
+     "min": 0,
+     "max": 0,
+     "id": "/intelcpu/0/power/4"
+    },
+    {
+     "hardware": "Virtual Memory",
+     "hardware_type": "Memory",
+     "parent": null,
+     "sensor": "Memory Used",
+     "type": "Data",
+     "value": 28.1811981,
+     "min": 28.1811981,
+     "max": 28.1811981,
+     "id": "/vram/data/2"
+    },
+    {
+     "hardware": "Virtual Memory",
+     "hardware_type": "Memory",
+     "parent": null,
+     "sensor": "Memory Available",
+     "type": "Data",
+     "value": 14.7687759,
+     "min": 14.7687759,
+     "max": 14.7687759,
+     "id": "/vram/data/3"
+    },
+    {
+     "hardware": "Virtual Memory",
+     "hardware_type": "Memory",
+     "parent": null,
+     "sensor": "Memory",
+     "type": "Load",
+     "value": 65.614006,
+     "min": 65.614006,
+     "max": 65.614006,
+     "id": "/vram/load/1"
+    },
+    {
+     "hardware": "Total Memory",
+     "hardware_type": "Memory",
+     "parent": null,
+     "sensor": "Memory Used",
+     "type": "Data",
+     "value": 17.2340851,
+     "min": 17.2340851,
+     "max": 17.2340851,
+     "id": "/ram/data/0"
+    },
+    {
+     "hardware": "Total Memory",
+     "hardware_type": "Memory",
+     "parent": null,
+     "sensor": "Memory Available",
+     "type": "Data",
+     "value": 6.715889,
+     "min": 6.715889,
+     "max": 6.715889,
+     "id": "/ram/data/1"
+    },
+    {
+     "hardware": "Total Memory",
+     "hardware_type": "Memory",
+     "parent": null,
+     "sensor": "Memory",
+     "type": "Load",
+     "value": 71.95868,
+     "min": 71.95868,
+     "max": 71.95868,
+     "id": "/ram/load/0"
+    },
+    {
+     "hardware": "NVIDIA GeForce RTX 3090",
+     "hardware_type": "GpuNvidia",
+     "parent": null,
+     "sensor": "GPU Core",
+     "type": "Temperature",
+     "value": 59,
+     "min": 59,
+     "max": 59,
+     "id": "/gpu-nvidia/0/temperature/0"
+    },
+    {
+     "hardware": "NVIDIA GeForce RTX 3090",
+     "hardware_type": "GpuNvidia",
+     "parent": null,
+     "sensor": "GPU Core",
+     "type": "Clock",
+     "value": 210,
+     "min": 210,
+     "max": 255,
+     "id": "/gpu-nvidia/0/clock/0"
+    },
+    {
+     "hardware": "NVIDIA GeForce RTX 3090",
+     "hardware_type": "GpuNvidia",
+     "parent": null,
+     "sensor": "GPU Memory",
+     "type": "Clock",
+     "value": 405,
+     "min": 405,
+     "max": 405,
+     "id": "/gpu-nvidia/0/clock/4"
+    },
+    {
+     "hardware": "NVIDIA GeForce RTX 3090",
+     "hardware_type": "GpuNvidia",
+     "parent": null,
+     "sensor": "GPU Fan 1",
+     "type": "Fan",
+     "value": 0,
+     "min": 0,
+     "max": 0,
+     "id": "/gpu-nvidia/0/fan/1"
+    },
+    {
+     "hardware": "NVIDIA GeForce RTX 3090",
+     "hardware_type": "GpuNvidia",
+     "parent": null,
+     "sensor": "GPU Fan 2",
+     "type": "Fan",
+     "value": 0,
+     "min": 0,
+     "max": 0,
+     "id": "/gpu-nvidia/0/fan/2"
+    },
+    {
+     "hardware": "NVIDIA GeForce RTX 3090",
+     "hardware_type": "GpuNvidia",
+     "parent": null,
+     "sensor": "GPU Fan 1",
+     "type": "Control",
+     "value": 0,
+     "min": 0,
+     "max": 0,
+     "id": "/gpu-nvidia/0/control/1"
+    },
+    {
+     "hardware": "NVIDIA GeForce RTX 3090",
+     "hardware_type": "GpuNvidia",
+     "parent": null,
+     "sensor": "GPU Fan 2",
+     "type": "Control",
+     "value": 0,
+     "min": 0,
+     "max": 0,
+     "id": "/gpu-nvidia/0/control/2"
+    },
+    {
+     "hardware": "NVIDIA GeForce RTX 3090",
+     "hardware_type": "GpuNvidia",
+     "parent": null,
+     "sensor": "GPU Core",
+     "type": "Load",
+     "value": 9,
+     "min": 9,
+     "max": 23,
+     "id": "/gpu-nvidia/0/load/0"
+    },
+    {
+     "hardware": "NVIDIA GeForce RTX 3090",
+     "hardware_type": "GpuNvidia",
+     "parent": null,
+     "sensor": "GPU Memory Controller",
+     "type": "Load",
+     "value": 9,
+     "min": 9,
+     "max": 14,
+     "id": "/gpu-nvidia/0/load/1"
+    },
+    {
+     "hardware": "NVIDIA GeForce RTX 3090",
+     "hardware_type": "GpuNvidia",
+     "parent": null,
+     "sensor": "GPU Video Engine",
+     "type": "Load",
+     "value": 0,
+     "min": 0,
+     "max": 0,
+     "id": "/gpu-nvidia/0/load/2"
+    },
+    {
+     "hardware": "NVIDIA GeForce RTX 3090",
+     "hardware_type": "GpuNvidia",
+     "parent": null,
+     "sensor": "GPU Bus",
+     "type": "Load",
+     "value": 0,
+     "min": 0,
+     "max": 0,
+     "id": "/gpu-nvidia/0/load/3"
+    },
+    {
+     "hardware": "NVIDIA GeForce RTX 3090",
+     "hardware_type": "GpuNvidia",
+     "parent": null,
+     "sensor": "GPU Power",
+     "type": "Load",
+     "value": 9.92,
+     "min": 9.92,
+     "max": 10.232,
+     "id": "/gpu-nvidia/0/load/4"
+    },
+    {
+     "hardware": "NVIDIA GeForce RTX 3090",
+     "hardware_type": "GpuNvidia",
+     "parent": null,
+     "sensor": "GPU Board Power",
+     "type": "Load",
+     "value": 13.728,
+     "min": 13.728,
+     "max": 13.926,
+     "id": "/gpu-nvidia/0/load/5"
+    },
+    {
+     "hardware": "NVIDIA GeForce RTX 3090",
+     "hardware_type": "GpuNvidia",
+     "parent": null,
+     "sensor": "GPU Core Voltage",
+     "type": "Voltage",
+     "value": 0.71875,
+     "min": 0.71875,
+     "max": 0.71875,
+     "id": "/gpu-nvidia/0/voltage/0"
+    },
+    {
+     "hardware": "NVIDIA GeForce RTX 3090",
+     "hardware_type": "GpuNvidia",
+     "parent": null,
+     "sensor": "D3D Dedicated Memory Used",
+     "type": "SmallData",
+     "value": 1179.60156,
+     "min": 1179.60156,
+     "max": 1179.60156,
+     "id": "/gpu-nvidia/0/smalldata/3"
+    },
+    {
+     "hardware": "NVIDIA GeForce RTX 3090",
+     "hardware_type": "GpuNvidia",
+     "parent": null,
+     "sensor": "D3D Shared Memory Used",
+     "type": "SmallData",
+     "value": 97.09766,
+     "min": 97.09766,
+     "max": 97.09766,
+     "id": "/gpu-nvidia/0/smalldata/4"
+    },
+    {
+     "hardware": "NVIDIA GeForce RTX 3090",
+     "hardware_type": "GpuNvidia",
+     "parent": null,
+     "sensor": "D3D 3D",
+     "type": "Load",
+     "value": 0.89901,
+     "min": 0.89901,
+     "max": 5.926658,
+     "id": "/gpu-nvidia/0/load/7"
+    },
+    {
+     "hardware": "NVIDIA GeForce RTX 3090",
+     "hardware_type": "GpuNvidia",
+     "parent": null,
+     "sensor": "D3D Overlay",
+     "type": "Load",
+     "value": 0,
+     "min": 0,
+     "max": 0,
+     "id": "/gpu-nvidia/0/load/11"
+    },
+    {
+     "hardware": "NVIDIA GeForce RTX 3090",
+     "hardware_type": "GpuNvidia",
+     "parent": null,
+     "sensor": "D3D Video Decode",
+     "type": "Load",
+     "value": 0,
+     "min": 0,
+     "max": 0,
+     "id": "/gpu-nvidia/0/load/13"
+    },
+    {
+     "hardware": "NVIDIA GeForce RTX 3090",
+     "hardware_type": "GpuNvidia",
+     "parent": null,
+     "sensor": "D3D Copy",
+     "type": "Load",
+     "value": 0,
+     "min": 0,
+     "max": 0,
+     "id": "/gpu-nvidia/0/load/8"
+    },
+    {
+     "hardware": "NVIDIA GeForce RTX 3090",
+     "hardware_type": "GpuNvidia",
+     "parent": null,
+     "sensor": "D3D Copy",
+     "type": "Load",
+     "value": 0.0157169569,
+     "min": 0.0157169569,
+     "max": 0.039780397,
+     "id": "/gpu-nvidia/0/load/9"
+    },
+    {
+     "hardware": "NVIDIA GeForce RTX 3090",
+     "hardware_type": "GpuNvidia",
+     "parent": null,
+     "sensor": "D3D Security",
+     "type": "Load",
+     "value": 0,
+     "min": 0,
+     "max": 0,
+     "id": "/gpu-nvidia/0/load/12"
+    },
+    {
+     "hardware": "NVIDIA GeForce RTX 3090",
+     "hardware_type": "GpuNvidia",
+     "parent": null,
+     "sensor": "D3D Video Encode",
+     "type": "Load",
+     "value": 0,
+     "min": 0,
+     "max": 0,
+     "id": "/gpu-nvidia/0/load/14"
+    },
+    {
+     "hardware": "NVIDIA GeForce RTX 3090",
+     "hardware_type": "GpuNvidia",
+     "parent": null,
+     "sensor": "D3D Optical Flow Accelerator 0",
+     "type": "Load",
+     "value": 0,
+     "min": 0,
+     "max": 0,
+     "id": "/gpu-nvidia/0/load/10"
+    },
+    {
+     "hardware": "NVIDIA GeForce RTX 3090",
+     "hardware_type": "GpuNvidia",
+     "parent": null,
+     "sensor": "D3D VR",
+     "type": "Load",
+     "value": 0,
+     "min": 0,
+     "max": 0,
+     "id": "/gpu-nvidia/0/load/15"
+    },
+    {
+     "hardware": "NVIDIA GeForce RTX 3090",
+     "hardware_type": "GpuNvidia",
+     "parent": null,
+     "sensor": "GPU Hot Spot",
+     "type": "Temperature",
+     "value": 68.75,
+     "min": 68.75,
+     "max": 68.8125,
+     "id": "/gpu-nvidia/0/temperature/2"
+    },
+    {
+     "hardware": "NVIDIA GeForce RTX 3090",
+     "hardware_type": "GpuNvidia",
+     "parent": null,
+     "sensor": "GPU Memory Junction",
+     "type": "Temperature",
+     "value": 64,
+     "min": 64,
+     "max": 64,
+     "id": "/gpu-nvidia/0/temperature/3"
+    },
+    {
+     "hardware": "NVIDIA GeForce RTX 3090",
+     "hardware_type": "GpuNvidia",
+     "parent": null,
+     "sensor": "GPU Memory Total",
+     "type": "SmallData",
+     "value": 24576,
+     "min": 24576,
+     "max": 24576,
+     "id": "/gpu-nvidia/0/smalldata/2"
+    },
+    {
+     "hardware": "NVIDIA GeForce RTX 3090",
+     "hardware_type": "GpuNvidia",
+     "parent": null,
+     "sensor": "GPU Memory Free",
+     "type": "SmallData",
+     "value": 23154,
+     "min": 23154,
+     "max": 23154,
+     "id": "/gpu-nvidia/0/smalldata/0"
+    },
+    {
+     "hardware": "NVIDIA GeForce RTX 3090",
+     "hardware_type": "GpuNvidia",
+     "parent": null,
+     "sensor": "GPU Memory Used",
+     "type": "SmallData",
+     "value": 1421,
+     "min": 1421,
+     "max": 1421,
+     "id": "/gpu-nvidia/0/smalldata/1"
+    },
+    {
+     "hardware": "NVIDIA GeForce RTX 3090",
+     "hardware_type": "GpuNvidia",
+     "parent": null,
+     "sensor": "GPU Memory",
+     "type": "Load",
+     "value": 5.7856245,
+     "min": 5.7856245,
+     "max": 5.7856245,
+     "id": "/gpu-nvidia/0/load/3"
+    },
+    {
+     "hardware": "NVIDIA GeForce RTX 3090",
+     "hardware_type": "GpuNvidia",
+     "parent": null,
+     "sensor": "GPU Package",
+     "type": "Power",
+     "value": 37.557,
+     "min": 37.557,
+     "max": 37.815,
+     "id": "/gpu-nvidia/0/power/0"
+    },
+    {
+     "hardware": "NVIDIA GeForce RTX 3090",
+     "hardware_type": "GpuNvidia",
+     "parent": null,
+     "sensor": "GPU PCIe Rx",
+     "type": "Throughput",
+     "value": 1249280,
+     "min": 1249280,
+     "max": 1249280,
+     "id": "/gpu-nvidia/0/throughput/0"
+    },
+    {
+     "hardware": "NVIDIA GeForce RTX 3090",
+     "hardware_type": "GpuNvidia",
+     "parent": null,
+     "sensor": "GPU PCIe Tx",
+     "type": "Throughput",
+     "value": 49152,
+     "min": 49152,
+     "max": 449536,
+     "id": "/gpu-nvidia/0/throughput/1"
+    }
+   ]
+  ]
+ }
+}
